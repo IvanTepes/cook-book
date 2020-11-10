@@ -1,45 +1,104 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Cook Book
 
-Welcome USER_NAME,
+Cook Book is site for all gourmets and people who love to cook, share, try a new recipes and delicious food. Cook Book offers the user a quick and effective way to get the desired specific recipe in the fastest possible way.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## UX
 
-## Gitpod Reminders
+### Goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The central target audience for Cook Book are people:
 
-`python3 -m http.server`
+- Who are old enough to be able to use household appliances on their own, who possess a certain level of skill to operate this type of tool.
+- Who like to share recipes and knowledge about food and be part of this type of community.
 
-A blue button should appear to click: *Make Public*,
+User Goal are:
 
-Another blue button should appear to click: *Open Browser*.
+- Find recipe on fastest posible way.
+- Find important information about recipe without too much looking.
+- Share recipes with community. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Cook Book is a great way to help users meet these needs because:
 
-A blue button should appear to click: *Make Public*,
+- The planning and design process took all these needs into account before starting to build it.
+- The needs of the user may vary and vary from person to person and this site tries to cover some of the most important issues that the user    has when visiting this site such as: 
+    - Time need to cook dish
+    - Size of dish
+    - Possible allergens
+    - Skill needed
+- Cook Book allows registered users to share their best creations with the community in form of CRUD operations (create, read, update, delete)
 
-Another blue button should appear to click: *Open Browser*.
+### User Stories
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### New Users
 
-## Updates Since The Instructional Video
+- As a new user, I want to be able to view recipes to cook.
+- As a new user, I want to be able to search for recipes.
+- As a new user, I want to be able easily navigate through the website. 
+- As a new user, I want to be able to easily access all of its feature.
+- As a new user, I want to be able to immediatly see what the website is about.
+- As a new user, I want to be able to see different categories of recipes.
+- As a new user, I want to be able to know cook time, portion size, allergens or difficulty of dish. 
+- As a new user, I want to be able to see whole recipe on separate page
+- As a new user, I want to be able to see ingredients needed for dish.
+- As a new user, I want to be able to see image of dish.
+- As a new user, I want to be able to create account.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Registered Users
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- As a returning user, I want to be able to log in to my account easily.
+- As a registered user, I want to be able to create my recipe.
+- As a registered user, I want to be able to see my recipes.
+- As a registered user, I want to be able to update my recipe.
+- As a registered user, I want to be able to share my recipes.
+- As a registered user, I want to be able to rate recipes.
+- As a registered user, I want to be able to see feedback about my recipes.
+- As a registered user, I expect my personal details to be private.
+- As a registered user, I want to be able to delete my account.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Design Choices
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Fonts
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Two fonts were used in this project.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- [Pacifico](https://fonts.google.com/specimen/Pacifico)
+    - The Pacifico font is used for document headers because it resembles a handwritten one and the page gets the impression of a book.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto)
+    - The Roboto font was used for all other parts of the page where text was used and because it blends in nicely with the rest of the page.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### Icons
 
---------
+All icons used were chosen for their obvious meaning and purpose so that they can be understood by everyone.
 
-Happy coding!
+#### Colours
+
+The color palette contains two dark, two light and one bright color. Combining these colors I got an eye-pleasing and interesting look.
+
+#### Styling
+
+- Cards and container boxes were given rounded corners with shadows.
+- Repeating the same rounded corner pattern throughout the page keeps consistency in design and maintains the feeling that all elements         belong together.
+- Pictures that accurately show the finished result of the recipes.
+- SHADOWS?
+- BUTTONS?
+- HOVER?
+- 
+
+### Wireframes
+
+These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
+
+- Wireframes for this project can be find [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes.pdf).
+- Colored wireframes cen be find [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
+
+## Features
+### Existing Features
+### Features Left to Implement
+## Technologies Used
+## Testing
+## Deployment
+## Credit
+### Content
+### Media
+### Acknowledgements
