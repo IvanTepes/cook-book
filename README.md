@@ -89,8 +89,15 @@ The color palette contains two dark, two light and one bright color. Combining t
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
 
-- Wireframes for this project can be find [here](readme_files/wireframes/cook_book_wireframes.pdf).
-- Colored wireframes cen be find [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
+- Wireframes for this project can be found [here](readme_files/wireframes/cook_book_wireframes.pdf).
+- Colored wireframes can be found [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
+
+#### Entity Relationship Diagram
+
+For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Plane part of the design and planning process for this project.
+
+- ERD can be found [here](readme_files/erd_diagram/cook-book-erd.png).
+
 
 ## Features
 
@@ -184,14 +191,18 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
     - to make communication between Python and MongoDB possible.
 - [**Favicon.io**](https://favicon.io/favicon-converter/)
     - to create Favicon.
-
-
-
-
-
+- [**LucidChart**](https://lucid.app/)
+    - to create ERD (Entity Relationship Diagram)
 ## Testing
+
+- Testing information can be found in separate testing.md file.
+
 ## Deployment
+
 ## Credit
 ### Content
+
+#### Recipes
+
 ### Media
 ### Acknowledgements
