@@ -83,18 +83,68 @@ The color palette contains two dark, two light and one bright color. Combining t
 - SHADOWS?
 - BUTTONS?
 - HOVER?
-- 
+- DIVIDERS?
 
 ### Wireframes
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
 
-- Wireframes for this project can be find [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes.pdf).
+- Wireframes for this project can be find [here](readme_files/wireframes/cook_book_wireframes.pdf).
 - Colored wireframes cen be find [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
 
 ## Features
+
 ### Existing Features
+
+#### Navigation Bar
+
+- Allows all users to select the content they want to view by simply clicking them, this also collapses into a toggle on mobile devices to.
+- After the user registers, the navigation bar expands and gets two new items My Recipes and Add Recipe.  
+
+#### Search Bar
+
+- So the user can find recipes
+- The user can find the search bar on the home page and on the pages where the recipes are grouped as Dinner, giving the user the option to     continue searching for recipes without returning to the home page.
+
+#### Parallax Hero Image
+- 
+#### Return Button 
+
+- Allow user a quick return to the Home page.
+
+#### Quick Log In
+
+- Allow the user a quick login to his account directly from the home page.
+
+#### Recipe Cards
+
+- Allow the user to see without searching and clicking the recipe they would like, also providing the user with more important information      about the recipe.
+
+#### Allargens Guide
+
+#### Log In / Register Page
+
+- Allows a new user to create their account and allows existing users to log in to their account.
+
+#### My Recipes
+
+- Allows registered users to **view** previously added recipe.
+- Allows registered users to **update** their recipe.
+- Allows registered users to **delete** their recipe. 
+
+#### Add Recipe
+
+- Allows registered users to add their own recipes.
+
+#### Footer 
+- 
+
 ### Features Left to Implement
+
+#### Rate Recipe 
+#### Admin Statistics
+
+
 ## Technologies Used
 ## Testing
 ## Deployment
