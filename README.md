@@ -120,7 +120,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 - Allow the user to see without searching and clicking the recipe they would like, also providing the user with more important information      about the recipe.
 
-#### Allargens Guide
+#### Allergens Guide
 
 #### Log In / Register Page
 
@@ -137,15 +137,58 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - Allows registered users to add their own recipes.
 
 #### Footer 
-- 
 
 ### Features Left to Implement
 
 #### Rate Recipe 
 #### Admin Statistics
 
-
 ## Technologies Used
+- [**HTML**](https://www.w3.org/TR/html52/)
+    - standard markup language for creating Web pages.
+- [**CSS**](https://www.w3.org/Style/CSS/Overview.en.html)
+    - to describe and style HTML document such as layout, colors, font and animation.
+- [**Github**](https://github.com/)
+    - to store and share all project code remotely.
+- [**Gitpod**](https://gitpod.io/)
+    - used as development environment for building the application.
+- [**MongoDB Atlas**](https://www.mongodb.com/cloud/atlas)
+    - used for database storage
+- [**Trello**](https://trello.com/)
+    - to save and organize user stories.
+- [**Monday.com**](https://monday.com/)
+    - for organizing and planning the project and its phases.
+- [**Google Fonts**](https://fonts.google.com/)
+    - to style the website fonts.
+- [**Materialize**](https://materializecss.com/index.html)
+    - to simplify the structure of the website and make the website responsive easily.
+- [**Balsamiq Wireframes**](https://balsamiq.com/wireframes/)
+    - to create the wireframes and planning this project.
+- [**Photoshop**](https://www.adobe.com/ie/products/photoshop.html)
+    - to edit, crop and save images as well as logo creator.
+- [**Dev Tools**](https://developers.google.com/web/tools/chrome-devtools)
+    - to keep track and test the code during the development.
+- [**Tinypng**](https://tinypng.com/)
+    - to compress the size of the images.
+- [**Coolors**](https://coolors.co/)
+    - used to choose color pattern.
+- [**JQuery**](https://jquery.com/)
+    - to simplify DOM manipulation and **Materialize** initalization.
+- [**Flask**](https://flask.palletsprojects.com/en/1.0.x/)
+    - to construct and render pages.
+- [**Jinja**](https://jinja.palletsprojects.com/en/2.10.x/)
+    - to simplify displaying data from the backend of this project smoothly and effectively in html.
+- [**PIP**](https://pip.pypa.io/en/stable/installing/)
+    - for installation of tools needed in this project.
+- [**PyMongo**](https://pymongo.readthedocs.io/en/stable/)
+    - to make communication between Python and MongoDB possible.
+- [**Favicon.io**](https://favicon.io/favicon-converter/)
+    - to create Favicon.
+
+
+
+
+
 ## Testing
 ## Deployment
 ## Credit
