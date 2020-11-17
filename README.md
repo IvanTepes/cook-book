@@ -74,6 +74,7 @@ All icons used were chosen for their obvious meaning and purpose so that they ca
 #### Colours
 
 The color palette contains two dark, two light and one bright color. Combining these colors I got an eye-pleasing and interesting look.
+- Color palette can be find [here](readme_files/color_palette/cook_book_colour_palette.png).
 
 #### Styling
 
@@ -167,6 +168,8 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
     - for organizing and planning the project and its phases.
 - [**Google Fonts**](https://fonts.google.com/)
     - to style the website fonts.
+- [**Font Awesome**](https://fontawesome.com/)
+    - to provide fonts for this project.
 - [**Materialize**](https://materializecss.com/index.html)
     - to simplify the structure of the website and make the website responsive easily.
 - [**Balsamiq Wireframes**](https://balsamiq.com/wireframes/)
