@@ -1,13 +1,14 @@
 
 /* Color Pattern */
 :root {
-    --floral-white:  #fffcf2;
+    --floral-white:#fffcf2;
     --pale-silver: #CCC5B9;
     --black-olive: #403D39;
-    --eerie-black:  #252422;
-    --flame: #EB5E28;
+    --eerie-black: #252422;
+    --flame:       #EB5E28;
 }
 
+/* Body Bg Color */
 body {
   background-color: var(--floral-white);
 }
@@ -19,14 +20,51 @@ nav {
   position: relative;
 }
 
-.logo {
-  background: url("static/img/logo/logo.png");
-  height: 60px;
-  position: absolute;
-  left: 20px;
-  top: 5px;
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    height: 60px;
+    top: 5px;
 }
 
+/* Position burger menu icon on right side */
+nav .sidenav-trigger {
+    float: right;
+}
+
+/* Mobile side navigation width and bg-color */
+.sidenav {
+    width: 200px;
+    background-color: var(--eerie-black);
+}
+
+/* Mobile side navigation tab style */
+.mobile-navigation {
+    background-color: var(--pale-silver);
+    color: var(--eerie-black);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    letter-spacing: 1.5px;
+}
+
+/* To override Materialize default font */
+.sidenav li>a {
+    color: var(--eerie-black);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* When selected tab is pressed on mobile  */
+.mobile-navigation:hover {
+    background-color: var(--flame);
+}
+
+/* Footer */
 .page-footer {
   position: fixed;
   background-color: var(--eerie-black);
@@ -35,5 +73,4 @@ nav {
   right: 0px;
   margin-bottom: 0px;
 }
-
 
