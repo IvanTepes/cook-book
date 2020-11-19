@@ -1,0 +1,39 @@
+
+/* Color Pattern */
+:root {
+    --floral-white:  #fffcf2;
+    --pale-silver: #CCC5B9;
+    --black-olive: #403D39;
+    --eerie-black:  #252422;
+    --flame: #EB5E28;
+}
+
+body {
+  background-color: var(--floral-white);
+}
+
+nav {
+  background-color: var(--eerie-black);
+  height: 70px;
+  z-index: 2;
+  position: relative;
+}
+
+.logo {
+  background: url("static/img/logo/logo.png");
+  height: 60px;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+}
+
+.page-footer {
+  position: fixed;
+  background-color: var(--eerie-black);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+

@@ -8,7 +8,7 @@ from bson.objectid import ObjectId
 if os.path.exists("env.py"):
     import env
 
-# Create instance of Flask
+# Create instance of flask and assign it to "app"
 app = Flask(__name__)
 
 
@@ -25,10 +25,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/recipe")
+@app.route("/pages/recipe")
 def recipe():
     recipes = mongo.db.recipes.find()
-    return render_template("recipe.html", recipes=recipes)
+    return render_template("/pages/recipe.html", recipes=recipes)
 
 
 if __name__ == "__main__":
