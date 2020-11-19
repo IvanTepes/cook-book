@@ -21,6 +21,7 @@ nav {
 }
 
 nav .brand-logo {
+
     position: absolute;
     color: #fff;
     display: inline-block;
@@ -28,11 +29,6 @@ nav .brand-logo {
     padding: 0;
     height: 60px;
     top: 5px;
-}
-
-/* Position burger menu icon on right side */
-nav .sidenav-trigger {
-    float: right;
 }
 
 /* Mobile side navigation width and bg-color */
