@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h1>Hi23!</h1>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.recipe_category }}<br>
+        {{ recipe.recipe_allergen }}<br>
+        {{ recipe._id }}
+        {{ recipe.recipe_cuisine}}
+    {% endfor %}
+
+{% endblock %}
