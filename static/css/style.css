@@ -5,6 +5,7 @@
   --black-olive: #403d39;
   --eerie-black: #252422;
   --flame: #eb5e28;
+  --shadow: #000000;
 }
 
 /* Body Bg Color */
@@ -61,7 +62,7 @@ nav .brand-logo {
 }
 
 /* Home page style view for mobile and detskop sizes */
-/* Welcome message add backup font */
+/* Welcome message */
 .welcome-message {
   color: var(--flame);
   font-family: "Pacifico", sans-serif;
@@ -73,7 +74,7 @@ nav .brand-logo {
     font-size: 80px;
     padding-top: 50px;
     padding-left: 140px;
-    text-shadow: -1px 7px 11px #000000;
+    text-shadow: -1px 7px 11px var(--shadow);
   }
 
   .parallax-container p {
@@ -101,14 +102,14 @@ nav .brand-logo {
   h2.welcome-message {
     text-align: center;
     font-size: 50px;
-    text-shadow: 1px 1px 10px #000000, 1px 1px 10px #000000;
+    text-shadow: 1px 1px 10px var(--shadow), 1px 1px 10px var(--shadow);
   }
 
   .parallax-container p {
     text-align: center;
     font-family: "Pacifico", sans-serif;
     font-size: 30px;
-    text-shadow: 2px 1px 0px #000000;
+    text-shadow: 2px 1px 0px var(--shadow);
     color: #ccc5b9;
   }
 
@@ -121,7 +122,7 @@ nav .brand-logo {
 
   /* Button Position and style mobile view */
   .parallax-container .btn {
-    color: #000;
+    color: var(--shadow);
     background-color: var(--flame);
     border-radius: 10px;
     margin-bottom: 10px;
@@ -137,7 +138,7 @@ nav .brand-logo {
 }
 
 form {
-  background-color: var(--black-olive);
+  background-color: var(--eerie-black);
   height: 44px;
   border-radius: 5px;
   display: flex;
@@ -177,4 +178,38 @@ input {
     font-weight: 600;
 }
 
+/* To Override decorative divider position */
+.row .col {
+    float:none;
+}
+
+/* Category headers */
+.headers {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', sans-serif;
+    color: var(--flame);
+    text-shadow: 0px 7px 7px var(--shadow);
+}
+
+/* Position and size of dividers on different screens */
+@media screen and (min-width: 601px) {
+  .row .col.l6 {
+    width: 50%;
+  }
+
+  .headers {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row .col.s6 {
+    width: 100%;
+  }
+
+  .headers {
+    font-size: 10vw;
+  }
+}
 
