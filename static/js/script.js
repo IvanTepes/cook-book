@@ -5,4 +5,5 @@ $(document).ready(function () {
         edge: 'right',
     });
 
+    $('.parallax').parallax();
 });
