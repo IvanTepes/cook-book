@@ -192,7 +192,7 @@ input {
     text-shadow: 0px 7px 7px var(--shadow);
 }
 
-/* Position and size of dividers on different screens */
+/* Position and size of dividers on detskop screens */
 @media screen and (min-width: 601px) {
   .row .col.l6 {
     width: 50%;
@@ -203,6 +203,7 @@ input {
   }
 }
 
+/* Position and size of dividers on mobile screens */
 @media screen and (max-width: 600px) {
   .row .col.s6 {
     width: 100%;
