@@ -17,11 +17,10 @@ nav {
   background-color: var(--eerie-black);
   height: 70px;
   z-index: 2;
-  position: relative;
+  position: fixed;
 }
 
 nav .brand-logo {
-
     position: absolute;
     color: #fff;
     display: inline-block;
@@ -44,7 +43,7 @@ nav .brand-logo {
     margin: 10px;
     text-align: center;
     border-radius: 10px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 1.5px;
 }
 
@@ -60,6 +59,75 @@ nav .brand-logo {
     background-color: var(--flame);
 }
 
+/* Home page style view for mobile and detskop sizes */
+/* Welcome message add backup font */
+.welcome-message {
+    color: var(--flame);
+    font-family: 'Pacifico', sans-serif;
+}
+
+/* If the screen size is 601px wide or more */
+@media screen and (min-width: 601px) {
+  h2.welcome-message {
+    font-size: 80px;
+    padding-top: 50px;
+    padding-left: 140px;
+    text-shadow: -1px 7px 11px #000000;
+  }
+
+  .parallax-container p {
+    color: var(--eerie-black);
+    font-family: 'Pacifico', sans-serif;
+    font-size: 40px;
+    text-shadow: 2px 1px 0px var(--flame);
+    margin: 20px 0px 20px 60px;
+  }
+
+   /* Button Position and style detskop view */
+  .parallax-container .btn {
+    color: #000;
+    background-color: var(--flame);
+    border-radius: 10px;
+    left: 300px;
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+
+}
+
+/* If the screen size is 600px wide or less */
+@media screen and (max-width: 600px) {
+  h2.welcome-message {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 1px 1px 10px #000000, 1px 1px 10px #000000;
+  }
+
+  .parallax-container p {
+    text-align: center;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 1px 0px #000000;
+    color: #CCC5B9;
+  }
+    /* Added dimmed background for better contrast */
+  .mobile-container {
+    background-color: rgb(0 0 0 / 61%);
+    margin-top: 79px;
+    text-align: center;
+  }
+    /* Button Position and style mobile view */
+  .parallax-container .btn {
+    color: #000;
+    background-color: var(--flame);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+}
+
 /* Footer */
 .page-footer {
   position: fixed;
@@ -68,5 +136,5 @@ nav .brand-logo {
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
+  padding-top: 0px;
 }
-
