@@ -1,16 +1,17 @@
-
 /* Color Pattern */
 :root {
-    --floral-white:#fffcf2;
-    --pale-silver: #CCC5B9;
-    --black-olive: #403D39;
-    --eerie-black: #252422;
-    --flame:       #EB5E28;
+  --floral-white: #fffcf2;
+  --pale-silver: #ccc5b9;
+  --black-olive: #403d39;
+  --eerie-black: #252422;
+  --flame: #eb5e28;
 }
 
 /* Body Bg Color */
 body {
   background-color: var(--floral-white);
+  height: 100vh;
+  margin: 0;
 }
 
 nav {
@@ -21,49 +22,49 @@ nav {
 }
 
 nav .brand-logo {
-    position: absolute;
-    color: #fff;
-    display: inline-block;
-    font-size: 2.1rem;
-    padding: 0;
-    height: 60px;
-    top: 5px;
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+  height: 60px;
+  top: 5px;
 }
 
 /* Mobile side navigation width and bg-color */
 .sidenav {
-    width: 200px;
-    background-color: var(--eerie-black);
+  width: 200px;
+  background-color: var(--eerie-black);
 }
 
 /* Mobile side navigation tab style */
 .mobile-navigation {
-    background-color: var(--pale-silver);
-    color: var(--eerie-black);
-    margin: 10px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1.5px;
+  background-color: var(--pale-silver);
+  color: var(--eerie-black);
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 /* To override Materialize default font */
-.sidenav li>a {
-    color: var(--eerie-black);
-    font-size: 16px;
-    font-weight: bold;
+.sidenav li > a {
+  color: var(--eerie-black);
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* When selected tab is pressed on mobile  */
 .mobile-navigation:hover {
-    background-color: var(--flame);
+  background-color: var(--flame);
 }
 
 /* Home page style view for mobile and detskop sizes */
 /* Welcome message add backup font */
 .welcome-message {
-    color: var(--flame);
-    font-family: 'Pacifico', sans-serif;
+  color: var(--flame);
+  font-family: "Pacifico", sans-serif;
 }
 
 /* If the screen size is 601px wide or more */
@@ -77,23 +78,22 @@ nav .brand-logo {
 
   .parallax-container p {
     color: var(--eerie-black);
-    font-family: 'Pacifico', sans-serif;
+    font-family: "Pacifico", sans-serif;
     font-size: 40px;
     text-shadow: 2px 1px 0px var(--flame);
     margin: 20px 0px 20px 60px;
   }
 
-   /* Button Position and style detskop view */
+  /* Button Position and style detskop view */
   .parallax-container .btn {
     color: #000;
     background-color: var(--flame);
     border-radius: 10px;
     left: 300px;
     margin-top: 40px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
   }
-
 }
 
 /* If the screen size is 600px wide or less */
@@ -106,35 +106,75 @@ nav .brand-logo {
 
   .parallax-container p {
     text-align: center;
-    font-family: 'Pacifico', sans-serif;
+    font-family: "Pacifico", sans-serif;
     font-size: 30px;
     text-shadow: 2px 1px 0px #000000;
-    color: #CCC5B9;
+    color: #ccc5b9;
   }
-    /* Added dimmed background for better contrast */
+
+  /* Added dimmed background for better contrast */
   .mobile-container {
     background-color: rgb(0 0 0 / 61%);
     margin-top: 79px;
     text-align: center;
   }
-    /* Button Position and style mobile view */
+
+  /* Button Position and style mobile view */
   .parallax-container .btn {
     color: #000;
     background-color: var(--flame);
     border-radius: 10px;
     margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
   }
 }
 
-/* Footer */
+/* Footer position and color*/
 .page-footer {
-  position: fixed;
   background-color: var(--eerie-black);
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
+  padding-top: 32px;
 }
+
+form {
+  background-color: var(--black-olive);
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+
+/* Search Bar Input color and text position */
+#form {
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Text position inside search bar */
+.search {
+  text-align: center;
+}
+
+/* Search bar input text color */
+::placeholder,
+input {
+  color: var(--flame);
+}
+
+/* Search bar Button */
+.search-bar-button {
+    margin: 20px;
+    color: var(--eerie-black);
+    background-color: var(--flame);
+    height: 30px;
+    width: 85px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+
