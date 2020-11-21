@@ -15,17 +15,20 @@
     {% include 'components/search.html' %}
 
 
-    <div class="container">
+    <div class="decorative-divider container">
         <div class="row center-align">
             <img class="col s6 m6 l6" src="static/img/decorative_dividers/divider-top.png" alt="decorative-divider">
         </div>
     </div>
-    <h1 class="center-align headers">This Week Favorite</h1>
-    <div class="container">
+    <h1 class="center-align headers">For Great Morning</h1>
+    <div class="decorative-divider container">
         <div  class="row center-align">
             <img class="col s6 m6 l6" src="static/img/decorative_dividers/divider-bottom.png" alt="decorative-divider">
         </div>
     </div>
+	
+    <!-- Recipe cards -->
+    {% include 'components/recipe_card.html' %}
 
 
 {% endblock %}

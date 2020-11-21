@@ -179,8 +179,8 @@ input {
 }
 
 /* To Override decorative divider position */
-.row .col {
-    float:none;
+.decorative-divider .row .col {
+    float: none;
 }
 
 /* Category headers */
@@ -211,6 +211,102 @@ input {
 
   .headers {
     font-size: 10vw;
+  }
+}
+
+/* Recipe cards style and position
+   Category size and borders 
+ */
+.cooking-time {
+  height: 20px;
+  border-bottom: 1px solid var(--floral-white);
+  border-right: 1px solid var(--floral-white);
+}
+
+.allergens {
+  height: 20px;
+  border-bottom: 1px solid var(--floral-white);
+}
+
+.serves {
+  height: 20px;
+  border-right: 1px solid var(--floral-white);
+  border-bottom-left-radius: 20px;
+}
+
+.difficulty {
+  height: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Categories Fields Display, Position, Font */
+.card-category {
+  background-color: var(--pale-silver);
+  height: 100px;
+  display: grid;
+  color: #252422;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Recipe cards icons style */
+.fas {
+  text-align: center;
+  font-size: 30px;
+  color: #eb5e28;
+}
+
+/* Image position inside card */
+.card .card-image img {
+  display: inline;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-radius: 20px;
+}
+
+/* Position image on middle of card */
+.card .card-image {
+    position: relative;
+    text-align: center;
+}
+
+/* Card style  */
+.card {
+  border-radius: 20px;
+  background: var(--pale-silver);
+  position: initial;
+}
+
+/* To override Materialize style cards */
+.card .card-content {
+  padding: 0px;
+  border-radius: 0 0 2px 2px;
+}
+
+/* Cards category position and size */
+.recipe-card .col .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* 
+   Cards style for mobile screens  
+   Overide my custom styles for mobile screens 
+   Because category stacks on top of each other
+*/
+@media screen and (max-width: 600px) {
+  .cooking-time,
+  .allergens,
+  .serves {
+    border-bottom: 1px solid var( --floral-white);
+    border-bottom-left-radius: 0px;
+    border-right: none;
+  }
+  .difficulty {
+      border-bottom-left-radius: 20px;
   }
 }
 
