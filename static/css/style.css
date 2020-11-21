@@ -19,7 +19,7 @@ nav {
   background-color: var(--eerie-black);
   height: 70px;
   z-index: 2;
-  position: fixed;
+  position: relative; /* Add fixed to keep navbar on top */
 }
 
 nav .brand-logo {
@@ -137,22 +137,16 @@ nav .brand-logo {
   padding-top: 32px;
 }
 
-form {
-  background-color: var(--eerie-black);
-  height: 44px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px 0px 10px 0px;
-}
-
 /* Search Bar Input color and text position */
-#form {
+#form-search {
     height: 70px;
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: var(--eerie-black);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* Text position inside search bar */
@@ -318,5 +312,11 @@ input {
   .difficulty {
       border-bottom-left-radius: 20px;
   }
+}
+
+/* Register page */
+
+.card-panel {
+    margin-top: 75px;
 }
 
