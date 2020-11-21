@@ -320,3 +320,6 @@ input {
     margin-top: 75px;
 }
 
+.flashes h4 {
+    line-height: 2;
+}
