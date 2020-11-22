@@ -70,7 +70,7 @@ nav .brand-logo {
 
 /* If the screen size is 601px wide or more */
 @media screen and (min-width: 601px) {
-  h2.welcome-message {
+  .mobile-container h2.welcome-message {
     font-size: 80px;
     padding-top: 50px;
     padding-left: 140px;
@@ -155,7 +155,7 @@ nav .brand-logo {
 }
 
 /* Search bar input text color */
-::placeholder,
+.search ,#query::placeholder,
 input {
   color: var(--flame);
 }
@@ -314,12 +314,91 @@ input {
   }
 }
 
+/* /recipe card */
+
 /* Register page */
 
-.card-panel {
-    margin-top: 75px;
+/* Register Container  */
+.register-container {
+    margin-top: 50px;
+    background-color: var(--pale-silver);
+    /* border: 2px solid var(--eerie-black); */
 }
 
+/* Register tab icons color */
+.register-container .prefix {
+    color: var(--eerie-black);
+}
+
+/* Input label color and font */
+.register-container .input-field>label {
+    color: var(--flame);
+    font: 'Roboto';
+    font-weight: 600;
+}
+
+/* Register and log in card */
+.card-panel {
+    margin-top: 75px;
+    background-color: var(--pale-silver);
+    box-shadow: none;
+}
+
+/* Flashes message */
 .flashes h4 {
     line-height: 2;
+    background-color: var(--pale-silver);
+    color: var(--eerie-black);
 }
+
+/* Register button */
+.btn-large,
+.btn-large:hover,
+/* Tabs color and font on hover and active tab color and font */
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: var(--flame);
+    font-family: 'Roboto';
+    font-weight: 600;
+    color:  var(--eerie-black);
+}
+
+/* Registration button on hover  */
+.btn-large:hover {
+    background-color: var(--eerie-black);
+    color: var(--flame);
+}
+
+/* Tabs color on focus */
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: var(--flame);
+}
+
+/* Register invite message */
+.sign-msg {
+    font-family: 'Pacifico';
+    text-shadow: 0px 7px 7px var( --black-olive);
+}
+
+/* Tabs text color when is inactive */
+.tabs .tab a {
+    color: var(--flame);
+}
+
+/* Tabs bg color and active tab indicator */
+.tabs,
+.tabs .indicator {
+    background-color: var(--eerie-black);
+}
+
+/* Active tab indicator height */
+.tabs .indicator {
+    height: 4px;
+}
+
+/* Input color */
+.card-panel input {
+    color: var(--eerie-black);
+}
+
+/* /registration page */
