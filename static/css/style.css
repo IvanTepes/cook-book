@@ -298,7 +298,7 @@ input {
 
 /* 
    Cards style for mobile screens  
-   Overide my custom styles for mobile screens 
+   Override my custom styles for mobile screens 
    Because category stacks on top of each other
 */
 @media screen and (max-width: 600px) {
@@ -322,7 +322,6 @@ input {
 .register-container {
     margin-top: 50px;
     background-color: var(--pale-silver);
-    /* border: 2px solid var(--eerie-black); */
 }
 
 /* Register tab icons color */
@@ -339,9 +338,9 @@ input {
 
 /* Register and log in card */
 .card-panel {
-    margin-top: 75px;
     background-color: var(--pale-silver);
     box-shadow: none;
+    padding: 0px;
 }
 
 /* Flashes message */
@@ -354,8 +353,6 @@ input {
 /* Register button */
 .btn-large,
 .btn-large:hover,
-/* Tabs color and font on hover and active tab color and font */
-.tabs .tab a:hover,
 .tabs .tab a.active {
     background-color: var(--flame);
     font-family: 'Roboto';
@@ -363,11 +360,16 @@ input {
     color:  var(--eerie-black);
 }
 
+/* Tabs color on hover */
+.tabs .tab a:hover {
+    background-color: var( --black-olive);
+}
+
 /* Registration button on hover  */
 .btn-large:hover {
     background-color: var(--eerie-black);
     color: var(--flame);
-}
+} 
 
 /* Tabs color on focus */
 .tabs .tab a:focus, .tabs .tab a:focus.active {
@@ -399,6 +401,13 @@ input {
 /* Input color */
 .card-panel input {
     color: var(--eerie-black);
+}
+
+/* Override materialize sizing container for detskop screens */
+@media screen and (min-width: 993px) {
+  .container {
+    width: 60%
+  }
 }
 
 /* /registration page */
