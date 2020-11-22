@@ -16,7 +16,7 @@
     </section>
     
     <div class="container register-container">
-		<div class="row center-align">
+		<div class="row center-align z-depth-5">
 			<ul id="tabs-swipe-demo" class="tabs">
 				<li class="tab col s6">
                     <a href="#test-swipe-1">Log In</a>
@@ -26,19 +26,22 @@
                 </li>
 			</ul>
             <img src="static/img/logo/logo-dark.png" style="
-                    margin-top: 50px;" alt="cook-book logo">
-            <h3 class="sign-msg">
-                Sign up and reveal the secret of your specialty!
-            </h3>
-			<div id="test-swipe-1" class="col s12 ">Test 1</div>
-			<div id="test-swipe-2" class="col s12 ">
+                    margin-top: 10px;" alt="cook-book logo">
+			<div id="test-swipe-1" class="col s12 ">
             
+                <!-- Log in Form -->
+                {% include 'components/log_in_form.html' %}
+
+            </div>
+			<div id="test-swipe-2" class="col s12 ">
+
                 <!-- Registration Form -->
                 {% include 'components/registration_form.html' %}
 
             </div>
 		</div>
     </div>
+    
     
 	
 
