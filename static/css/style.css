@@ -15,6 +15,13 @@ body {
   margin: 0;
 }
 
+/* Icons style and color */
+.fas {
+  text-align: center;
+  font-size: 30px;
+  color: #eb5e28;
+}
+
 /* Footer position and color*/
 .page-footer {
   background-color: var(--eerie-black);

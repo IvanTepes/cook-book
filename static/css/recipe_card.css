@@ -36,13 +36,6 @@
   text-align: center;
 }
 
-/* Recipe cards icons style */
-.fas {
-  text-align: center;
-  font-size: 30px;
-  color: #eb5e28;
-}
-
 /* Image position inside card */
 .card .card-image img {
   display: inline;

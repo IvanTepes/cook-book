@@ -4,15 +4,16 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
 
 
-<nav>
+    <!-- Navigation Bar -->
+    <nav>
 	<div class="nav-wrapper">
-		<img src="static/img/logo/logo.png" class="brand-logo" href="{{ url_for('home') }}" alt="logo">
+		<img src="/static/img/logo/logo.png" class="brand-logo" href="{{ url_for('home') }}" alt="logo">
 		<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="{{ url_for('home') }}">Home</a></li>
 			<li><a href="#">Dashboard</a></li>
 			<li><a href="#">Recipes</a></li>
-			<li><a href="#">My Recipes</a></li>
+			<li><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
 			<li><a href="#">Add Recipe</a></li>
 			<li><a href="#">Log Out</a></li>
 			<li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -22,16 +23,15 @@
 </nav>
 
 <ul class="sidenav button-collapse" id="mobile-demo">
-    <li class="center-align"><img src="static/img/logo/logo.png" class="brand-logo" style="height:70px;margin-top:10px;" href="#!" alt="logo"></li>
+    <li class="center-align"><img src="/static/img/logo/logo.png" class="brand-logo" style="height:70px;margin-top:10px;" href="#!" alt="logo"></li>
 	<li class="mobile-navigation"><a href="{{ url_for('home') }}">Home</a></li>
 	<li class="mobile-navigation"><a href="#">Dashboard</a></li>
 	<li class="mobile-navigation"><a href="#">Recipes</a></li>
-	<li class="mobile-navigation"><a href="#">My Recipes</a></li>
+	<li class="mobile-navigation"><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
 	<li class="mobile-navigation"><a href="#">Add Recipe</a></li>
 	<li class="mobile-navigation"><a href="#">Log Out</a></li>
 	<li class="mobile-navigation"><a href="{{ url_for('login') }}">Log In</a></li>
 	<li class="mobile-navigation"><a href="{{ url_for('register') }}">Register</a></li>
 </ul>
-
 
 {% endblock %}
