@@ -1,0 +1,47 @@
+
+nav {
+  background-color: var(--eerie-black);
+  height: 70px;
+  z-index: 2;
+  position: relative; /* Add fixed to keep navbar on top */
+}
+
+nav .brand-logo {
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+  height: 60px;
+  top: 5px;
+}
+
+/* Mobile side navigation width and bg-color */
+.sidenav {
+  width: 200px;
+  background-color: var(--eerie-black);
+}
+
+/* Mobile side navigation tab style */
+.mobile-navigation {
+  background-color: var(--pale-silver);
+  color: var(--eerie-black);
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+/* To override Materialize default font */
+.sidenav li > a {
+  color: var(--eerie-black);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* When selected tab is pressed on mobile  */
+.mobile-navigation:hover {
+  background-color: var(--flame);
+}
+

@@ -1,0 +1,94 @@
+/* Register Container  */
+.register-container {
+  margin-top: 50px;
+  background-color: var(--pale-silver);
+}
+
+/* Register tab icons color */
+.register-container .prefix {
+  color: var(--eerie-black);
+}
+
+/* Input label color and font */
+.register-container .input-field > label {
+  color: var(--flame);
+  font: "Roboto";
+  font-weight: 600;
+}
+
+/* Register and log in card */
+.card-panel {
+  background-color: var(--pale-silver);
+  box-shadow: none;
+  padding: 0px;
+}
+
+/* Flashes message */
+.flashes h4 {
+  line-height: 2;
+  background-color: var(--pale-silver);
+  color: var(--eerie-black);
+}
+
+/* Register button */
+.btn-large,
+.btn-large:hover,
+.tabs .tab a.active {
+  background-color: var(--flame);
+  font-family: "Roboto";
+  font-weight: 600;
+  color: var(--eerie-black);
+}
+
+/* Tabs color on hover */
+.tabs .tab a:hover {
+  background-color: var(--black-olive);
+}
+
+/* Registration button on hover  */
+.btn-large:hover {
+  background-color: var(--eerie-black);
+  color: var(--flame);
+}
+
+/* Tabs color on focus */
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: var(--flame);
+}
+
+/* Register invite message */
+.sign-msg {
+  font-family: "Pacifico";
+  text-shadow: 0px 7px 7px var(--black-olive);
+}
+
+/* Tabs text color when is inactive */
+.tabs .tab a {
+  color: var(--flame);
+}
+
+/* Tabs bg color and active tab indicator */
+.tabs,
+.tabs .indicator {
+  background-color: var(--eerie-black);
+}
+
+/* Active tab indicator height */
+.tabs .indicator {
+  height: 4px;
+}
+
+/* Input color */
+.card-panel input {
+  color: var(--eerie-black);
+}
+
+/* Override materialize sizing container for detskop screens */
+@media screen and (min-width: 993px) {
+  .container {
+    width: 60%;
+  }
+}
+
+/* /registration page */
