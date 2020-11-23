@@ -15,122 +15,6 @@ body {
   margin: 0;
 }
 
-nav {
-  background-color: var(--eerie-black);
-  height: 70px;
-  z-index: 2;
-  position: relative; /* Add fixed to keep navbar on top */
-}
-
-nav .brand-logo {
-  position: absolute;
-  color: #fff;
-  display: inline-block;
-  font-size: 2.1rem;
-  padding: 0;
-  height: 60px;
-  top: 5px;
-}
-
-/* Mobile side navigation width and bg-color */
-.sidenav {
-  width: 200px;
-  background-color: var(--eerie-black);
-}
-
-/* Mobile side navigation tab style */
-.mobile-navigation {
-  background-color: var(--pale-silver);
-  color: var(--eerie-black);
-  margin: 10px;
-  text-align: center;
-  border-radius: 10px;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 1.5px;
-}
-
-/* To override Materialize default font */
-.sidenav li > a {
-  color: var(--eerie-black);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* When selected tab is pressed on mobile  */
-.mobile-navigation:hover {
-  background-color: var(--flame);
-}
-
-/* Home page style view for mobile and detskop sizes */
-/* Welcome message */
-.welcome-message {
-  color: var(--flame);
-  font-family: "Pacifico", sans-serif;
-}
-
-/* If the screen size is 601px wide or more */
-@media screen and (min-width: 601px) {
-  .mobile-container h2.welcome-message {
-    font-size: 80px;
-    padding-top: 50px;
-    padding-left: 140px;
-    text-shadow: -1px 7px 11px var(--shadow);
-  }
-
-  .parallax-container p {
-    color: var(--eerie-black);
-    font-family: "Pacifico", sans-serif;
-    font-size: 40px;
-    text-shadow: 2px 1px 0px var(--flame);
-    margin: 20px 0px 20px 60px;
-  }
-
-  /* Button Position and style detskop view */
-  .parallax-container .btn {
-    color: #000;
-    background-color: var(--flame);
-    border-radius: 10px;
-    left: 300px;
-    margin-top: 40px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-  }
-}
-
-/* If the screen size is 600px wide or less */
-@media screen and (max-width: 600px) {
-  h2.welcome-message {
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 1px 1px 10px var(--shadow), 1px 1px 10px var(--shadow);
-  }
-
-  .parallax-container p {
-    text-align: center;
-    font-family: "Pacifico", sans-serif;
-    font-size: 30px;
-    text-shadow: 2px 1px 0px var(--shadow);
-    color: #ccc5b9;
-  }
-
-  /* Added dimmed background for better contrast */
-  .mobile-container {
-    background-color: rgb(0 0 0 / 61%);
-    margin-top: 79px;
-    text-align: center;
-  }
-
-  /* Button Position and style mobile view */
-  .parallax-container .btn {
-    color: var(--shadow);
-    background-color: var(--flame);
-    border-radius: 10px;
-    margin-bottom: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-  }
-}
-
 /* Footer position and color*/
 .page-footer {
   background-color: var(--eerie-black);
@@ -139,14 +23,14 @@ nav .brand-logo {
 
 /* Search Bar Input color and text position */
 #form-search {
-    height: 70px;
-    border-radius: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: var(--eerie-black);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: var(--eerie-black);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Text position inside search bar */
@@ -155,45 +39,46 @@ nav .brand-logo {
 }
 
 /* Search bar input text color */
-.search ,#query::placeholder,
+.search,
+#query::placeholder,
 input {
   color: var(--flame);
 }
 
 /* Search bar Button */
 .search-bar-button {
-    margin: 20px;
-    color: var(--eerie-black);
-    background-color: var(--flame);
-    height: 30px;
-    width: 85px;
-    border-radius: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+  margin: 20px;
+  color: var(--eerie-black);
+  background-color: var(--flame);
+  height: 30px;
+  width: 85px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 
 /* To add breading space between dividers and headers */
 .decorative-divider-top {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 .decorative-divider-bottom {
-    margin-top: 40px;
-    margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 70px;
 }
 
 /* To Override decorative divider position */
 .decorative-divider-top .row .col,
 .decorative-divider-bottom .row .col {
-    float: none;
+  float: none;
 }
 
 /* Category headers */
 .headers {
-    margin: 0px;
-    font-family: 'Pacifico', sans-serif;
-    color: var(--flame);
-    text-shadow: 0px 7px 7px var(--shadow);
+  margin: 0px;
+  font-family: "Pacifico", sans-serif;
+  color: var(--flame);
+  text-shadow: 0px 7px 7px var(--shadow);
 }
 
 /* Position and size of dividers on detskop screens */
@@ -217,197 +102,3 @@ input {
     font-size: 10vw;
   }
 }
-
-/* Recipe cards style and position
-   Category size and borders 
- */
-.cooking-time {
-  height: 20px;
-  border-bottom: 1px solid var(--floral-white);
-  border-right: 1px solid var(--floral-white);
-}
-
-.allergens {
-  height: 20px;
-  border-bottom: 1px solid var(--floral-white);
-}
-
-.serves {
-  height: 20px;
-  border-right: 1px solid var(--floral-white);
-  border-bottom-left-radius: 20px;
-}
-
-.difficulty {
-  height: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-/* Categories Fields Display, Position, Font */
-.card-category {
-  background-color: var(--pale-silver);
-  height: 100px;
-  display: grid;
-  color: #252422;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  text-align: center;
-}
-
-/* Recipe cards icons style */
-.fas {
-  text-align: center;
-  font-size: 30px;
-  color: #eb5e28;
-}
-
-/* Image position inside card */
-.card .card-image img {
-  display: inline;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-radius: 20px;
-}
-
-/* Position image on middle of card */
-.card .card-image {
-    position: relative;
-    text-align: center;
-}
-
-/* Card style  */
-.card {
-  border-radius: 20px;
-  background: var(--pale-silver);
-  position: initial;
-}
-
-/* To override Materialize style cards */
-.card .card-content {
-  padding: 0px;
-  border-radius: 0 0 2px 2px;
-}
-
-/* Cards category position and size */
-.recipe-card .col .row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-/* 
-   Cards style for mobile screens  
-   Override my custom styles for mobile screens 
-   Because category stacks on top of each other
-*/
-@media screen and (max-width: 600px) {
-  .cooking-time,
-  .allergens,
-  .serves {
-    border-bottom: 1px solid var( --floral-white);
-    border-bottom-left-radius: 0px;
-    border-right: none;
-  }
-  .difficulty {
-      border-bottom-left-radius: 20px;
-  }
-}
-
-/* /recipe card */
-
-/* Register page */
-
-/* Register Container  */
-.register-container {
-    margin-top: 50px;
-    background-color: var(--pale-silver);
-}
-
-/* Register tab icons color */
-.register-container .prefix {
-    color: var(--eerie-black);
-}
-
-/* Input label color and font */
-.register-container .input-field>label {
-    color: var(--flame);
-    font: 'Roboto';
-    font-weight: 600;
-}
-
-/* Register and log in card */
-.card-panel {
-    background-color: var(--pale-silver);
-    box-shadow: none;
-    padding: 0px;
-}
-
-/* Flashes message */
-.flashes h4 {
-    line-height: 2;
-    background-color: var(--pale-silver);
-    color: var(--eerie-black);
-}
-
-/* Register button */
-.btn-large,
-.btn-large:hover,
-.tabs .tab a.active {
-    background-color: var(--flame);
-    font-family: 'Roboto';
-    font-weight: 600;
-    color:  var(--eerie-black);
-}
-
-/* Tabs color on hover */
-.tabs .tab a:hover {
-    background-color: var( --black-olive);
-}
-
-/* Registration button on hover  */
-.btn-large:hover {
-    background-color: var(--eerie-black);
-    color: var(--flame);
-} 
-
-/* Tabs color on focus */
-.tabs .tab a:focus, .tabs .tab a:focus.active {
-    background-color: var(--flame);
-}
-
-/* Register invite message */
-.sign-msg {
-    font-family: 'Pacifico';
-    text-shadow: 0px 7px 7px var( --black-olive);
-}
-
-/* Tabs text color when is inactive */
-.tabs .tab a {
-    color: var(--flame);
-}
-
-/* Tabs bg color and active tab indicator */
-.tabs,
-.tabs .indicator {
-    background-color: var(--eerie-black);
-}
-
-/* Active tab indicator height */
-.tabs .indicator {
-    height: 4px;
-}
-
-/* Input color */
-.card-panel input {
-    color: var(--eerie-black);
-}
-
-/* Override materialize sizing container for detskop screens */
-@media screen and (min-width: 993px) {
-  .container {
-    width: 60%
-  }
-}
-
-/* /registration page */
