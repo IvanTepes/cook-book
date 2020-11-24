@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- 
+    Hero image source
+    https://downloads.canon.com/nw/learn/2019/june/top-tips-for-better-food-photos-on-social-media/liza-gershman-food-photos-social-parallax.jpg
+
+ -->
+
+    <!-- Parallax and welcome message -->
+    {% include 'components/parallax.html' %}
+
+    <!-- Search Bar -->
+    {% include 'components/search.html' %}
+
+
+    {% include 'components/divider_top.html' %}
+
+    <h1 class="center-align headers">For Great Morning</h1>
+    
+    {% include 'components/divider_bottom.html' %}
+	
+    <!-- Recipe breakfast -->
+    {% include 'components/recipe_breakfast.html' %}
+
+    {% include 'components/divider_top.html' %}
+
+    <h1 class="center-align headers">For Perfect Lunch</h1>
+
+    {% include 'components/divider_bottom.html' %}
+    <!-- Recipe lunch -->
+    {% include 'components/recipe_lunch.html' %}
+
+    {% include 'components/divider_top.html' %}
+
+    <h1 class="center-align headers">For Easy Dinner</h1>
+
+    {% include 'components/divider_bottom.html' %}
+    <!-- Recipe dinner -->
+    {% include 'components/recipe_dinner.html' %}
+
+    {% include 'components/divider_top.html' %}
+
+    <h1 class="center-align headers">Best From Desserts</h1>
+
+    {% include 'components/divider_bottom.html' %}
+    <!-- Recipe dinner -->
+    {% include 'components/recipe_desserts.html' %}
+
+
+
+{% endblock %}
