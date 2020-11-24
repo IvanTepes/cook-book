@@ -19,7 +19,7 @@ body {
 .fas {
   text-align: center;
   font-size: 30px;
-  color: #eb5e28;
+  color:  var(--flame);
 }
 
 /* Footer position and color*/
