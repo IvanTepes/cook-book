@@ -1,14 +1,14 @@
-
 nav {
   background-color: var(--eerie-black);
   height: 70px;
   z-index: 2;
   position: relative; /* Add fixed to keep navbar on top */
+  font-family: 'Pacifico';
+  font-weight: 500;
 }
 
 nav .brand-logo {
   position: absolute;
-  color: #fff;
   display: inline-block;
   font-size: 2.1rem;
   padding: 0;
@@ -16,32 +16,92 @@ nav .brand-logo {
   top: 5px;
 }
 
-/* Mobile side navigation width and bg-color */
-.sidenav {
-  width: 200px;
-  background-color: var(--eerie-black);
+/* Nav style on screens with min 993px */
+@media only screen and (min-width: 993px) {
+  .dropdown-content {
+      /* To override materialize style and position */
+    top: 52px !important;
+    margin: 12px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: var(--flame);
+    height: 204px;
+  }
+  /* Dropdown category style */
+  .dropdown-content li>a {
+      color: var(--eerie-black);
+      text-align: center;
+  }
+  /* Nav item color and spacing*/
+   nav ul a {
+    font-size: 1.5rem;
+    color:var(--floral-white);
+    padding: 0px 1.5em;
+    letter-spacing: 2px;
+  }
+  /* Navigation items on hover*/
+  nav ul a:hover {
+    color: var(--flame);
+    background-color: var(--eerie-black);
+    border-bottom: 4px solid  var(--flame);
+    font-size: 1.7rem;
+  }
 }
 
-/* Mobile side navigation tab style */
-.mobile-navigation {
-  background-color: var(--pale-silver);
-  color: var(--eerie-black);
-  margin: 10px;
-  text-align: center;
-  border-radius: 10px;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 1.5px;
-}
+/* Category bg color and text position */
+@media only screen and (max-width: 992px) {
+  #categories-mobile a {
+    background-color: var(--flame);
+    text-align: center;
+  }
+  /* Color of category tab when is pressed */
+  .sidenav li > a:hover {
+    background-color: var(--flame);
+  }
+  /* To position dropdown categories in middle and down */
+  .dropdown-content {
+    margin: 12px;
+    overflow-y: auto;
+    position: inherit;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  /* Color of Caret-down icon when is presed */
+  .fas:hover {
+    color: var(--eerie-black);
+  }
+  /* Mobile side navigation width and bg-color */
+  .sidenav {
+    width: 200px;
+    background-color: var(--eerie-black);
+  }
+  /* Mobile side navigation tab style */
+  .mobile-navigation {
+    background-color: var(--pale-silver);
+    color: var(--eerie-black);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Pacifico';
+    letter-spacing: 1.5px;
+  }
+  /* To override Materialize default font */
+  .sidenav li > a {
+    color: var(--eerie-black);
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
 
-/* To override Materialize default font */
-.sidenav li > a {
-  color: var(--eerie-black);
-  font-size: 16px;
-  font-weight: bold;
-}
+  /* When selected tab is pressed on mobile  */
+  .mobile-navigation:hover {
+    background-color: var(--flame);
+  }
 
-/* When selected tab is pressed on mobile  */
-.mobile-navigation:hover {
-  background-color: var(--flame);
+  /* Position and Style of Caret-Down Icon */
+  .sidenav li > a > i {
+    margin: 0;
+    color: var(--flame);
+  }
 }
 
