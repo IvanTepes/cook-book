@@ -3,17 +3,25 @@
 <!--Link to css files-->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
 
-
-    <!-- Navigation Bar -->
-    <nav>
-	<div class="nav-wrapper">
-		<img src="/static/img/logo/logo.png" class="brand-logo" href="{{ url_for('home') }}" alt="logo">
-		<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-		<ul class="right hide-on-med-and-down">
-			<li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="#">Recipes</a></li>
+<!-- Navigation Bar -->
+<nav>
+    <div class="nav-wrapper">
+        <img src="/static/img/logo/logo.png" class="brand-logo"
+            href="{{ url_for('home') }}" alt="logo">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <ul id="categories-detskop" class="dropdown-content">
+                <li><a href="#!">Breakfast</a></li>
+                <li><a href="#!">Dinner</a></li>
+                <li><a href="#!">Lunch</a></li>
+                <li><a href="#!">Desserts</a></li>
+            </ul>
+            <li><a class="dropdown-trigger" href="#!" data-target="categories-detskop">
+                Recipes<i class="fas fa-caret-down right"></i>
+                </a>
+            </li>
             {% if session.user %}
-                <!-- <li><a href="#">Dashboard</a></li> -->
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
                 <li><a href="#">Add Recipe</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -21,20 +29,28 @@
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
-		</ul>
-	</div>
+        </ul>
+    </div>
 </nav>
-
 <ul class="sidenav button-collapse" id="mobile-demo">
-    <li class="center-align"><img src="/static/img/logo/logo.png" class="brand-logo" style="height:70px;margin-top:10px;" href="#!" alt="logo"></li>
-	<li class="mobile-navigation"><a href="{{ url_for('home') }}">Home</a></li>
-    <li class="mobile-navigation"><a href="#">Recipes</a></li>
-	<!-- <li class="mobile-navigation"><a href="#">Dashboard</a></li> -->
+    <li class="center-align"><img src="/static/img/logo/logo.png" class="brand-logo" 
+        style="height:70px;margin-top:10px;" href="#!" alt="logo">
+    </li>
+    <li class="mobile-navigation"><a href="{{ url_for('home') }}">Home</a></li>
+    <ul id="categories-mobile" class="dropdown-content">
+        <li><a href="#!">Breakfast</a></li>
+        <li><a href="#!">Dinner</a></li>
+        <li><a href="#!">Lunch</a></li>
+        <li><a href="#!">Desserts</a></li>
+    </ul>
+    <li><a class="dropdown-trigger mobile-navigation" href="#!" data-target="categories-mobile">
+        Recipes<i class="fas fa-caret-down  right"></i>
+        </a>
+    </li>
     {% if session.user %}
-        <li class="mobile-navigation"><a href="{{ url_for('profile', username=session['user']) }}">My Recipes</a></li>
+        <li class="mobile-navigation"><a href="{{ url_for('profile',username=session['user']) }}">My Recipes</a></li>
         <li class="mobile-navigation"><a href="#">Add Recipe</a></li>
-        <li class="mobile-navigation"><a href="{{ url_for('logout') }}
-        ">Log Out</a></li>
+        <li class="mobile-navigation"><a href="{{ url_for('logout') }}">Log Out</a></li>
     {% else %}
         <li class="mobile-navigation"><a href="{{ url_for('login') }}">Log In</a></li>
         <li class="mobile-navigation"><a href="{{ url_for('register') }}">Register</a></li>
