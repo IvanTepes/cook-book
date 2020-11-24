@@ -26,10 +26,21 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/home")
+@app.route("/index")
 def home():
-    recipes = mongo.db.recipes.find()
-    return render_template("/home.html", recipes=recipes)
+    # Display 4 recipe from each category
+    breakfast = {"recipe_category": "Breakfast"}
+    breakfast = list(mongo.db.recipes.find(breakfast).limit(4))
+    lunch = {"recipe_category": "Lunch"}
+    lunch = list(mongo.db.recipes.find(lunch).limit(4))
+    dinner = {"recipe_category": "Dinner"}
+    dinner = list(mongo.db.recipes.find(dinner).limit(4))
+    desserts = {"recipe_category": "Desserts"}
+    desserts = list(mongo.db.recipes.find(desserts).limit(4))
+
+    return render_template(
+        "/index.html", breakfast=breakfast,
+        dinner=dinner, lunch=lunch, desserts=desserts)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -110,7 +121,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    #remove user from session cookie
+    # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
