@@ -7,4 +7,5 @@ $(document).ready(function () {
 
     $('.parallax').parallax();
     $('.tabs').tabs();
+    $(".dropdown-trigger").dropdown();
 });
