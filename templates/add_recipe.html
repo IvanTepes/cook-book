@@ -1,73 +1,78 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_recipe.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add_recipe.css') }}">
 
-    <h3 class="center-align headers">Add Recipe</h3>
-	<div class="container add-recipe">
-		<div class="row">
-			<form class="col s12" method="POST" action="">
-				<div class="row">
-					<div class="input-field col s6 m6 offset-m3">
-						<select>
-	                        <option  class="validate" value="" disabled selected>Choose Recipe Category
-	                        </option>
-	                        <option value="1">Breakfast</option>
-	                        <option value="2">Lunch</option>
-	                        <option value="3">Dinner</option>
-	                        <option value="4">Desserts</option>
-	                    </select>
-					</div>
-					<div class="input-field col s6 m6 offset-m3">
-                        <input id="recipe-name" type="text" data-length="10">
-                        <label for="input_text">Recipe Name</label>
-                    </div>
-                    <div class="input-field col s6 m6 offset-m3">
-                        <input id="recipe-cuisine" type="text" data-length="10">
-                        <label for="input_text">Recipe Cuisine</label>
-                    </div>
-                    <div class="input-field col s6 m6 offset-m3">
-                        <input id="recipe-time" type="text" data-length="10">
-                        <label for="input_text">Recipe Prepare Time</label>
-                    </div>
-                    <div class="input-field col s6 m6 offset-m3">
-						<select>
-	                        <option  class="validate" value="" disabled selected>Recipe Allergens
-	                        </option>
-	                        <option value="1">Breakfast</option>
-	                        <option value="2">Lunch</option>
-	                        <option value="3">Dinner</option>
-	                        <option value="4">Desserts</option>
-	                    </select>
-					</div>
-                    <div class="input-field col s6 m6 offset-m3">
-                        <input id="recipe-size" type="text" data-length="10">
-                        <label for="input_text">Recipe Size</label>
-                    </div>
-                    <div class="input-field col s6 m6 offset-m3">
-						<select>
-	                        <option  class="validate" value="" disabled selected>Recipe Difficulty
-	                        </option>
-	                        <option value="1">Breakfast</option>
-	                        <option value="2">Lunch</option>
-	                        <option value="3">Dinner</option>
-	                        <option value="4">Desserts</option>
-	                    </select>
-					</div>
-                    <div class="input-field col s6 m6 offset-m3">
-                        <input id="recipe-image" type="text" data-length="10">
-                        <label for="input_text">Recipe Image ULR</label>
-                    </div>
-                    <div class="input-field col s6 m6 offset-m3">
-                        <textarea id="recipe-ingredients" class="materialize-textarea"></textarea>
-                        <label for="recipe-ingredients">Recipe Ingredients</label>
-                    </div>
-                    <div class="input-field col s6 m6 offset-m3">
-                        <textarea id="recipe-method" class="materialize-textarea"></textarea>
-                        <label for="recipe-method">Recipe Method</label>
-                    </div>
-				</div>
-			</form>
-		</div>
-	</div>
+<h3 class="center-align headers">Add Recipe</h3>
+
+<div class="container add-recipe">
+    <div class="row">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s6 m6 offset-m3">
+                    <select class="validate" required>
+                        <option class="validate" value="" disabled selected> Choose Recipe Category
+                        </option>
+                        <option value="1">Breakfast</option>
+                        <option value="2">Lunch</option>
+                        <option value="3">Dinner</option>
+                        <option value="4">Desserts</option>
+                    </select>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <input id="recipe_name" name="recipe_name" 
+                        type="text" data-length="30" required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <input id="recipe_cuisine" name="recipe_cuisine"
+                        type="text" data-length="30" required>
+                    <label for="recipe_cuisine">Recipe Cuisine</label>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <input id="recipe_cooking_time" name="recipe_cooking_time" 
+                        type="text" data-length="10" required>
+                    <label for="recipe_cooking_time">Recipe Prepare Time</label>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <select class="validate" required>
+                        <option value="" disabled selected>Recipe Allergens
+                        </option>
+                        <option value="1">Breakfast</option>
+                        <option value="2">Lunch</option>
+                        <option value="3">Dinner</option>
+                        <option value="4">Desserts</option>
+                    </select>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <input id="recipe_size" name="recipe_size" type="text" 
+                        data-length="10" required>
+                    <label for="recipe_size">Recipe Size</label>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <select class="validate" required>
+                        <option value="" disabled selected>Recipe Difficulty
+                        </option>
+                        <option value="1">Breakfast</option>
+                        <option value="2">Lunch</option>
+                        <option value="3">Dinner</option>
+                        <option value="4">Desserts</option>
+                    </select>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <input id="recipe_image" name="recipe_image" type="text" required>
+                    <label for="recipe_image">Recipe Image ULR</label>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required></textarea>
+                    <label for="recipe-ingredients">Recipe Ingredients</label>
+                </div>
+                <div class="input-field col s6 m6 offset-m3">
+                    <textarea id="recipe_method" name="recipe_method" class="materialize-textarea" required></textarea>
+                    <label for="recipe-method">Recipe Method</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
