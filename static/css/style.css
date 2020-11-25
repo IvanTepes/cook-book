@@ -83,8 +83,17 @@ input {
     float: none;
 }
 
-/* Category headers */
 .headers {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-top: 0px;
+    font-family: "Pacifico", sans-serif;
+    color: var(--flame);
+    text-shadow: 0px 7px 7px var(--shadow);
+}
+
+/* Category headers */
+.category-headers {
     margin: 0px;
     font-family: "Pacifico", sans-serif;
     color: var(--flame);
@@ -97,7 +106,7 @@ input {
     width: 50%;
   }
 
-  .headers {
+  .category-headers {
     font-size: 4vw;
   }
 }
@@ -108,7 +117,7 @@ input {
     width: 100%;
   }
 
-  .headers {
+  .category-headers {
     font-size: 10vw;
   }
 }

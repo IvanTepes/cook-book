@@ -2,7 +2,7 @@ nav {
     background-color: var(--eerie-black);
     height: 70px;
     z-index: 2;
-    position: relative; /* Add fixed to keep navbar on top */
+    position: fixed; /* Add fixed to keep navbar on top */
     font-family: 'Pacifico';
     font-weight: 500;
 }
