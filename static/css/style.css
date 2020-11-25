@@ -13,6 +13,7 @@ body {
   background-color: var(--floral-white);
   height: 100vh;
   margin: 0;
+  
 }
 
 /* Icons style and color */
@@ -24,8 +25,11 @@ body {
 
 /* Footer position and color*/
 .page-footer {
-  background-color: var(--eerie-black);
-  padding-top: 32px;
+    background-color: var(--eerie-black);
+    position: relative;
+    bottom: 0;
+    left:0;
+    width: 100%;
 }
 
 /* Search Bar Input color and text position */
