@@ -1,0 +1,27 @@
+
+/* Position and style of caret when category is pressed */
+.select-wrapper .caret {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 0;
+    fill: rgba(0,0,0,0.87);
+}
+
+/* Recipes container style */
+.add-recipe {
+    background-color: var(--pale-silver);
+    border: 2px solid black;
+    margin-bottom: 80px;
+}
+
+.dropdown-content {
+    top: 33px !important;
+    margin: 12px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: var(--eerie-black);
+    height: 255px;
+  }
