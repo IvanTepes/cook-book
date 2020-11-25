@@ -23,13 +23,6 @@
   padding: 0px;
 }
 
-/* Flashes message */
-.flashes h4 {
-  line-height: 2;
-  background-color: var(--pale-silver);
-  color: var(--eerie-black);
-}
-
 /* Register button */
 .btn-large,
 .btn-large:hover,
