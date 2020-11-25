@@ -15,6 +15,15 @@ body {
     margin: 0;
 }
 
+/* Flash messages style and position */
+.flashes h4 {
+  line-height: 2;
+  padding-top: 100px;
+  margin-top: 0px;
+  background-color: var(--pale-silver);
+  color: var(--eerie-black);
+}
+
 /* Icons style and color */
 .fas {
     text-align: center;
