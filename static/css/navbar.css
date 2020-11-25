@@ -1,25 +1,26 @@
 nav {
-  background-color: var(--eerie-black);
-  height: 70px;
-  z-index: 2;
-  position: relative; /* Add fixed to keep navbar on top */
-  font-family: 'Pacifico';
-  font-weight: 500;
+    background-color: var(--eerie-black);
+    height: 70px;
+    z-index: 2;
+    position: relative; /* Add fixed to keep navbar on top */
+    font-family: 'Pacifico';
+    font-weight: 500;
 }
 
 nav .brand-logo {
-  position: absolute;
-  display: inline-block;
-  font-size: 2.1rem;
-  padding: 0;
-  height: 60px;
-  top: 5px;
+    position: absolute;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    height: 60px;
+    top: 5px;
 }
 
 /* Nav style on screens with min 993px */
 @media only screen and (min-width: 993px) {
-  .dropdown-content {
-      /* To override materialize style and position */
+
+  #categories-detskop {
+    /* To override materialize style and position */
     top: 52px !important;
     margin: 12px;
     overflow-y: auto;
@@ -27,11 +28,13 @@ nav .brand-logo {
     background-color: var(--flame);
     height: 204px;
   }
+
   /* Dropdown category style */
   .dropdown-content li>a {
-      color: var(--eerie-black);
-      text-align: center;
+    color: var(--eerie-black);
+    text-align: center;
   }
+
   /* Nav item color and spacing*/
    nav ul a {
     font-size: 1.5rem;
@@ -39,6 +42,7 @@ nav .brand-logo {
     padding: 0px 1.5em;
     letter-spacing: 2px;
   }
+
   /* Navigation items on hover*/
   nav ul a:hover {
     color: var(--flame);
@@ -54,27 +58,33 @@ nav .brand-logo {
     background-color: var(--flame);
     text-align: center;
   }
+
   /* Color of category tab when is pressed */
   .sidenav li > a:hover {
     background-color: var(--flame);
   }
+
   /* To position dropdown categories in middle and down */
-  .dropdown-content {
+  #categories-mobile {
     margin: 12px;
     overflow-y: auto;
     position: inherit;
     background-color: transparent;
     box-shadow: none;
+    height: 204px;
   }
+
   /* Color of Caret-down icon when is presed */
   .fas:hover {
     color: var(--eerie-black);
   }
+
   /* Mobile side navigation width and bg-color */
   .sidenav {
     width: 200px;
     background-color: var(--eerie-black);
   }
+
   /* Mobile side navigation tab style */
   .mobile-navigation {
     background-color: var(--pale-silver);
@@ -85,6 +95,7 @@ nav .brand-logo {
     font-family: 'Pacifico';
     letter-spacing: 1.5px;
   }
+
   /* To override Materialize default font */
   .sidenav li > a {
     color: var(--eerie-black);
