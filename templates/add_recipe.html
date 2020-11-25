@@ -10,13 +10,12 @@
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s6 m6 offset-m3">
-                    <select class="validate" required>
+                    <select id="recipe_category" name="recipe_category" class="validate" required>
                         <option class="validate" value="" disabled selected> Choose Recipe Category
                         </option>
-                        <option value="1">Breakfast</option>
-                        <option value="2">Lunch</option>
-                        <option value="3">Dinner</option>
-                        <option value="4">Desserts</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="input-field col s6 m6 offset-m3">
@@ -35,13 +34,11 @@
                     <label for="recipe_cooking_time">Recipe Prepare Time</label>
                 </div>
                 <div class="input-field col s6 m6 offset-m3">
-                    <select class="validate" required>
-                        <option value="" disabled selected>Recipe Allergens
-                        </option>
-                        <option value="1">Breakfast</option>
-                        <option value="2">Lunch</option>
-                        <option value="3">Dinner</option>
-                        <option value="4">Desserts</option>
+                    <select multiple id="recipe_allergen" name="recipe_allergen" class="validate active" required>
+                        <option value="" disabled selected>Recipe Allergens</option>
+                        {% for allergen in allergens %}
+                            <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="input-field col s6 m6 offset-m3">
@@ -50,13 +47,12 @@
                     <label for="recipe_size">Recipe Size</label>
                 </div>
                 <div class="input-field col s6 m6 offset-m3">
-                    <select class="validate" required>
+                    <select id="recipe_difficulty" name="recipe_difficulty"          class="validate" required>
                         <option value="" disabled selected>Recipe Difficulty
                         </option>
-                        <option value="1">Breakfast</option>
-                        <option value="2">Lunch</option>
-                        <option value="3">Dinner</option>
-                        <option value="4">Desserts</option>
+                        {% for difficulty in difficultys %}
+                            <option value="{{ difficulty.difficulty_name }}">{{ difficulty.difficulty_name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="input-field col s6 m6 offset-m3">
@@ -75,4 +71,5 @@
         </form>
     </div>
 </div>
+
 {% endblock %}
