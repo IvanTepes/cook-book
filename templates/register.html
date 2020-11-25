@@ -1,19 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="center-align">
-                            {{ message }}
-                        </h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
+    {% include 'components/flash_message.html' %}
     
     <div class="container register-container">
 		<div class="row center-align z-depth-5">
@@ -42,8 +30,4 @@
 		</div>
     </div>
     
-    
-	
-
-
 {% endblock %}
