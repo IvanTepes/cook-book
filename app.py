@@ -3,6 +3,7 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
+import datetime
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -30,9 +31,9 @@ mongo = PyMongo(app)
 def home():
     # Display 4 recipe from each category
     breakfast = {"recipe_category": "Breakfast"}
-    breakfast = list(mongo.db.recipes.find(breakfast).limit(4))
+    breakfast = list(mongo.db.recipes.find(breakfast).limit(4).sort("_id", -1))
     lunch = {"recipe_category": "Lunch"}
-    lunch = list(mongo.db.recipes.find(lunch).limit(4))
+    lunch = list(mongo.db.recipes.find(lunch).limit(4).sort("_id", -1))
     dinner = {"recipe_category": "Dinner"}
     dinner = list(mongo.db.recipes.find(dinner).limit(4))
     desserts = {"recipe_category": "Desserts"}
@@ -127,8 +128,33 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        # Convert user input array list into string and save to db
+        # https://www.decalage.info/en/python/print_list
+        allergen_list = request.form.getlist("recipe_allergen")
+        today = datetime.datetime.now()
+
+        recipe = {
+            "recipe_category": request.form.get("recipe_category"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_cuisine": request.form.get("recipe_cuisine"),
+            "recipe_cooking_time": request.form.get("recipe_cooking_time"),
+            "recipe_allergen": ', '.join(allergen_list),
+            "recipe_size": request.form.get("recipe_size"),
+            "recipe_difficulty": request.form.get("recipe_difficulty"),
+            "recipe_image": request.form.get("recipe_image"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "created_by": session["user"],
+            "date_created": today.strftime("%d/%m/%Y, %H:%M:%S")
+        }
+
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("add_recipe"))
+
     categories = mongo.db.categories.find()
     allergens = mongo.db.allergens.find().sort("allergens_name", 1)
     difficultys = mongo.db.difficulty.find()
