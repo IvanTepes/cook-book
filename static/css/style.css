@@ -1,26 +1,25 @@
 /* Color Pattern */
 :root {
-  --floral-white: #fffcf2;
-  --pale-silver: #ccc5b9;
-  --black-olive: #403d39;
-  --eerie-black: #252422;
-  --flame: #eb5e28;
-  --shadow: #000000;
+    --floral-white: #fffcf2;
+    --pale-silver: #ccc5b9;
+    --black-olive: #403d39;
+    --eerie-black: #252422;
+    --flame: #eb5e28;
+    --shadow: #000000;
 }
 
 /* Body Bg Color */
 body {
-  background-color: var(--floral-white);
-  height: 100vh;
-  margin: 0;
-  
+    background-color: var(--floral-white);
+    height: 100vh;
+    margin: 0;
 }
 
 /* Icons style and color */
 .fas {
-  text-align: center;
-  font-size: 30px;
-  color:  var(--flame);
+    text-align: center;
+    font-size: 30px;
+    color:  var(--flame);
 }
 
 /* Footer position and color*/
@@ -34,62 +33,62 @@ body {
 
 /* Search Bar Input color and text position */
 #form-search {
-  height: 70px;
-  border-radius: 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: var(--eerie-black);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: var(--eerie-black);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* Text position inside search bar */
 .search {
-  text-align: center;
+    text-align: center;
 }
 
 /* Search bar input text color */
 .search,
 #query::placeholder,
 input {
-  color: var(--flame);
-}
+    color: var(--flame);
+} 
 
 /* Search bar Button */
 .search-bar-button {
-  margin: 20px;
-  color: var(--eerie-black);
-  background-color: var(--flame);
-  height: 30px;
-  width: 85px;
-  border-radius: 10px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+    margin: 20px;
+    color: var(--eerie-black);
+    background-color: var(--flame);
+    height: 30px;
+    width: 85px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
 }
 
 /* To add breading space between dividers and headers */
 .decorative-divider-top {
-  margin-top: 70px;
+    margin-top: 70px;
 }
 
 .decorative-divider-bottom {
-  margin-top: 40px;
-  margin-bottom: 70px;
+    margin-top: 40px;
+    margin-bottom: 70px;
 }
 
 /* To Override decorative divider position */
 .decorative-divider-top .row .col,
 .decorative-divider-bottom .row .col {
-  float: none;
+    float: none;
 }
 
 /* Category headers */
 .headers {
-  margin: 0px;
-  font-family: "Pacifico", sans-serif;
-  color: var(--flame);
-  text-shadow: 0px 7px 7px var(--shadow);
+    margin: 0px;
+    font-family: "Pacifico", sans-serif;
+    color: var(--flame);
+    text-shadow: 0px 7px 7px var(--shadow);
 }
 
 /* Position and size of dividers on detskop screens */
