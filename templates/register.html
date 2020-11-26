@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% include 'components/flash_message.html' %}
+    {% include 'components/flash_msg/flash_message.html' %}
     
     <div class="container register-container">
 		<div class="row center-align z-depth-5">
@@ -18,13 +18,13 @@
 			<div id="test-swipe-1" class="col s12 ">
             
                 <!-- Log in Form -->
-                {% include 'components/log_in_form.html' %}
+                {% include 'components/forms/log_in_form.html' %}
 
             </div>
 			<div id="test-swipe-2" class="col s12 ">
 
                 <!-- Registration Form -->
-                {% include 'components/registration_form.html' %}
+                {% include 'components/forms/registration_form.html' %}
 
             </div>
 		</div>
