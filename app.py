@@ -75,7 +75,7 @@ def register():
         flash("Registration Successful!")
 
         # if register sucessful rediret to My Recipe
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("my_recipes", username=session["user"]))
     return render_template("/register.html")
 
 
@@ -94,7 +94,7 @@ def login():
                 flash("Welcome, {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "my_recipes", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -108,14 +108,14 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+@app.route("/my_recipes/<username>", methods=["GET", "POST"])
+def my_recipes(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("my_recipes.html", username=username)
 
     return redirect(url_for("login"))
 
