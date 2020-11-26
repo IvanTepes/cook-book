@@ -18,8 +18,7 @@ body {
 /* Flash messages style and position */
 .flashes h4 {
   line-height: 2;
-  padding-top: 100px;
-  margin-top: 0px;
+  margin-top: 100px;
   background-color: var(--pale-silver);
   color: var(--eerie-black);
 }
@@ -93,9 +92,9 @@ input {
 }
 
 .headers {
-    padding-top: 100px;
+    position: relative;
+    top: 100px;
     padding-bottom: 50px;
-    margin-top: 0px;
     font-family: "Pacifico", sans-serif;
     color: var(--flame);
     text-shadow: 0px 7px 7px var(--shadow);

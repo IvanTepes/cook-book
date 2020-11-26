@@ -24,4 +24,8 @@
     position: absolute;
     background-color: var(--eerie-black);
     height: 210px;
-  }
+}
+
+.headers { 
+    top: 50px;
+}

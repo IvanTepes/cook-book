@@ -1,17 +1,22 @@
 {% block flash_message %}
 
-    <section>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center-align">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
                 {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="center-align">
-                            {{ message }}
-                        </h4>
-                    </div>
+                <div class="row flashes">
+                    <h4 class="center-align">
+                        {{ message }}
+                    </h4>
+                </div>
                 {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+        
 
 {% endblock %}
