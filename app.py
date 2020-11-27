@@ -52,11 +52,42 @@ def home():
 
 @app.route('/breakfast')
 def breakfast():
-    """Renders breakfast recipe page and finds all breakfast"""
+    # Renders breakfast recipe page and finds all breakfast
+    # Sort them by last entry in db
     breakfast = {"recipe_category": "Breakfast"}
     breakfast = list(mongo.db.recipes.find(breakfast).sort("_id", -1))
     return render_template(
         "pages/breakfast.html", breakfast=breakfast)
+
+
+@app.route('/lunch')
+def lunch():
+    # Renders lunch recipe page and finds all lunch
+    # Sort them by last entry in db
+    lunch = {"recipe_category": "Lunch"}
+    lunch = list(mongo.db.recipes.find(lunch).sort("_id", -1))
+    return render_template(
+        "pages/lunch.html", lunch=lunch)
+
+
+@app.route('/dinner')
+def dinner():
+    # Renders dinner recipe page and finds all dinner
+    # Sort them by last entry in db
+    dinner = {"recipe_category": "Dinner"}
+    dinner = list(mongo.db.recipes.find(dinner).sort("_id", -1))
+    return render_template(
+        "pages/dinner.html", dinner=dinner)
+
+
+@app.route('/desserts')
+def desserts():
+    # Renders desserts recipe page and finds all desserts
+    # Sort them by last entry in db
+    desserts = {"recipe_category": "Desserts"}
+    desserts = list(mongo.db.recipes.find(desserts).sort("_id", -1))
+    return render_template(
+        "pages/desserts.html", desserts=desserts)
 
 
 @app.route("/register", methods=["GET", "POST"])
