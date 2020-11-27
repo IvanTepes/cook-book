@@ -2,9 +2,10 @@
 
 {% block content %}
 
-    <!-- Link to css files -->
+    <!-- Link to my_recipes css files -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/my_recipes.css') }}">
 
+    <!-- Link to recipe card css files -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
 
@@ -28,7 +29,7 @@
                 {% include 'components/recipe_card/recipe_card.html' %}
             {% endfor %}
         </div>
-</div>
+    </div>
 
 
 {% endblock %}
