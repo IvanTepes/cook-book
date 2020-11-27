@@ -1,0 +1,34 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <!-- Link to category css file-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipes_category.css') }}">
+
+    <!-- Link to recipes card css file-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+
+    {% include 'components/text_dividers/divider_top.html' %}
+
+    <div class="headers">
+        <h3 class="center-align category-headers">
+            Breakfast
+        </h3>
+    </div>
+
+    {% include 'components/text_dividers/divider_bottom.html' %}
+
+    <!-- Add middle divider after 4 added recipes -->
+    <div class="recipe-card container">
+        <div class="row">
+            {% for recipe in breakfast %}
+                {% include 'components/recipe_card/recipe_card.html' %}  
+                {% if loop.index == 4 %}
+                    {% include 'components/text_dividers/divider_middle.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}
