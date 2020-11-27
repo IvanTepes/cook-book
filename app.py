@@ -50,6 +50,15 @@ def home():
         dinner=dinner, lunch=lunch, desserts=desserts)
 
 
+@app.route('/breakfast')
+def breakfast():
+    """Renders breakfast recipe page and finds all breakfast"""
+    breakfast = {"recipe_category": "Breakfast"}
+    breakfast = list(mongo.db.recipes.find(breakfast).sort("_id", -1))
+    return render_template(
+        "pages/breakfast.html", breakfast=breakfast)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -147,6 +156,7 @@ def add_recipe():
     if request.method == "POST":
         """
         Convert user input array list into string and save to db
+        Code is created for multiple allergens entry
         Code inspiration https://www.decalage.info/en/python/print_list
         Convert date and time when user is added recipe d/m/y h/m/s
         """
