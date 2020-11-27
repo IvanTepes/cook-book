@@ -30,14 +30,20 @@ mongo = PyMongo(app)
 @app.route("/index")
 def home():
     # Display 4 recipe from each category
+    """
+    Create 4 lists from each recipe category to display on home page
+    Find all recipe for each category
+    Limit them on 4 entrys from database
+    Sort them to show last 4 added in db
+    """
     breakfast = {"recipe_category": "Breakfast"}
     breakfast = list(mongo.db.recipes.find(breakfast).limit(4).sort("_id", -1))
     lunch = {"recipe_category": "Lunch"}
     lunch = list(mongo.db.recipes.find(lunch).limit(4).sort("_id", -1))
     dinner = {"recipe_category": "Dinner"}
-    dinner = list(mongo.db.recipes.find(dinner).limit(4))
+    dinner = list(mongo.db.recipes.find(dinner).limit(4).sort("_id", -1))
     desserts = {"recipe_category": "Desserts"}
-    desserts = list(mongo.db.recipes.find(desserts).limit(4))
+    desserts = list(mongo.db.recipes.find(desserts).limit(4).sort("_id", -1))
 
     return render_template(
         "/index.html", breakfast=breakfast,
@@ -110,12 +116,20 @@ def login():
 
 @app.route("/my_recipes/<username>", methods=["GET", "POST"])
 def my_recipes(username):
-    # grab the session user's username from db
+    """
+    Grab the session user's username from db
+    When user is looged, search all recipe added by looged user
+    and sort them by last added recipes.
+    If log is failed redirect them to login page
+    """
+    logged_user = {"created_by": username}
+    my_recipes = mongo.db.recipes.find(logged_user).sort("_id", -1)
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("my_recipes.html", username=username)
+        return render_template(
+            "my_recipes.html", username=username, my_recipes=my_recipes)
 
     return redirect(url_for("login"))
 
@@ -131,8 +145,11 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        # Convert user input array list into string and save to db
-        # https://www.decalage.info/en/python/print_list
+        """
+        Convert user input array list into string and save to db
+        Code inspiration https://www.decalage.info/en/python/print_list
+        Convert date and time when user is added recipe d/m/y h/m/s
+        """
         allergen_list = request.form.getlist("recipe_allergen")
         today = datetime.datetime.now()
 
