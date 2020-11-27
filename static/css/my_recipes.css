@@ -1,0 +1,10 @@
+/* Headers position */
+.headers { 
+    top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Decorative dividers position */
+.decorative-divider-top {
+    margin-top: 80px;
+}
