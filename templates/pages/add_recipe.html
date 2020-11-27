@@ -21,7 +21,9 @@
                         <option value="" disabled selected>Choose Recipe Category
                         </option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            <option value="{{ category.category_name }}">
+                                {{ category.category_name }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
@@ -58,9 +60,9 @@
                     <select id="recipe_allergen" name="recipe_allergen"                     class="validate active" required>
                         <option value="" disabled selected>Recipe Allergens</option>
                         {% for allergen in allergens %}
-                        <option value="{{ allergen.allergen_name }}">
-                            {{ allergen.allergen_name }}
-                        </option>
+                            <option value="{{ allergen.allergen_name }}">
+                                {{ allergen.allergen_name }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
@@ -75,9 +77,9 @@
                     <select id="recipe_difficulty" name="recipe_difficulty"                 class="validate" required>
                         <option value="" disabled selected>Recipe Difficulty</option>
                         {% for difficulty in difficultys %}
-                        <option value="{{ difficulty.difficulty_name }}">
-                            {{ difficulty.difficulty_name }}
-                        </option>
+                            <option value="{{ difficulty.difficulty_name }}">
+                                {{ difficulty.difficulty_name }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
