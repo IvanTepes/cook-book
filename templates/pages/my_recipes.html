@@ -1,0 +1,34 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <!-- Link to css files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my_recipes.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+
+
+    <!-- Flash Message -->
+    {% include 'components/flash_msg/flash_message.html' %}
+
+    {% include 'components/text_dividers/divider_top.html' %}
+
+
+    <div class="headers">
+        <h3 class="center-align">
+            {{ username }}'s Recipes
+        </h3>
+    </div>
+
+    {% include '/components/text_dividers/divider_bottom.html' %}
+
+    <div class="recipe-card container">
+        <div class="row">
+            {% for recipe in my_recipes %}
+                {% include 'components/recipe_card/recipe_card.html' %}
+            {% endfor %}
+        </div>
+</div>
+
+
+{% endblock %}
