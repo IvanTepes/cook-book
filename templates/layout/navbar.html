@@ -13,9 +13,9 @@
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <ul id="categories-detskop" class="dropdown-content">
                 <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
-                <li><a href="#!">Dinner</a></li>
-                <li><a href="#!">Lunch</a></li>
-                <li><a href="#!">Desserts</a></li>
+                <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
+                <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
+                <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
             </ul>
             <li><a class="dropdown-trigger" href="#!" data-target="categories-detskop">
                 Recipes<i class="fas fa-caret-down right"></i>
@@ -38,10 +38,10 @@
     </li>
     <li class="mobile-navigation"><a href="{{ url_for('home') }}">Home</a></li>
     <ul id="categories-mobile" class="dropdown-content">
-        <li><a href="#!">Breakfast</a></li>
-        <li><a href="#!">Dinner</a></li>
-        <li><a href="#!">Lunch</a></li>
-        <li><a href="#!">Desserts</a></li>
+        <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
+        <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
+        <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
+        <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
     </ul>
     <li><a class="dropdown-trigger mobile-navigation" href="#!" data-target="categories-mobile">
         Recipes<i class="fas fa-caret-down  right"></i>
