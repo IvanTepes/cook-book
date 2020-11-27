@@ -46,7 +46,7 @@ def home():
     desserts = list(mongo.db.recipes.find(desserts).limit(4).sort("_id", -1))
 
     return render_template(
-        "/index.html", breakfast=breakfast,
+        "pages/index.html", breakfast=breakfast,
         dinner=dinner, lunch=lunch, desserts=desserts)
 
 
@@ -82,7 +82,7 @@ def register():
 
         # if register sucessful rediret to My Recipe
         return redirect(url_for("my_recipes", username=session["user"]))
-    return render_template("/register.html")
+    return render_template("pages/register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -111,7 +111,7 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("pages/login.html")
 
 
 @app.route("/my_recipes/<username>", methods=["GET", "POST"])
@@ -129,7 +129,7 @@ def my_recipes(username):
 
     if session["user"]:
         return render_template(
-            "my_recipes.html", username=username, my_recipes=my_recipes)
+            "pages/my_recipes.html", username=username, my_recipes=my_recipes)
 
     return redirect(url_for("login"))
 
@@ -176,7 +176,7 @@ def add_recipe():
     allergens = mongo.db.allergens.find().sort("allergens_name", 1)
     difficultys = mongo.db.difficulty.find()
     return render_template(
-        "add_recipe.html", categories=categories,
+        "pages/add_recipe.html", categories=categories,
         allergens=allergens, difficultys=difficultys)
 
 
