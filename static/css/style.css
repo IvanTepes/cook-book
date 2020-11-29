@@ -8,6 +8,12 @@
     --shadow: #000000;
 }
 
+:root {
+    --header-font: "Pacifico", sans-serif;
+    --text-font: "Roboto", sans-serif;
+}
+
+
 /* Body Bg Color */
 body {
     background-color: var(--floral-white);
