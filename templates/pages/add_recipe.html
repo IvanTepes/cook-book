@@ -4,118 +4,115 @@
 <!-- Flash Message -->
 {% include 'components/flash_msg/flash_message.html' %}
 <div class="container">
-    <div class="row">
-        <div class="col s12 center-align">
-            <h3 class="center-align headers">Add Recipe</h3>
-        </div>
-    </div>
+   <div class="row">
+      <div class="col s12 center-align">
+         <h3 class="center-align headers">Add Recipe</h3>
+      </div>
+   </div>
 </div>
 <div class="container add-recipe">
-    <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
-            <div class="row">
-                <!-- Dropdown Recipe Category -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <select id="recipe_category" name="recipe_category"
-                        class="validate" required>
-                        <option value="" disabled selected>Choose Recipe Category
-                        </option>
-                        {% for category in categories %}
-                            <option value="{{ category.category_name }}">
-                                {{ category.category_name }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <!-- Text Input Recipe Name -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <input id="recipe_name" name="recipe_name"
-                        type="text" minlength="5" maxlength="20"
-                        class="validate" data-length="20"
-                        pattern="[a-zA-Z]{5,20}|[a-zA-Z]{3,20}( )[a-zA-Z]{3,20}"
-                        title="Please use Alphabet letters!"
-                        data-error="wrong" required>
-                    <label for="recipe_name">Recipe Name</label>
-                </div>
-                <!-- Text Input Recipe Cuisine -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <input id="recipe_cuisine" name="recipe_cuisine"
-                        type="text" minlength="3" maxlength="20"
-                        class="validate" data-length="20"
-                        pattern="^[a-zA-Z]{5,20}$"
-                        title="Please use Alphabet letters!"
-                        data-error="wrong" required>
-                    <label for="recipe_cuisine">Recipe Cuisine</label>
-                </div>
-                <!-- Text Input Recipe Cooking Time -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <input id="recipe_cooking_time" name="recipe_cooking_time"
-                        type="text" minlength="1" maxlength="6"
-                        class="validate" data-length="6"
-                        pattern="^[1-9]{1,2}( )[a-z]{1,3}|[1-9][0-9]{1,2}( )[a-z]{1,3}$" title="Please use format X min, X h, EXAMPLE: 10 min, 10 h" data-error="wrong" required>
-                    <label for="recipe_cooking_time">Recipe Prepare Time</label>
-                </div>
-                <!-- Dropdown Recipe Allergens -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <select id="recipe_allergen" name="recipe_allergen"                     class="validate active" required>
-                        <option value="" disabled selected>Recipe Allergens</option>
-                        {% for allergen in allergens %}
-                            <option value="{{ allergen.allergen_name }}">
-                                {{ allergen.allergen_name }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <!-- Text Input Recipe Size -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <input id="recipe_size" name="recipe_size" type="text"
-                        minlength="1" maxlength="3" class="validate" data-length="3" pattern="^[1-9]{1,3}|[1-9][0-9]{1,3}$" title="Size of recipe! Use Digits only" data-error="wrong" required>
-                    <label for="recipe_size">Recipe Size</label>
-                </div>
-                <!-- Dropdown Recipe Difficulty -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <select id="recipe_difficulty" name="recipe_difficulty"                 class="validate" required>
-                        <option value="" disabled selected>Recipe Difficulty</option>
-                        {% for difficulty in difficultys %}
-                            <option value="{{ difficulty.difficulty_name }}">
-                                {{ difficulty.difficulty_name }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <!-- Text input Recipe Image -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <input id="recipe_image" name="recipe_image" type="text"
-                        minlength="5" maxlength="250" class="validate"
-                        data-length="250" pattern="https?://.*"
-                        title="Image URL must start with http:// or https://" data-error="wrong" required>
-                    <label for="recipe_image">Recipe Image ULR</label>
-                </div>
-                <!-- Text Input Recipe Ingredients -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <textarea id="recipe_ingredients" name="recipe_ingredients"
-                        class="materialize-textarea validate" minlength="5" maxlength="250" data-length="250" required></textarea>
-                    <label for="recipe_ingredients">
-                    Add here recipe ingredients and place every ingredient on a new line
-                    </label>
-                </div>
-                <!-- Text Input Recipe Method -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <textarea id="recipe_method" name="recipe_method"
-                        class="materialize-textarea validate" minlength="5" maxlength="250" data-length="250" required></textarea>
-                    <label for="recipe_method">
-                    Add here recipe cooking instructions and place every instruction on a new line
-                    </label>
-                </div>
+   <div class="row">
+      <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+         <div class="row">
+            <!-- Dropdown Recipe Category -->
+            <div class="input-field col s6 m6 offset-m3">
+               <select id="recipe_category" name="recipe_category" class="validate" required>
+                  <option value="" disabled selected>Choose Recipe Category</option>
+                  {% for category in categories %}
+                  <option value="{{ category.category_name }}">{{ category.category_name }}
+                  </option>
+                  {% endfor %}
+               </select>
             </div>
-            <!-- Submit Button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button class="btn waves-effect waves-light" type="submit">Add Recipe<i class="material-icons right"></i>
-                    </button>
-                </div>
+            <!-- Text Input Recipe Name -->
+            <div class="input-field col s6 m6 offset-m3">
+               <input id="recipe_name" name="recipe_name"
+                  type="text" minlength="5" maxlength="20"
+                  class="validate" data-length="20"
+                  pattern="[a-zA-Z]{5,20}|[a-zA-Z]{3,20}( )[a-zA-Z]{3,20}"
+                  title="Please use Alphabet letters!"
+                  data-error="wrong" required>
+               <label for="recipe_name">Recipe Name</label>
             </div>
-        </form>
-    </div>
+            <!-- Text Input Recipe Cuisine -->
+            <div class="input-field col s6 m6 offset-m3">
+               <input id="recipe_cuisine" name="recipe_cuisine"
+                  type="text" minlength="3" maxlength="20"
+                  class="validate" data-length="20"
+                  pattern="^[a-zA-Z]{5,20}$"
+                  title="Please use Alphabet letters!"
+                  data-error="wrong" required>
+               <label for="recipe_cuisine">Recipe Cuisine</label>
+            </div>
+            <!-- Text Input Recipe Cooking Time -->
+            <div class="input-field col s6 m6 offset-m3">
+               <input id="recipe_cooking_time" name="recipe_cooking_time"
+                  type="text" minlength="1" maxlength="6"
+                  class="validate" data-length="6"
+                  pattern="^[1-9]{1,2}( )[a-z]{1,3}|[1-9][0-9]{1,2}( )[a-z]{1,3}$" title="Please use format X min, X h, EXAMPLE: 10 min, 10 h" data-error="wrong" required>
+               <label for="recipe_cooking_time">Recipe Prepare Time</label>
+            </div>
+            <!-- Dropdown Recipe Allergens -->
+            <div class="input-field col s6 m6 offset-m3">
+               <select id="recipe_allergen" name="recipe_allergen"                     class="validate active" required>
+                  <option value="" disabled selected>Recipe Allergens</option>
+                  {% for allergen in allergens %}
+                  <option value="{{ allergen.allergen_name }}">
+                     {{ allergen.allergen_name }}
+                  </option>
+                  {% endfor %}
+               </select>
+            </div>
+            <!-- Text Input Recipe Size -->
+            <div class="input-field col s6 m6 offset-m3">
+               <input id="recipe_size" name="recipe_size" type="text"
+                  minlength="1" maxlength="3" class="validate" data-length="3" pattern="^[1-9]{1,3}|[1-9][0-9]{1,3}$" title="Size of recipe! Use Digits only" data-error="wrong" required>
+               <label for="recipe_size">Recipe Size</label>
+            </div>
+            <!-- Dropdown Recipe Difficulty -->
+            <div class="input-field col s6 m6 offset-m3">
+               <select id="recipe_difficulty" name="recipe_difficulty"                 class="validate" required>
+                  <option value="" disabled selected>Recipe Difficulty</option>
+                  {% for difficulty in difficultys %}
+                  <option value="{{ difficulty.difficulty_name }}">
+                     {{ difficulty.difficulty_name }}
+                  </option>
+                  {% endfor %}
+               </select>
+            </div>
+            <!-- Text input Recipe Image -->
+            <div class="input-field col s6 m6 offset-m3">
+               <input id="recipe_image" name="recipe_image" type="text"
+                  minlength="5" maxlength="250" class="validate"
+                  data-length="250" pattern="https?://.*"
+                  title="Image URL must start with http:// or https://" data-error="wrong" required>
+               <label for="recipe_image">Recipe Image ULR</label>
+            </div>
+            <!-- Text Input Recipe Ingredients -->
+            <div class="input-field col s6 m6 offset-m3">
+               <textarea id="recipe_ingredients" name="recipe_ingredients"
+                  class="materialize-textarea validate" minlength="5" maxlength="250" data-length="250" required></textarea>
+               <label for="recipe_ingredients">
+               Add here recipe ingredients and place every ingredient on a new line
+               </label>
+            </div>
+            <!-- Text Input Recipe Method -->
+            <div class="input-field col s6 m6 offset-m3">
+               <textarea id="recipe_method" name="recipe_method"
+                  class="materialize-textarea validate" minlength="5" maxlength="3000" data-length="3000" required></textarea>
+               <label for="recipe_method">
+               Add here recipe cooking instructions and place every instruction on a new line
+               </label>
+            </div>
+         </div>
+         <!-- Submit Button -->
+         <div class="row">
+            <div class="col s12 center-align">
+               <button class="btn waves-effect waves-light" type="submit">Add Recipe<i class="material-icons right"></i>
+               </button>
+            </div>
+         </div>
+      </form>
+   </div>
 </div>
 {% endblock %}
