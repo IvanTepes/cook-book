@@ -54,11 +54,10 @@
             </div>
             <!-- Dropdown Recipe Allergens -->
             <div class="input-field col s6 m6 offset-m3">
-               <select id="recipe_allergen" name="recipe_allergen"                     class="validate active" required>
+               <select id="recipe_allergen" name="recipe_allergen"            class="validate active" required>
                   <option value="" disabled selected>Recipe Allergens</option>
                   {% for allergen in allergens %}
-                  <option value="{{ allergen.allergen_name }}">
-                     {{ allergen.allergen_name }}
+                  <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }}
                   </option>
                   {% endfor %}
                </select>
@@ -74,8 +73,7 @@
                <select id="recipe_difficulty" name="recipe_difficulty"                 class="validate" required>
                   <option value="" disabled selected>Recipe Difficulty</option>
                   {% for difficulty in difficultys %}
-                  <option value="{{ difficulty.difficulty_name }}">
-                     {{ difficulty.difficulty_name }}
+                  <option value="{{ difficulty.difficulty_name }}">{{ difficulty.difficulty_name }}
                   </option>
                   {% endfor %}
                </select>
