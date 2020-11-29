@@ -1,0 +1,78 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+    <!-- Link to my_recipes css files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe.css') }}">
+
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ recipe.recipe_image}}"></div>
+	</div>
+	<div class="container recipe-container">
+		{% include 'components/text_dividers/divider_top.html' %}
+		<div class="headers">
+			<h3 class="center-align recipe-name">
+				{{ recipe.recipe_name }}
+			</h3>
+		</div>
+		{% include 'components/text_dividers/divider_bottom.html' %}
+        <h5 class="text-cuisine center-align">
+                {{ recipe.recipe_cuisine }}
+        </h5>
+        <div class="container info-container">
+            <div class="row row-info">
+                <div class="col s3">Cooking time</div>
+                <div class="col s3">Allergens</div>
+                <div class="col s3">Recipe Portion</div>
+                <div class="col s3">Difficulty</div>
+            </div>
+            <div class="row row-desc">
+                <div class="col s3">{{ recipe.recipe_cooking_time }}</div>
+                <div class="col s3">{{ recipe.recipe_allergen }}</div>
+                <div class="col s3">{{ recipe.recipe_size }}</div>
+                <div class="col s3">{{ recipe.recipe_difficulty }}</div>
+            </div>
+        </div>
+        <div class="container prep-container">
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    {% include 'components/text_dividers/divider_top.html' %}
+                    <h2 class="prep-headers">Ingredients</h2>
+                    {% include 'components/text_dividers/divider_bottom.html' %}
+                    <ul>
+                        {% for break in recipe.recipe_ingredients.splitlines() %}
+                            {% if loop.index % 2 !=0 %}
+                            <li class="odd-ingred">
+                            {% endif %}
+                                {{break}}
+                            </li>  
+                        {% endfor %}    
+                    </ul>     
+                </div>
+                <div class="col s12 m8 l8">
+                    {% include 'components/text_dividers/divider_top.html' %}
+                    <h2 class="prep-headers">Method</h2>
+                    {% include 'components/text_dividers/divider_bottom.html' %}
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ recipe.recipe_image}}">
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <ol class="method">
+                        {% for break in recipe.recipe_method.splitlines() %}
+                            <li>
+                                {{break}}
+                            </li>
+                        {% endfor %}    
+                    </ol> 
+                    <div class="row user-info">
+                        <div class="col s5">{{ recipe.created_by}}</div>
+                        <div class="col s5">{{ recipe.date_created}}</div>
+                    </div>         
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
