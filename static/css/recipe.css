@@ -1,0 +1,323 @@
+/* body bg color */
+body {
+    background-color: var(--pale-silver);
+}
+
+nav li{
+    font-family: 'Pacifico';
+
+}
+
+/* Parallax image blur */
+.parallax-container {
+    filter: blur(5px);
+}
+
+/* position of recipe container */
+.recipe-container {
+    margin-bottom: 200px;
+    margin-top: -360px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--floral-white);
+    border: 1px solid var(--eerie-black);
+    width: 80%;
+}
+
+/* Braething space from top */
+.decorative-divider-top {
+    margin-top: 10px;
+}
+
+/* To remove style from style.css from home page */
+.decorative-divider-bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Recipe name and position */
+.headers {
+    position: relative;
+    font-family: "Pacifico", sans-serif;
+    color: var(--flame);
+    top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Recipe cuisine style */
+.text-cuisine {
+    background-color: #ccc5b9;
+    width: 50%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: 'Pacifico';
+    color: #252422;
+    border-radius: 10px;
+}
+
+/* Recipe information container */
+.info-container {
+    background-color: var(--pale-silver);
+    width: 90%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Recipe information row style */
+.info-container .row-info {
+    font-family: 'Roboto';
+    font-weight: 600;
+    border-bottom: 1px solid #fffcf2;
+    color: var(--eerie-black);
+    letter-spacing: 2px;
+   }
+
+/* Recipe description row style */
+  .container .row-desc {
+    font-family: 'Pacifico';
+    color: #eb5e28;
+    padding: 5px;
+  }
+
+/* To override materialize row bottom margin */
+.recipe-container .row {
+    margin-bottom: 0px;
+}
+
+/* Ingedients and method container */
+.prep-container {
+    width: 95%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Ingredients and Method Text */
+.prep-headers {
+    font-family: 'Roboto';
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+/* To match right size dividers */
+.prep-container .row .l4 .container .row .l6 {
+    width: 100%;
+}
+
+/* To remove margin from line 27 */
+.prep-container .row .l4 .decorative-divider-bottom,
+.prep-container .row .l8 .decorative-divider-bottom{
+    margin-top: 0px;
+}
+
+.card {
+    border-radius: 30px;
+    /* margin-left: 80px;
+    margin-right: 80px; */
+    margin-top: 40px;
+}
+
+/* Recipe image */
+.card .card-image img {
+    border-radius: 30px;
+    box-shadow: -2px -1px 20px 0px black;
+}
+
+ul {
+    margin-top: 40px;
+    font-family: 'Roboto';
+}
+
+.odd-ingred {
+    background-color: #ccc5b9; 
+}
+
+.method  {
+    text-align: justify;
+}
+
+.user-info {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    font-family: 'Pacifico';
+    color: red;
+}
+
+.user-info .col {
+    margin: 20px;
+}
+
+/* If the screen size is 600px wide or less */
+@media screen and (max-width: 600px) {
+    /* Top decorative divider position */
+   .recipe-name {
+    font-size: 12vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+
+    /* Recipe Description row font size */
+   .container .row-desc {
+    font-size: 5vw;
+  }
+
+  /* Recipe information row style */
+   .info-container .row-info {
+    font-size: 2.6vw;
+   }
+
+   .prep-headers {
+    font-size: 7vw;
+   }
+
+   ul,
+   .method  {
+    font-size: 7vw;
+   }
+}
+
+/* If the screen size is 601px wide or more */
+@media only screen and (min-width: 601px) {
+    .recipe-name {
+    font-size: 7vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  /* Recipe Description row font size */
+   .container .row-desc {
+    font-size: 5vw;
+  }
+
+  /* Recipe information row style */
+   .info-container .row-info {
+    font-size: 2vw;
+   }
+
+   .prep-headers {
+    font-size: 3vw;
+   }
+
+   ul,
+   .method  {
+    font-size: 3vw;
+   }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .recipe-name {
+    font-size: 7vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+
+   /* Recipe Description row font size */
+   .container .row-desc {
+    font-size: 4.4vw;
+  }
+
+  /* Recipe information row style */
+   .info-container .row-info {
+    font-size: 1.9vw;
+   }
+
+   .prep-headers {
+    font-size: 3vw;
+   }
+
+   
+   ul,
+   .method  {
+    font-size: 3vw;
+   }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .recipe-name {
+    font-size: 5vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+
+   /* Recipe Description row font size */
+   .container .row-desc {
+    font-size: 3.6vw;
+  }
+
+  /* Recipe information row style */
+   .info-container .row-info {
+    font-size: 1.6vw;
+   }
+
+   .prep-headers {
+    font-size: 2.5vw;
+   }
+   
+   ul,
+   .method  {
+    font-size: 3vw;
+   }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .recipe-name {
+    font-size: 4vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+
+   /* Recipe Description row font size */
+   .container .row-desc {
+    font-size: 3vw;
+  }
+
+  /* Recipe information row style */
+   .info-container .row-info {
+    font-size: 1.4vw;
+   }
+
+   .prep-headers {
+    font-size: 2.6vw;
+   }
+   
+   ul,
+   .method  {
+    font-size: 1.5vw;
+   }
+}
+
+@media only screen and (min-width: 1400px) {
+    .recipe-name {
+    font-size: 4vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   }
+
+   /* Recipe Description row font size */
+   .container .row-desc {
+    font-size: 2.3vw;
+  }
+
+  /* Recipe information row style */
+   .info-container .row-info {
+    font-size: 1vw;
+   }
+
+   .prep-headers {
+    font-size: 2.2vw;
+   }
+   
+   ul,
+   .method  {
+    font-size: 1.5vw;
+   }
+}
+
