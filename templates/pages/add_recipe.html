@@ -29,10 +29,10 @@
                         name="recipe_name"
                         type="text"
                         minlength="5"
-                        maxlength="20"
+                        maxlength="40"
                         class="validate"
-                        data-length="20"
-                        pattern="[a-zA-Z]{5,20}|[a-zA-Z]{3,20}( )[a-zA-Z]{3,20}|[a-zA-Z]{3-20}( )[a-zA-Z]{3,20}( )[a-zA-Z]{3,20}"
+                        data-length="40"
+                        pattern="[a-zA-Z]{5,40}|[a-zA-Z]{3,20}( )[a-zA-Z]{3,20}|[a-zA-Z]{3-20}( )[a-zA-Z]{3,20}( )[a-zA-Z]{3,20}"
                         title="Please use Alphabet letters!"
                         data-error="wrong"
                         required
@@ -40,10 +40,10 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
                 <!-- Text Input Recipe Cuisine -->
-                <div class="input-field col s6 m6 offset-m3">
+                <!-- <div class="input-field col s6 m6 offset-m3">
                     <input id="recipe_cuisine" name="recipe_cuisine" type="text" minlength="3" maxlength="20" class="validate" data-length="20" pattern="^[a-zA-Z]{5,20}$" title="Please use Alphabet letters!" data-error="wrong" required />
                     <label for="recipe_cuisine">Recipe Cuisine</label>
-                </div>
+                </div> -->
                 <!-- Text Input Recipe Cooking Time -->
                 <div class="input-field col s6 m6 offset-m3">
                     <input
@@ -115,7 +115,7 @@
                 </div>
                 <!-- Text Input Recipe Ingredients -->
                 <div class="input-field col s6 m6 offset-m3">
-                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea validate" minlength="5" maxlength="250" data-length="250" required></textarea>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea validate" minlength="5" maxlength="800" data-length="800" required></textarea>
                     <label for="recipe_ingredients">
                         Add here recipe ingredients and place every ingredient on a new line
                     </label>
