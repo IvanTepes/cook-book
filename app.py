@@ -204,7 +204,6 @@ def add_recipe():
         recipe = {
             "recipe_category": request.form.get("recipe_category"),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_cuisine": request.form.get("recipe_cuisine"),
             "recipe_cooking_time": request.form.get("recipe_cooking_time"),
             "recipe_allergen": ', '.join(allergen_list),
             "recipe_size": request.form.get("recipe_size"),
