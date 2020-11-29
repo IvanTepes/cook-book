@@ -21,7 +21,7 @@ nav li{
     z-index: 1;
     background-color: var(--floral-white);
     border: 1px solid var(--eerie-black);
-    width: 80%;
+    width: 90%;
 }
 
 /* Braething space from top */
@@ -31,7 +31,7 @@ nav li{
 
 /* To remove style from style.css from home page */
 .decorative-divider-bottom {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -64,6 +64,7 @@ nav li{
     text-align: center;
     position: relative;
     margin-bottom: 20px;
+    margin-top: 30px;
     border-radius: 10px;
     padding: 5px;
 }
@@ -74,15 +75,22 @@ nav li{
     font-weight: 600;
     border-bottom: 1px solid #fffcf2;
     color: var(--eerie-black);
-    letter-spacing: 2px;
-   }
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+/* To remove default Materialize padding */
+.info-container .row-info .s3,
+.info-container .row-desc .s3 {
+    padding: 0px;
+}
 
 /* Recipe description row style */
   .container .row-desc {
     font-family: 'Pacifico';
     color: #eb5e28;
     padding: 5px;
-  }
+}
 
 /* To override materialize row bottom margin */
 .recipe-container .row {
@@ -116,8 +124,6 @@ nav li{
 
 .card {
     border-radius: 30px;
-    /* margin-left: 80px;
-    margin-right: 80px; */
     margin-top: 40px;
 }
 
@@ -152,11 +158,14 @@ ul {
     margin: 20px;
 }
 
+/* Used Media Query here for all screens because of layout
+    of page and also to easy override global style in style.css  */
+
 /* If the screen size is 600px wide or less */
 @media screen and (max-width: 600px) {
     /* Top decorative divider position */
    .recipe-name {
-    font-size: 12vw;
+    font-size: 10vw;
     margin-top: 0px;
     margin-bottom: 0px;
    }
@@ -177,7 +186,7 @@ ul {
 
    ul,
    .method  {
-    font-size: 7vw;
+    font-size: 4vw;
    }
 }
 
@@ -205,7 +214,7 @@ ul {
 
    ul,
    .method  {
-    font-size: 3vw;
+    font-size: 2.5vw;
    }
 }
 
@@ -234,7 +243,7 @@ ul {
    
    ul,
    .method  {
-    font-size: 3vw;
+    font-size: 2vw;
    }
 }
 
@@ -262,7 +271,7 @@ ul {
    
    ul,
    .method  {
-    font-size: 3vw;
+    font-size: 2vw;
    }
 }
 
@@ -290,7 +299,7 @@ ul {
    
    ul,
    .method  {
-    font-size: 1.5vw;
+    font-size: 2vw;
    }
 }
 
