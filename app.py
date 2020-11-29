@@ -50,6 +50,13 @@ def home():
         dinner=dinner, lunch=lunch, desserts=desserts)
 
 
+@app.route("/recipe/<recipe_id>")
+def recipe(recipe_id):
+    # Function that finds a specific recipe from db
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("pages/recipe.html", recipe=recipe)
+
+
 @app.route('/breakfast')
 def breakfast():
     # Renders breakfast recipe page and finds all breakfast
