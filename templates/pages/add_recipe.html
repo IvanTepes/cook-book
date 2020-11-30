@@ -22,6 +22,15 @@
                         {% endfor %}
                     </select>
                 </div>
+                <!-- Dropdown Recipe Difficulty -->
+                <div class="input-field col s6 m6 offset-m3">
+                    <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
+                        <option value="" disabled selected>Choose Recipe Difficulty</option>
+                        {% for difficulty in difficultys %}
+                        <option value="{{ difficulty.difficulty_name }}">{{ difficulty.difficulty_name }} </option>
+                        {% endfor %}
+                    </select>
+                </div>
                 <!-- Text Input Recipe Name -->
                 <div class="input-field col s6 m6 offset-m3">
                     <input
@@ -54,42 +63,41 @@
                         data-error="wrong"
                         required
                     />
-                    <label for="recipe_cooking_time">Recipe Prepare Time</label>
+                    <label for="recipe_cooking_time">Recipe Cooking Time</label>
                 </div>
-                <!-- Dropdown Recipe Allergens -->
+                <!-- Text input Recipe Preparation Time -->
                 <div class="input-field col s6 m6 offset-m3">
-                    <select id="recipe_allergen" name="recipe_allergen" class="validate active" required>
-                        <option value="" disabled selected>Recipe Allergens</option>
-                        {% for allergen in allergens %}
-                        <option value="{{ allergen.allergen_name }}">{{ allergen.allergen_name }} </option>
-                        {% endfor %}
-                    </select>
+                    <input
+                        id="recipe_prep_time"
+                        name="recipe_prep_time"
+                        type="text"
+                        minlength="1"
+                        maxlength="6"
+                        class="validate"
+                        data-length="6"
+                        pattern="^[1-9]{1,2}( )[a-z]{1,3}|[1-9][0-9]{1,2}( )[a-z]{1,3}$"
+                        title="Please use format X min, X h, EXAMPLE: 10 min, 10 h"
+                        data-error="wrong"
+                        required
+                    />
+                    <label for="recipe_prep_time">Recipe Prepare Time</label>
                 </div>
                 <!-- Text Input Recipe Size -->
                 <div class="input-field col s6 m6 offset-m3">
                     <input
-                        id="recipe_size"
-                        name="recipe_size"
+                        id="recipe_servings"
+                        name="recipe_servings"
                         type="text"
                         minlength="1"
                         maxlength="3"
                         class="validate"
                         data-length="3"
                         pattern="^[1-9]{1,3}|[1-9][0-9]{1,3}$"
-                        title="Size of recipe! Use Digits only"
+                        title="Servings! Use Digits only"
                         data-error="wrong"
                         required
                     />
-                    <label for="recipe_size">Recipe Servings</label>
-                </div>
-                <!-- Dropdown Recipe Difficulty -->
-                <div class="input-field col s6 m6 offset-m3">
-                    <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
-                        <option value="" disabled selected>Recipe Difficulty</option>
-                        {% for difficulty in difficultys %}
-                        <option value="{{ difficulty.difficulty_name }}">{{ difficulty.difficulty_name }} </option>
-                        {% endfor %}
-                    </select>
+                    <label for="recipe_servings">Recipe Servings</label>
                 </div>
                 <!-- Text input Recipe Image -->
                 <div class="input-field col s6 m6 offset-m3">
@@ -110,7 +118,13 @@
                 </div>
                 <!-- Text Input Recipe Ingredients -->
                 <div class="input-field col s6 m6 offset-m3">
-                    <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea validate" minlength="5" maxlength="800" data-length="800" required></textarea>
+                    <textarea id="recipe_ingredients" 
+                    name="recipe_ingredients" 
+                    class="materialize-textarea validate"
+                    minlength="5" 
+                    maxlength="800" 
+                    data-length="800" 
+                    required></textarea>
                     <label for="recipe_ingredients">
                         Add here recipe ingredients and place every ingredient on a new line
                     </label>
