@@ -208,8 +208,14 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        # Convert date and time when user is added recipe d/m/y h/m/s
+        """
+        After user add recipe he is redirected to my recipe page
+        what give him option to see recipe added and process to edit if he make mistake
+        """
         today = datetime.datetime.now()
+
+        username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
 
         recipe = {
             "recipe_category": request.form.get("recipe_category"),
@@ -227,7 +233,7 @@ def add_recipe():
 
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("add_recipe"))
+        return redirect(url_for("my_recipes", username=username))
 
     categories = mongo.db.categories.find()
     difficultys = mongo.db.difficulty.find()
@@ -238,7 +244,35 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    # Edit recipe function
+    if request.method == "POST":
+        """
+        Edit recipe function
+        After user edit own recipe he is redirected
+        to page with own recipes
+        """
+        today = datetime.datetime.now()
+
+        submit = {
+            "recipe_category": request.form.get("recipe_category"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_cooking_time": request.form.get("recipe_cooking_time"),
+            "recipe_prep_time": request.form.get("recipe_prep_time"),
+            "recipe_servings": request.form.get("recipe_servings"),
+            "recipe_difficulty": request.form.get("recipe_difficulty"),
+            "recipe_image": request.form.get("recipe_image"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "created_by": session["user"],
+            "date_created": today.strftime("%d/%m/%Y, %H:%M:%S")
+        }
+
+        username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Successfully Updated")
+        return redirect(url_for("my_recipes", username=username))
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find()
     difficultys = mongo.db.difficulty.find()
