@@ -18,15 +18,15 @@
 		{% include 'components/text_dividers/divider_bottom.html' %}
         <div class="container info-container">
             <div class="row row-info">
+                <div class="col s3">Preparation time</div>
                 <div class="col s3">Cooking time</div>
-                <div class="col s3">Allergens</div>
                 <div class="col s3">Servings</div>
                 <div class="col s3">Difficulty</div>
             </div>
             <div class="row row-desc">
+                <div class="col s3">{{ recipe.recipe_prep_time }}</div>
                 <div class="col s3">{{ recipe.recipe_cooking_time }}</div>
-                <div class="col s3">{{ recipe.recipe_allergen }}</div>
-                <div class="col s3">{{ recipe.recipe_size }}</div>
+                <div class="col s3">{{ recipe.recipe_servings }}</div>
                 <div class="col s3">{{ recipe.recipe_difficulty }}</div>
             </div>
         </div>
