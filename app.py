@@ -280,6 +280,21 @@ def edit_recipe(recipe_id):
         "pages/edit_recipe.html", recipe=recipe, categories=categories, difficultys=difficultys)
 
 
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    """
+    Delete recipe function
+    After user delete own recipe he is redirected
+    to page with own recipes
+    """
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted!")
+    return redirect(url_for("my_recipes", username=username))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
