@@ -107,13 +107,14 @@ def desserts():
     return render_template(
         "pages/desserts.html", desserts=desserts)
 
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
     """
     Register functio which check if user is provide uniqe username and email if it registration is sucessful
     If not he is returned to try again whit message that something
     is wrong (email or username is aready in db)
     """
-@app.route("/register", methods=["GET", "POST"])
-def register():
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -207,21 +208,15 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        """
-        Convert user input array list into string and save to db
-        Code is created for multiple allergens entry
-        Code inspiration https://www.decalage.info/en/python/print_list
-        Convert date and time when user is added recipe d/m/y h/m/s
-        """
-        allergen_list = request.form.getlist("recipe_allergen")
+        # Convert date and time when user is added recipe d/m/y h/m/s
         today = datetime.datetime.now()
 
         recipe = {
             "recipe_category": request.form.get("recipe_category"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_cooking_time": request.form.get("recipe_cooking_time"),
-            "recipe_allergen": ', '.join(allergen_list),
-            "recipe_size": request.form.get("recipe_size"),
+            "recipe_prep_time": request.form.get("recipe_prep_time"),
+            "recipe_servings": request.form.get("recipe_servings"),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
             "recipe_image": request.form.get("recipe_image"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
@@ -235,18 +230,20 @@ def add_recipe():
         return redirect(url_for("add_recipe"))
 
     categories = mongo.db.categories.find()
-    allergens = mongo.db.allergens.find().sort("allergens_name", 1)
     difficultys = mongo.db.difficulty.find()
     return render_template(
-        "pages/add_recipe.html", categories=categories,
-        allergens=allergens, difficultys=difficultys)
+         "pages/add_recipe.html",
+         categories=categories, difficultys=difficultys)
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     # Edit recipe function
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("pages/edit_recipe.html", recipe=recipe)
+    categories = mongo.db.categories.find()
+    difficultys = mongo.db.difficulty.find()
+    return render_template(
+        "pages/edit_recipe.html", recipe=recipe, categories=categories, difficultys=difficultys)
 
 
 if __name__ == "__main__":
