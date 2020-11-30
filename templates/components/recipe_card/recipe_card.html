@@ -10,16 +10,16 @@
                 <div class="card-content">
                     <div class="row card-content">
                         <div class="card-category col s6 cooking-time">
+                            <i class="fas fa-mortar-pestle"></i>
+                            {{recipe.recipe_prep_time }}
+                        </div>
+                        <div class="card-category col s6 allergens">
                             <i class="fas fa-clock"></i>
                             {{recipe.recipe_cooking_time }}
                         </div>
-                        <div class="card-category col s6 allergens">
-                            <i class="fas fa-allergies"></i>
-                            {{recipe.recipe_allergen }}
-                        </div>
                         <div class="card-category col s6 serves">
                             <i class="fas fa-users"></i>
-                            {{recipe.recipe_size }}
+                            {{recipe.recipe_servings }}
                         </div>
                         <div class="card-category col s6 difficulty">
                             <i class="fas fa-balance-scale"></i>
