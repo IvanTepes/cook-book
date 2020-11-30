@@ -29,8 +29,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def home():
-    # Display 4 recipe from each category
     """
+    Display 4 recipe from each category
     Create 4 lists from each recipe category to display on home page
     Find all recipe for each category
     Limit them on 4 entrys from database
@@ -52,15 +52,20 @@ def home():
 
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
-    # Function that finds a specific recipe from db
+    """
+    Function that finds a specific recipe from db and render it
+    to recipe page
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("pages/recipe.html", recipe=recipe)
 
 
 @app.route('/breakfast')
 def breakfast():
-    # Renders breakfast recipe page and finds all breakfast
-    # Sort them by last entry in db
+    """
+    Renders breakfast recipe page and finds all breakfast
+    Sort them by last entry in db
+    """
     breakfast = {"recipe_category": "Breakfast"}
     breakfast = list(mongo.db.recipes.find(breakfast).sort("_id", -1))
     return render_template(
@@ -69,8 +74,10 @@ def breakfast():
 
 @app.route('/lunch')
 def lunch():
-    # Renders lunch recipe page and finds all lunch
-    # Sort them by last entry in db
+    """
+    Renders lunch recipe page and finds all lunch
+    Sort them by last entry in db
+    """
     lunch = {"recipe_category": "Lunch"}
     lunch = list(mongo.db.recipes.find(lunch).sort("_id", -1))
     return render_template(
@@ -79,8 +86,10 @@ def lunch():
 
 @app.route('/dinner')
 def dinner():
-    # Renders dinner recipe page and finds all dinner
-    # Sort them by last entry in db
+    """
+    Renders dinner recipe page and finds all dinner
+    Sort them by last entry in db
+    """
     dinner = {"recipe_category": "Dinner"}
     dinner = list(mongo.db.recipes.find(dinner).sort("_id", -1))
     return render_template(
@@ -89,14 +98,20 @@ def dinner():
 
 @app.route('/desserts')
 def desserts():
-    # Renders desserts recipe page and finds all desserts
-    # Sort them by last entry in db
+    """
+    Renders desserts recipe page and finds all desserts
+    Sort them by last entry in db
+    """
     desserts = {"recipe_category": "Desserts"}
     desserts = list(mongo.db.recipes.find(desserts).sort("_id", -1))
     return render_template(
         "pages/desserts.html", desserts=desserts)
 
-
+    """
+    Register functio which check if user is provide uniqe username and email if it registration is sucessful
+    If not he is returned to try again whit message that something
+    is wrong (email or username is aready in db)
+    """
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -225,6 +240,13 @@ def add_recipe():
     return render_template(
         "pages/add_recipe.html", categories=categories,
         allergens=allergens, difficultys=difficultys)
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    # Edit recipe function
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("pages/edit_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":
