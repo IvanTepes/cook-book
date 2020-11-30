@@ -26,7 +26,10 @@
     <div class="recipe-card container">
         <div class="row">
             {% for recipe in my_recipes %}
-                {% include 'components/recipe_card/recipe_card.html' %}
+                {% include 'components/recipe_card/recipe_card_user.html' %}
+                    {% if loop.index == 4 %}
+                        {% include 'components/text_dividers/divider_middle.html' %}
+                    {% endif %}
             {% endfor %}
         </div>
     </div>
