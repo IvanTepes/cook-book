@@ -7,6 +7,13 @@ nav {
     font-weight: 500;
 }
 
+.visited {
+    color: var(--flame);
+    background-color: var(--eerie-black);
+    border-bottom: 4px solid  var(--flame);
+    font-size: 1.7rem;
+}
+
 nav .brand-logo {
     position: absolute;
     display: inline-block;
