@@ -1,0 +1,25 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+    
+    <!-- Search -->
+    <!-- If search true display results on search.html
+        if search false display error
+        if reset render search_new.html and display search instruction-->
+    {% include 'components/search_bar/search_bar_new.html' %}
+    {% if recipes|length > 0 %}
+        <div class="recipe-card container">
+            <div class="row">
+            {% for recipe in recipes %}
+                {% include 'components/recipe_card/recipe_card.html' %}
+            {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <h3>error</h3>
+    {% endif %}
+
+{% endblock %}
+
