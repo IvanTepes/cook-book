@@ -56,21 +56,20 @@ def search():
     Search function, use search tutorial from
     Flask Mini-Project 20 | 08 - Searching Within
     The Database (8a - Text Index Searching)
-    Offer user to search form db recipes collection 
+    offer user to search form db recipes collection
     all fields category, name ,cook time,etc
     Search use two pages one when user comming from home page
     and one when reset search same page is used
-    for display error messages 
-     """
+    for display error messages
+    """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    print(recipes)
     return render_template("pages/search.html", recipes=recipes)
 
 
-@app.route("/search_all")
-def search_all():
-    return render_template("pages/search_all.html")
+@app.route("/search_new")
+def search_new():
+    return render_template("pages/search_new.html")
 
 
 @app.route("/recipe/<recipe_id>")
