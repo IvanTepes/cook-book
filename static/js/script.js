@@ -1,8 +1,8 @@
 $(document).ready(function () {
     // Nav mobile initalization
     $('.sidenav').sidenav({
-        closeOnClick: true,
-        draggable: true,
+        /* closeOnClick: true,
+        draggable: false, */
         edge: 'right',
     });
 
