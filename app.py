@@ -50,6 +50,29 @@ def home():
         dinner=dinner, lunch=lunch, desserts=desserts)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    """
+    Search function, use search tutorial from
+    Flask Mini-Project 20 | 08 - Searching Within
+    The Database (8a - Text Index Searching)
+    Offer user to search form db recipes collection 
+    all fields category, name ,cook time,etc
+    Search use two pages one when user comming from home page
+    and one when reset search same page is used
+    for display error messages 
+     """
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    print(recipes)
+    return render_template("pages/search.html", recipes=recipes)
+
+
+@app.route("/search_all")
+def search_all():
+    return render_template("pages/search_all.html")
+
+
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     """
@@ -111,7 +134,8 @@ def desserts():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Register functio which check if user is provide uniqe username and email if it registration is sucessful
+    Register functio which check if user is provide uniqe
+    username and email if it registration is sucessful
     If not he is returned to try again whit message that something
     is wrong (email or username is aready in db)
     """
@@ -210,12 +234,13 @@ def add_recipe():
     if request.method == "POST":
         """
         After user add recipe he is redirected to my recipe page
-        what give him option to see recipe added and process to edit if he make mistake
+        what give him option to see recipe added and
+        process to edit if he make mistake
         """
         today = datetime.datetime.now()
 
         username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+            {"username": session["user"]})["username"]
 
         recipe = {
             "recipe_category": request.form.get("recipe_category"),
@@ -267,7 +292,7 @@ def edit_recipe(recipe_id):
         }
 
         username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+            {"username": session["user"]})["username"]
 
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
@@ -277,7 +302,8 @@ def edit_recipe(recipe_id):
     categories = mongo.db.categories.find()
     difficultys = mongo.db.difficulty.find()
     return render_template(
-        "pages/edit_recipe.html", recipe=recipe, categories=categories, difficultys=difficultys)
+            "pages/edit_recipe.html", recipe=recipe,
+            categories=categories, difficultys=difficultys)
 
 
 @app.route("/delete_recipe/<recipe_id>")
