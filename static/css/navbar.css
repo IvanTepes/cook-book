@@ -97,11 +97,13 @@ nav .brand-logo {
   }
 
   /* To override Materialize default font */
+  /* Position logo inside mobile nav bar */
   .sidenav li > a {
     color: var(--eerie-black);
     font-size: 1.3rem;
     font-weight: bold;
     letter-spacing: 1.5px;
+    height: 100%;
   }
 
   /* When selected tab is pressed on mobile  */
