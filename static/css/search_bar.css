@@ -23,7 +23,7 @@
     top: 0.5rem;
 }
 
-/* icon color */
+/* Icon color */
 .fas {
     color: var(--flame);
 }
@@ -67,4 +67,131 @@
 .search-btn:hover {
     background-color:  var(--eerie-black);
     color:  var(--flame);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 320px) {
+    /* Search Position */
+      .card-panel {
+    margin-top: 14vw;
+    margin-bottom: 14vw;
+    }
+
+    /* Hide button icons on small */
+    .btn i, .btn-large i, .btn-small i, .btn-floating i, .btn-large i, .btn-small i, .btn-flat i {
+    display: none;
+}
+
+    /* Position search icon */
+    .input-field .prefix {
+    position: absolute;
+    width: 3rem;
+    font-size: 2.5rem;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    top: 0.5rem;
+}  
+    /* Button display  */
+    .btn-container {
+        display: flex;
+}
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Search Position */
+    .card-panel {
+    margin-top: 10vw;
+    margin-bottom: 0vw;
+}
+}
+    /* Hide button icons on small */
+    .btn i, .btn-large i, .btn-small i, .btn-floating i, .btn-large i, .btn-small i, .btn-flat i {
+    display: none;
+    }
+
+    /* Position search icon */
+    .input-field .prefix {
+    position: absolute;
+    width: 3rem;
+    font-size: 2.5rem;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    top: 0.5rem;
+ } 
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .card-panel {
+    margin-top: 14vw;
+    margin-bottom: 15vw;
+    }
+
+    /* Hide button icons on small */
+    .btn i, .btn-large i, .btn-small i, .btn-floating i, .btn-large i, .btn-small i, .btn-flat i {
+    display: none;
+    }
+
+    /* Position search icon */
+    .input-field .prefix {
+    position: absolute;
+    width: 3rem;
+    font-size: 2.5rem;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    top: 0.5rem;
+ }  
+    /* Button display  */
+    .btn-container {
+    display: inline;
+}
+
+    /* Center btn */
+    .btn, .btn-large, .btn-small, .btn-flat {
+    margin-right: 0px;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .card-panel {
+    padding: 10px;
+    background-color: var(--pale-silver);
+    border-radius: 30px;
+    margin-top: 11vw;
+    margin-bottom: 11vw;
+}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .card-panel {
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+}
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .card-panel {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+}
+}
+
+@media only screen and (min-width: 1400px) {
+    .card-panel {
+    padding: 10px;
+    background-color: var(--pale-silver);
+    border-radius: 30px;
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+    
+}
+
 }
