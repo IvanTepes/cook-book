@@ -1,27 +1,26 @@
 {% block recipe_card %}
 
-    <div class="col s6 m4 l3">
-        <a href="{{ url_for('recipe', recipe_id=recipe._id) }}">
-            <div class="card z-depth-5">
+        <a class="col s6 m3" href="{{ url_for('recipe', recipe_id=recipe._id) }}">
+            <div class="card main-shadow">
                 <div class="card-image">
                     <img src="{{ recipe.recipe_image }}">
                     <span class="card-title">{{ recipe.recipe_name }}</span>
                 </div>
                 <div class="card-content">
                     <div class="row card-content">
-                        <div class="card-category col s6 cooking-time">
+                        <div class="col card-category  s6 cooking-time">
                             <i class="fas fa-mortar-pestle"></i>
                             {{recipe.recipe_prep_time }}
                         </div>
-                        <div class="card-category col s6 allergens">
+                        <div class="col card-category  s6 allergens">
                             <i class="fas fa-clock"></i>
                             {{recipe.recipe_cooking_time }}
                         </div>
-                        <div class="card-category col s6 serves">
+                        <div class="col card-category  s6 serves">
                             <i class="fas fa-users"></i>
                             {{recipe.recipe_servings }}
                         </div>
-                        <div class="card-category col s6 difficulty">
+                        <div class="col card-category  s6 difficulty">
                             <i class="fas fa-balance-scale"></i>
                             {{recipe.recipe_difficulty }}
                         </div>
@@ -29,6 +28,5 @@
                 </div>
             </div>
         </a>
-    </div>
    
 {% endblock %}
