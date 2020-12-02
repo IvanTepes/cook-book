@@ -4,13 +4,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
 
-<div class="recipe-card container">
-    <div class="row">
-    {% for recipe in lunch %}
-        {% include 'components/recipe_card/recipe_card.html' %}
-    {% endfor %}
+    <div class="container recipe-card">
+        <div class="row justify-center">
+            {% for recipe in lunch %}
+                {% include 'components/recipe_card/recipe_card.html' %}
+            {% endfor %}
+        </div>
     </div>
-</div>
-
 
 {% endblock %}
