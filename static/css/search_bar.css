@@ -1,0 +1,70 @@
+/* Search Bar Styles */
+
+/* To change default padding */
+.card-panel {
+    padding: 10px;
+    background-color: var(--pale-silver);
+    border-radius: 30px;
+    margin-top: 115px;
+    margin-bottom: 150px;
+}
+
+.search-container {
+    border-radius: 50px;
+}
+
+/* Search icon size and location  */
+.input-field .prefix {
+    position: absolute;
+    width: 4rem;
+    font-size: 3rem;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    top: 0.5rem;
+}
+
+/* icon color */
+.fas {
+    color: var(--flame);
+}
+
+/* Search filed size */
+.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .helper-text, .input-field .prefix ~ .autocomplete-content {
+    margin-left: 5rem;
+    width: 68%;
+    width: calc(100% - 5rem);
+}
+
+/* Buttons Style */
+.btn, .btn-large, .btn-small, .btn-flat {
+    border: none;
+    font-weight: 800;
+    font-family: 'Roboto';
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: var(--pale-silver);
+    color: var(--pale-silver);
+}
+
+/* Search btn */
+.search-btn {
+    background-color: var(--eerie-black);
+    border-radius: 51px;
+}
+
+/* Reset btn */
+.reset-btn {
+    background-color: var(--flame);
+}
+
+/* Border radius */
+.search-btn,
+.reset-btn {
+    border-radius: 10px;
+}
+
+/* Search on hover */
+.search-btn:hover {
+    background-color:  var(--eerie-black);
+    color:  var(--flame);
+}
