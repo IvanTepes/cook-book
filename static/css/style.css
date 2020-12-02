@@ -13,6 +13,13 @@
     --text-font: "Roboto", sans-serif;
 }
 
+/* Body Bg Color */
+body {
+    background-color: var(--floral-white);
+    height: 100vh;
+    margin: 0;
+}
+
 /* H1 only welcome "Start Cooking" msg  */
 h1 {
     font-family: var(--header-font);
@@ -20,12 +27,26 @@ h1 {
     text-shadow: 0px 7px 7px var(--eerie-black);
 }
 
+/* Parallax overlay  */
+.message-container {
+    background-color: rgb(0 0 0 / 50%);
+}
 
-/* Body Bg Color */
-body {
-    background-color: var(--floral-white);
-    height: 100vh;
-    margin: 0;
+/* 
+    Classes for hide not working without this
+    Small an medium screens
+ */
+.show-on-small {
+    display: none;
+}
+
+.show-on-medium-and-up {
+    display: none;
+}
+
+/* Use as global shadow for elements */
+.main-shadow {
+    box-shadow: 0px 2px 20px 0px  var(--shadow);
 }
 
 /* Navbar position  */
@@ -37,12 +58,6 @@ nav {
     font-family: 'Pacifico';
     font-weight: 500;
 }
-
-/* Navbar shadow */
-nav .nav-wrapper {
-    box-shadow: 0px 7px 20px 2px var(--shadow);
-}
-
 
 /* Flash messages style and position */
 .flashes h4 {
@@ -137,11 +152,13 @@ input {
     text-shadow: 0px 7px 7px var(--shadow);
 }
 
+/* ******************* MEDIA QUERY ********************** */
+
 /* If the screen size is 600px wide or less */
 @media screen and (max-width: 400px) {
    /* Message container */
     .message-container {
-    background-color: rgb(0 0 0 / 67%);
+    /* background-color: rgb(0 0 0 / 67%); */
     padding-top: 63px;
     text-align: center;
     height: 100%;
@@ -169,8 +186,8 @@ input {
 
     /* Added dimmed background for better contrast */
     .message-container {
-    background-color: rgb(0 0 0 / 67%);
-    padding-top: 63px;
+    /* background-color: rgb(0 0 0 / 67%); */
+    padding-top: 105px;
     text-align: center;
     height: 100%;
   }
@@ -178,13 +195,13 @@ input {
    .parallax-container p {
     text-align: center;
     font-family: var(--header-font);
-    font-size: 8vw;
+    font-size: 5vw;
     text-shadow: 0px 4px 2px var(--shadow);
     color: var(--pale-silver);
   }
 
   h1 {
-      font-size: 14vw;
+      font-size: 10vw;
       color: var(--flame);
       text-shadow: 0px 7px 7px var(--shadow);
       padding: 10px;
@@ -192,10 +209,11 @@ input {
 
 }
 
+
 /* If the screen size is 601px wide or more */
 @media only screen and (min-width: 601px) {
     .message-container {
-    background-color: rgb(0 0 0 / 67%);
+    /* background-color: rgb(0 0 0 / 67%); */
     position: relative;
     padding: 96px 0;
     text-align: center;
@@ -209,6 +227,7 @@ input {
     font-family: 'Pacifico';
     text-shadow: -4px 4px 2px var(--shadow);
     color:  var(--pale-silver);
+    padding: 1px;
   }
 
   h1 {
@@ -217,36 +236,37 @@ input {
     text-shadow: -2px 9px 4px var(--shadow);
 }
 
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-   .message-container {
+   /* .message-container {
     background-color: rgb(0 0 0 / 67%);
     position: relative;
     margin: auto;
     width: 100%;
-    padding: 90px 0;
+    padding: 100px 0;
     padding-right: 48vw;
     text-align: center;
-}
+} */
     /* Submesage style */
-   .parallax-container p {
+   /* .parallax-container p {
     font-size: 3vw;
     text-shadow: -4px 4px 2px var(--shadow);
     color: var(--pale-silver);
     padding: 1px;
-  }
+  } */
     /* Start Cooking message */
   h1 {
     font-size: 6vw;
-    padding: 10px;
-    text-shadow: -2px 9px 4px var(--shadow);
+    /* padding: 10px;
+    text-shadow: -2px 9px 4px var(--shadow); */
   }
   
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .message-container {
+    /* .message-container {
     background-color: rgb(0 0 0 / 67%);
     position: relative;
     margin: auto;
@@ -254,38 +274,38 @@ input {
     padding: 70px 0;
     padding-right: 48vw;
     text-align: center;
-  }
-   .parallax-container p {
+  } */
+   /* .parallax-container p {
     font-size: 3vw;
     text-shadow: -4px 4px 2px var(--shadow);
     color: var(--pale-silver);
     padding: 1px;
   }
-    
-  h1 {
+     */
+  /* h1 {
       font-size: 5vw;
       padding: 10px;
       text-shadow: -2px 9px 4px var(--shadow);
-  }
+  } */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1100px) {
     .message-container {
-    background-color: rgb(0 0 0 / 67%);
-    position: relative;
+    /* background-color: rgb(0 0 0 / 67%); */
+    /* position: relative;
     margin: auto;
     width: 100%;
     padding: 70px 0;
+    text-align: center; */
     padding-right: 55vw;
-    text-align: center;
     }
 
     .parallax-container p {
     font-size: 2vw;
-    text-shadow: -4px 4px 2px var(--shadow);
+    /* text-shadow: -4px 4px 2px var(--shadow);
     color: var(--pale-silver);
-    padding: 1px;
+    padding: 1px; */
     }
 
   h1 {
@@ -296,25 +316,28 @@ input {
 
 /*  Screens 1400px and up */
 @media only screen and (min-width: 1400px) {
-    .message-container {
+    /* Hero messages */
+    /* .message-container {
     background-color: rgb(0 0 0 / 67%);
     position: relative;
     margin: auto;
     width: 100%;
-    padding: 70px 0;
     padding-right: 55vw;
     text-align: center;
-    }
+    padding: 70px 0;
+    } */
 
-    .parallax-container p {
+    /* .parallax-container p {
     font-size: 2vw;
     text-shadow: -4px 4px 2px var(--shadow);
     color: var(--pale-silver);
     padding: 1px;
-    }
+    } */
 
-  h1 {
+  /* h1 {
       font-size: 4vw;
   }
+ */
+  /* Search bar position */
 }
 }
