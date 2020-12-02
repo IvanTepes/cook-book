@@ -1,6 +1,35 @@
 /* Recipe cards style and position
    Category size and borders 
  */
+
+ /* Position card */
+/* .recipe-card .col .row {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+} */
+
+/* To center categorys inside card */
+.col .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* To remove left margin from recipe cards and position them to middle 
+    give padding from both sides to get space between cards
+*/
+.row .col.m3,
+.row .col.s6 {
+    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+/* To remove paddings around recipe categories */
+.card .card-content {
+    padding: 0px;
+}
+
 .cooking-time {
   height: 20px;
   border-bottom: 1px solid var(--floral-white);
@@ -28,12 +57,13 @@
   background-color: var(--pale-silver);
   height: 100px;
   display: grid;
-  color: #252422;
+  color: var(--eerie-black);
   position: relative;
   align-items: center;
   justify-content: center;
   font-size: 15px;
   text-align: center;
+  font-weight: 700;
 }
 
 /* Image position inside card */
@@ -42,7 +72,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-radius: 20px;
-  height: 200px;
+  height: 160px;
 }
 
 /* Position image on middle of card */
@@ -58,18 +88,34 @@
   position: initial;
 }
 
+/* Recipe cards on hover */
+.card:hover {
+    box-shadow: 0px 2px 20px 3px #eb5e28, 0px 2px 20px 2px #0000006e; ;
+}
+
+/* Recipe titles in cards */
+.card .card-image .card-title {
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    /* padding: 19px; */
+    color: #eb5e28;
+    font-family: 'Pacifico';
+    text-shadow: 0px 0px 3px #000000;
+    /* border-bottom: 1px solid black; */
+    text-decoration: underline;
+    letter-spacing: 1px;
+    /* margin-top: 10px; */
+}
+
+/* box-shadow: 0px 2px 20px 3px #eb5e28, 0px 2px 20px 2px #0000006e; */
+
 /* To override Materialize style cards */
-.card .card-content {
+/* .card .card-content {
   padding: 0px;
   border-radius: 0 0 2px 2px;
 }
-
-/* Cards category position and size */
-.recipe-card .col .row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
+ */
 /* 
    Cards style for mobile screens  
    Override my custom styles for mobile screens 
