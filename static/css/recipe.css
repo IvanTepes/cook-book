@@ -9,7 +9,7 @@ nav li{
 }
 
 /* Parallax image blur */
-.parallax-container {
+.message-container {
     filter: blur(5px);
 }
 
