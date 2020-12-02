@@ -2,6 +2,8 @@
 
 {% block content %}
 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
 <!-- 
     Hero image source
     https://downloads.canon.com/nw/learn/2019/june/top-tips-for-better-food-photos-on-social-media/liza-gershman-food-photos-social-parallax.jpg
@@ -18,7 +20,11 @@
     {% include 'components/text_dividers/divider_top.html' %}
 
     <!-- Breakfast -->
-    <h1 class="center-align category-headers">For Great Morning</h1>
+    <div class="container">
+        <div class="row center-align">
+            <h1 class="center-align category-headers">For Great Morning</h1>
+        </div>
+    </div>
 
     <!-- Decoarative Text Divider Bottom -->
     {% include 'components/text_dividers/divider_bottom.html' %}
@@ -30,7 +36,11 @@
     {% include 'components/text_dividers/divider_top.html' %}
 
     <!-- Lunch -->
-    <h1 class="center-align category-headers">For Perfect Lunch</h1>
+    <div class="container">
+        <div class="row center-align">
+           <h1 class="center-align category-headers">For Perfect Lunch</h1>
+        </div>
+    </div>
 
     <!-- Decoarative Text Divider Bootom -->
     {% include 'components/text_dividers/divider_bottom.html' %}
@@ -42,7 +52,11 @@
     {% include 'components/text_dividers/divider_top.html' %}
 
     <!-- Dinner -->
-    <h1 class="center-align category-headers">For Easy Dinner</h1>
+    <div class="container">
+        <div class="row center-align">
+           <h1 class="center-align category-headers">For Easy Dinner</h1>
+        </div>
+    </div>
 
     <!-- Decoarative Text Divider Bootom -->
     {% include 'components/text_dividers/divider_bottom.html' %}
@@ -54,8 +68,12 @@
     {% include 'components/text_dividers/divider_top.html' %}
 
     <!-- Desserts -->
-    <h1 class="center-align category-headers">Best From Desserts</h1>
-
+    <div class="container">
+        <div class="row center-align">
+           <h1 class="center-align category-headers">Best From Desserts</h1>
+        </div>
+    </div>
+    
     <!-- Decoarative Text Divider Bootom -->
     {% include 'components/text_dividers/divider_bottom.html' %}
 
