@@ -27,6 +27,14 @@ h1 {
     text-shadow: 0px 7px 7px var(--eerie-black);
 }
 
+h3 {
+    font-size: 50px;
+    font-family: var(--header-font);
+    text-shadow: -4px 4px 2px #eb5e28;
+    color: #252422;
+    padding: 3px;
+}
+
 /* Parallax overlay  */
 .message-container {
     background-color: rgb(0 0 0 / 50%);
@@ -77,11 +85,20 @@ nav {
     margin-right: 0px;
 }
 
+/* Custom margin style */
+.margin-b {
+    margin-bottom: 2rem;
+}
+
 /* To remove bottom margin from materialize rows */
 .no-bottom-margin {
     margin-bottom: 0px;
 }
 
+/* No margin left */
+.no-margin-left{
+    margin-left: 0px! important;
+}
 /* To justify recipe cards to center */
 .justify-center {
     position: relative;
@@ -100,6 +117,73 @@ nav {
 /*     font-family: "Pacifico", sans-serif;
     color: var(--flame); */
     text-shadow: 0px 7px 7px var(--shadow);
+}
+
+/* Login form message */
+.index-message h3 {
+    font-family: var(--header-font);
+    font-size: 3vw;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.login-index-container {
+    box-shadow: 0px 2px 20px 0px var(--shadow);
+    border-radius: 30px;
+}
+
+/* Position search bar on search page and error*/
+.new-search-container {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    position: relative;
+    top: 7vw;
+}
+
+/* To position search result below search bar */
+.search-result-container {
+    margin-top: 8vw;
+    margin-bottom: 4vw;
+    text-align: center;
+}
+
+/* Centering error message in middle
+    Push footer to bottom
+ */
+.error-message {
+    position: relative;
+    margin-top: 133px;
+    text-align: center;
+    margin-bottom: 32px;;
+}
+
+/* Align instruction message to middle */
+.new-search {
+    text-align: center;
+    /* margin: 0px !important; */ 
+}
+
+/* Position message below search bar */
+.search-instruction-container {
+    margin-top: 165px;
+}
+
+/* Error msg New search msg icons */
+.search-result-container .fa-smile,
+.new-search .fa-smile,
+.error-message .fa-sad-tear {
+    font-size: 10vw;
+    text-shadow: 0px 6px 14px black;
+}
+
+/* Remove margins from search_bar.css:188 */
+.new-search-container .new-search {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.new-search-container .recipe-card {
+    margin-top: 158px;
 }
 
 /* Flash messages style and position */
@@ -160,6 +244,12 @@ input {
     border-radius: 10px;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
+}
+
+/* To position log in */
+.index-log-btn {
+    width: 80% !important;
+    transform: translate(13%,-10%);
 }
 
 /* To add breading space between dividers and headers */
