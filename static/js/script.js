@@ -18,6 +18,17 @@ $(document).ready(function () {
     // Select dropdown initalization
     $('select').formSelect();
 
+    // Modal initalization
+    $('.modal').modal();
+
+    // Carousel
+    $('.carousel').carousel();
+
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+
     // Character counter initalization
     $('input#recipe_name,#recipe_cuisine,#recipe_cooking_time,#recipe_prep_time,         #recipe_ingredients,#recipe_method,#recipe_image').characterCounter();
 
