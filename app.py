@@ -152,7 +152,7 @@ def register():
             {"email": request.form.get("email").lower()})
 
         if existing_email:
-            flash("Email already exists!")
+            flash("Email aready in use! Please try again")
             return redirect(url_for("register"))
 
         register = {
@@ -256,7 +256,7 @@ def add_recipe():
         }
 
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipe Successfully Added")
+        flash("Thank you for adding the recipe and for using the Cook Book app. You can find your recipes below, the last recipe added is always in the first place!")
         return redirect(url_for("my_recipes", username=username))
 
     categories = mongo.db.categories.find()
