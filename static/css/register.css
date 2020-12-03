@@ -1,8 +1,36 @@
 /* Register Container  */
+
+/* Position of register/login container */
 .register-container {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  background-color: var(--pale-silver);
+    border-radius: 30px;
+    top: 100px;
+    position: relative;
+    display: block;
+    margin-bottom: 142px;
+    background-color: var(--pale-silver);
+    border-top-left-radius: 30px;
+    box-shadow: 0px 2px 20px 0px var(--shadow);
+}
+
+/* Container style */
+.register-container .row {
+    border-radius: 30px;
+}
+
+/* Top left and right tabs border radius */
+.register-container .row .tabs {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Login/register.html button */
+.forms-btn {
+    box-shadow: 0px 0px 20px 0px #000000;
+    border-radius: 20px;
+}
+
+.forms-btn:hover {
+    box-shadow: 0px 0px 10px 10px #eb5e28;
 }
 
 /* Register tab icons color */
@@ -52,11 +80,15 @@
 }
 
 /* Register invite message */
-.sign-msg {
-  font-family: "Pacifico";
-  text-shadow: 0px 7px 7px var(--black-olive);
+/* .sign-msg {
+    font-size: 50px;
+    font-family: var(--header-font);
+    text-shadow: 0px 3px 3px #eb5e28;
+    color: #252422;
+    padding: 3px;
+    -----DELETE-----
 }
-
+ */
 /* Tabs text color when is inactive */
 .tabs .tab a {
   color: var(--flame);
