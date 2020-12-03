@@ -58,7 +58,7 @@ def search():
     The Database (8a - Text Index Searching)
     offer user to search form db recipes collection
     all fields category, name ,cook time,etc
-    Search use two pages one when user comming from home page
+    Search use two pages one when user comes from home page
     and one when reset search same page is used
     for display error messages
     """
@@ -85,7 +85,7 @@ def recipe(recipe_id):
 @app.route('/breakfast')
 def breakfast():
     """
-    Renders breakfast recipe page and finds all breakfast
+    Renders breakfast recipe page and find all breakfast
     Sort them by last entry in db
     """
     breakfast = {"recipe_category": "Breakfast"}
@@ -97,7 +97,7 @@ def breakfast():
 @app.route('/lunch')
 def lunch():
     """
-    Renders lunch recipe page and finds all lunch
+    Renders lunch recipe page and find all lunch
     Sort them by last entry in db
     """
     lunch = {"recipe_category": "Lunch"}
@@ -121,7 +121,7 @@ def dinner():
 @app.route('/desserts')
 def desserts():
     """
-    Renders desserts recipe page and finds all desserts
+    Render desserts recipe page and finds all desserts
     Sort them by last entry in db
     """
     desserts = {"recipe_category": "Desserts"}
@@ -133,9 +133,9 @@ def desserts():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Register functio which check if user is provide uniqe
-    username and email if it registration is sucessful
-    If not he is returned to try again whit message that something
+    Register function check if user is provide uniqe
+    username and email if registration is sucessful
+    If not he is returned to try again with message that something
     is wrong (email or username is aready in db)
     """
     if request.method == "POST":
@@ -204,9 +204,9 @@ def login():
 def my_recipes(username):
     """
     Grab the session user's username from db
-    When user is looged, search all recipe added by looged user
+    When user is loged, search all recipe added by loged user
     and sort them by last added recipes.
-    If log is failed redirect them to login page
+    If log in is failed redirect them to login page
     """
     logged_user = {"created_by": username}
     my_recipes = mongo.db.recipes.find(logged_user).sort("_id", -1)
@@ -232,9 +232,11 @@ def logout():
 def add_recipe():
     if request.method == "POST":
         """
-        After user add recipe he is redirected to my recipe page
+        After Add redirected to my recipe page
         what give him option to see recipe added and
         process to edit if he make mistake
+        Set current time and date for recipe record 
+        
         """
         today = datetime.datetime.now()
 
@@ -270,9 +272,10 @@ def add_recipe():
 def edit_recipe(recipe_id):
     if request.method == "POST":
         """
-        Edit recipe function
-        After user edit own recipe he is redirected
-        to page with own recipes
+        Read recipe by _id to display user input
+        After edit recipe redirected to
+        own recipes
+        Grab datetime for update
         """
         today = datetime.datetime.now()
 
@@ -309,8 +312,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     """
     Delete recipe function
-    After user delete own recipe he is redirected
-    to page with own recipes
+    After delete redirected own recipes
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
