@@ -3,7 +3,7 @@
 <!-- Link to css files -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-
+    <!-- Dinner Cards -->
 	<div class="container recipe-card">
 		<div class="row justify-center">
 			{% for recipe in dinner %}
@@ -11,6 +11,5 @@
 			{% endfor %}
 		</div>
 	</div>
-
 
 {% endblock %}
