@@ -8,19 +8,21 @@
     <!-- Link to recipes card css file-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
+    <!-- Decorative Text Divider Top -->
     {% include 'components/text_dividers/divider_top.html' %}
 
     <div class="headers">
-        <h3 class="center-align category-headers">
-            Dinner
-        </h3>
+        <h1 class="center-align category-headers">
+            Dinners Recipes
+        </h1>
     </div>
 
+    <!-- Decorative Text Divider Bottom -->
     {% include 'components/text_dividers/divider_bottom.html' %}
 
     <!-- Add middle divider after 4 added recipes -->
     <div class="recipe-card container">
-        <div class="row">
+        <div class="row justify-center">
             {% for recipe in dinner %}
                 {% include 'components/recipe_card/recipe_card.html' %}  
                 {% if loop.index == 4 %}
