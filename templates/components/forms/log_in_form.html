@@ -9,8 +9,13 @@
    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
       <div id="log_in_form" class="card-panel">
       <h3 class="sign-msg">
+           We Miss You!
+        </h3>
+        <h3 class="sign-msg">
             Welcome Back!
         </h3>
+        <!-- Flash Message -->
+        {% include 'components/flash_msg/flash_message.html' %}
          <!-- Username -->
          <div class="row">
             <div class="input-field col s12">
@@ -33,7 +38,7 @@
          </div>
          <!-- Log in  -->
 		<div class="row">
-			<button type="submit" class="col s12 btn-large z-depth-3">
+			<button type="submit" class="col s12 btn-large forms-btn">
 		        Log In 
 		    </button>
 			<div class="col s12">
