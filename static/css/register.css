@@ -77,12 +77,3 @@
 .card-panel input {
   color: var(--eerie-black);
 }
-
-/* Override materialize sizing container for detskop screens */
-@media screen and (min-width: 993px) {
-  .container {
-    width: 60%;
-  }
-}
-
-/* /registration page */
