@@ -22,7 +22,7 @@
 
     <!-- Add middle divider after 4 added recipes -->
     <div class="recipe-card container">
-        <div class="row justify-center">
+        <div class="row">
             {% for recipe in breakfast %}
                 {% include 'components/recipe_card/recipe_card.html' %}  
                 {% if loop.index == 4 %}
