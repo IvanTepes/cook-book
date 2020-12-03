@@ -26,6 +26,9 @@ nav .brand-logo {
     position: absolute;
     background-color: var(--flame);
     height: 204px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 2px 20px 0px var(--shadow);
   }
 
   /* Dropdown category style */
