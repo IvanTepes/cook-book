@@ -101,7 +101,7 @@
     padding: 0px;
     color: #eb5e28;
     font-family: 'Pacifico';
-    text-shadow: -2px 0px 3px #000000;;
+    text-shadow: 0px -3px 3px #000000;
     /* border-bottom: 1px solid black; */
     text-decoration: underline;
     letter-spacing: 2px;
@@ -111,7 +111,7 @@
 
 /* Recipe name font  */
 .card .card-title {
-    font-size: 1.3vw;
+    font-size: 1.6vw;
     font-weight: 300;
 }
 
