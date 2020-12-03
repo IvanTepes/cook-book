@@ -13,9 +13,6 @@ window.onload = function() {
   checkActivePage();
 };
 
-/* Check where user is */
-function checkActivePage() {
-
 // Grab git page
 let gitPage = "https://8080-eb42513f-a0fa-42fd-9fac-02217a4bbd7d.ws-eu01.gitpod.io/"
 
@@ -30,6 +27,10 @@ let categories = ["breakfast", "dinner", "lunch", "desserts"];
     if true line >> 35
 */
 let recipePage = categories.some(el => activePage.includes(el));
+
+
+/* Check where user is */
+function checkActivePage() {
 
 
 if (activePage == gitPage ) {
@@ -51,5 +52,4 @@ if (activePage == gitPage ) {
 } else { (activePage.includes("logout")) 
   document.getElementById("logout").classList.toggle("visited");
 }
-
 }
