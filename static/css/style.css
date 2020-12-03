@@ -73,6 +73,11 @@ nav {
     float: none;
 }
 
+/* Decorative divider middle */
+.decorative-divider-middle {
+    padding: 70px;
+}
+
 /* Recipe card margins */
 .recipe-card {
     margin-top: 4vw;
@@ -193,7 +198,6 @@ nav {
     margin-top: 158px;
 }
 
-
 /* Flash messahes container */
 .flash-msg {
     box-shadow: 0px 0px 10px 7px red;
@@ -215,6 +219,33 @@ nav {
     letter-spacing: 1.5px;
 }
 
+/* New here msg on login form */
+.new-here-msg {
+    font-family: 'Pacifico';
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: 0px 0px 7px #000000, 3px -1px 1px #000000, 1px -2px 1px #000000;
+    color: #fffcf2;
+}
+
+/* Register account style */
+.register-acc {
+    color: #eb5e28;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Register in form on hover */
+.register-acc:hover {
+    color: #000000;
+    text-decoration: underline;
+    -webkit-tap-highlight-color: transparent;
+    text-shadow: 2px -2px 3px #eb5e28, -2px -2px 0px #eb5e28, 0px 0px 1px #eb5e28;
+}
+
+.edit-delete-btn {
+    border-top: 1px solid black;
+}
 
 /* Icons style and color */
 .fas {
