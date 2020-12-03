@@ -17,13 +17,13 @@
 /* To remove left margin from recipe cards and position them to middle 
     give padding from both sides to get space between cards
 */
-.row .col.m3,
+/* .row .col.m3,
 .row .col.s6 {
     margin-left: 0px;
     padding-right: 20px;
     padding-left: 20px;
 
-}
+} */
 
 /* To remove paddings around recipe categories */
 .card .card-content {
@@ -98,14 +98,21 @@
     bottom: 0;
     left: 0;
     max-width: 100%;
-    /* padding: 19px; */
+    padding: 0px;
     color: #eb5e28;
     font-family: 'Pacifico';
-    text-shadow: 0px 0px 3px #000000;
+    text-shadow: -2px 0px 3px #000000;;
     /* border-bottom: 1px solid black; */
     text-decoration: underline;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     /* margin-top: 10px; */
+    position: relative;
+}
+
+/* Recipe name font  */
+.card .card-title {
+    font-size: 1.3vw;
+    font-weight: 300;
 }
 
 /* box-shadow: 0px 2px 20px 3px #eb5e28, 0px 2px 20px 2px #0000006e; */
