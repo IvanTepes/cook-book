@@ -1,57 +1,57 @@
 {% block log_in_form %}
 
-<!-- Link css file -->
 
+<!-- Link css file -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 
-
-<div class="container">
-   <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-      <div id="log_in_form" class="card-panel">
-      <h3 class="sign-msg">
-           We Miss You!
-        </h3>
-        <h3 class="sign-msg">
-            Welcome Back!
-        </h3>
-        <!-- Flash Message -->
-        {% include 'components/flash_msg/flash_message.html' %}
-         <!-- Username -->
-         <div class="row">
-            <div class="input-field col s12">
-               <i class="fas fa-user prefix"></i>
-               <input id="username" name="username" type="text"
-                  minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
-                  class="validate" required>
-               <label for="username">Username</label>
+    <!-- Log In Form -->
+    <div class="container">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+            <div id="log_in_form" class="card-panel">
+            <h3 class="sign-msg">
+                We Miss You!
+                </h3>
+                <h3 class="sign-msg">
+                    Welcome Back!
+                </h3>
+                <!-- Flash Message -->
+                {% include 'components/flash_msg/flash_message.html' %}
+                <!-- Username -->
+                <div class="row">
+                    <div class="input-field col s12">
+                    <i class="fas fa-user prefix"></i>
+                    <input id="username" name="username" type="text"
+                        minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                        class="validate" required>
+                    <label for="username">Username</label>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="row">
+                    <div class="input-field col s12">
+                    <i class="fas fa-user-lock prefix"></i>
+                    <input id="password" name="password"
+                        minlength="5" maxlength="15" type="password"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                    </div>
+                </div>
+                <!-- Log in  -->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large forms-btn">
+                        Log In 
+                    </button>
+                    <div class="col s12">
+                        <p class="center-align">
+                            New Here?
+                            <a href="{{ url_for('register') }}">
+                                Register Account!
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <!-- Password -->
-         <div class="row">
-            <div class="input-field col s12">
-               <i class="fas fa-user-lock prefix"></i>
-               <input id="password" name="password"
-                  minlength="5" maxlength="15" type="password"
-                  pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-               <label for="password">Password</label>
-            </div>
-         </div>
-         <!-- Log in  -->
-		<div class="row">
-			<button type="submit" class="col s12 btn-large forms-btn">
-		        Log In 
-		    </button>
-			<div class="col s12">
-				<p class="center-align">
-					New Here?
-					<a href="{{ url_for('register') }}">
-						Register Account!
-					</a>
-				</p>
-			</div>
-         </div>
-      </div>
-   </form>
-</div>
+        </form>
+    </div>
 
 {% endblock %}
