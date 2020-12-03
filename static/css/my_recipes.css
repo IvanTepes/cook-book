@@ -1,10 +1,23 @@
-/* Headers position */
-.headers { 
-    top: 0px;
-    padding-bottom: 0px;
-}
+/* My Recipe styles used separate css because of middle divider */
 
 /* Decorative dividers position */
-.decorative-divider-top {
+.decorative-divider-top-main .row .col {
     margin-top: 80px;
+    float: none;
+}  
+
+/* Middle divider show after 4 recipes is added */
+.decorative-divider-middle {
+ /*    display: grid; */
+    padding: 25px;
+}
+
+/* Log in welcome message  */
+.log-in-welcome-msg {
+    font-size: 50px;
+    font-family: var(--header-font);
+    text-shadow: -4px 4px 2px #eb5e28;
+    color: #252422;
+    padding: 3px;
+    margin-top: 0px;
 }
