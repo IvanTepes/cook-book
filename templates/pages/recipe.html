@@ -10,14 +10,7 @@
 
 
 <!-- 
-            COPY  MEDIA QUERIES
-            -------------------
-            POSITION DIVIDERS
-            ------------------
-            SEARCH POSITION 
-            -----------------
-            RECIPE CARDS
-            -----------------
+        
             FLOAT ACTION BUTTON BUTTONS
             ---------------------------
             CARD SOLUTION --- >> CAROUSEL CATEGORY MOBILE
@@ -26,14 +19,11 @@
             -----------------
             MODAL DELETE RECIPE AGREED 
             ------------------
-            SEARCH ERROR 
             ------------
             WORKING PAGE Circular Flashing Colors
             ---------------
             PAGINATION
             ------------
-            FORMS
-            --------
             REGISTER REPEAT PASSWORD 
             --------
             
@@ -48,14 +38,14 @@
 
 
     <div class="parallax-container">
-        <div class="parallax"><img src="{{ recipe.recipe_image}}"></div>
+        <div class="parallax message-container"><img src="{{ recipe.recipe_image}}"></div>
 	</div>
 	<div class="container recipe-container">
 		{% include 'components/text_dividers/divider_top.html' %}
 		<div class="headers">
-			<h3 class="center-align recipe-name">
+			<h1 class="center-align recipe-name">
 				{{ recipe.recipe_name }}
-			</h3>
+			</h1>
 		</div>
 		{% include 'components/text_dividers/divider_bottom.html' %}
         <div class="container info-container">
