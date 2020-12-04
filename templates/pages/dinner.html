@@ -1,36 +1,37 @@
-{% extends "layout/base.html" %}
+{% extends "layout/base.html" %} {% block content %}
 
-{% block content %}
+<!-- Link to category css file-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipes_category.css') }}">
 
-    <!-- Link to category css file-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipes_category.css') }}">
+<!-- Link to recipes card css file-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-    <!-- Link to recipes card css file-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+<!-- Decorative Text Divider Top -->
+{% include 'components/text_dividers/divider_top.html' %}
 
-    <!-- Decorative Text Divider Top -->
-    {% include 'components/text_dividers/divider_top.html' %}
+<div class="headers">
+    <h1 class="center-align category-headers">
+        Dinners Recipes
+    </h1>
+</div>
 
-    <div class="headers">
-        <h1 class="center-align category-headers">
-            Dinners Recipes
-        </h1>
+<!-- Decorative Text Divider Bottom -->
+{% include 'components/text_dividers/divider_bottom.html' %}
+
+<!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
+{% include 'components/helpers/floating_button.html' %}
+
+<!-- Add middle divider after 4 added recipes -->
+<div class="recipe-card container">
+    <div class="row justify-center">
+        {% for recipe in dinner %} 
+            {% include 'components/recipe_card/recipe_card.html' %} 
+            {% if loop.index == 4 %} 
+                {% include 'components/text_dividers/divider_middle.html' %} 
+            {% endif %} 
+        {% endfor %}
     </div>
-
-    <!-- Decorative Text Divider Bottom -->
-    {% include 'components/text_dividers/divider_bottom.html' %}
-
-    <!-- Add middle divider after 4 added recipes -->
-    <div class="recipe-card container">
-        <div class="row justify-center">
-            {% for recipe in dinner %}
-                {% include 'components/recipe_card/recipe_card.html' %}  
-                {% if loop.index == 4 %}
-                    {% include 'components/text_dividers/divider_middle.html' %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+</div>
 
 
 {% endblock %}
