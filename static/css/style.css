@@ -372,11 +372,11 @@ input {
 }
 
     /*  Card title font */
-    .card .card-title {
+/*     .card .card-title {
     font-size: 8vw;
     font-weight: 300;
 }
-
+ */
 
 
 /* ******************* MEDIA QUERY ********************** */
@@ -453,7 +453,7 @@ input {
    } 
 
     /* To control recipe name in recipe card stylecss:147*/
-    .card .card-title {
+  .card .card-image .card-title {
     font-size: 5.6vw;
 }
     
@@ -538,6 +538,9 @@ input {
     /* padding: 10px;
     text-shadow: -2px 9px 4px var(--shadow); */
   }
+  .card .card-image .card-title {
+    font-size: 3vw;
+}
   
 }
 
