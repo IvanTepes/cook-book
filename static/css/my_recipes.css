@@ -1,16 +1,13 @@
 /* My Recipe styles used separate css because of middle divider */
 
 /* Decorative dividers position */
-.decorative-divider-top-main .row .col {
-    margin-top: 80px;
+.decorative-divider-top .row .col {
+    margin-top: 7rem;
     float: none;
 }  
 
 /* Middle divider show after 4 recipes is added */
-.decorative-divider-middle {
- /*    display: grid; */
-     padding: 70px;
-}
+
 
 /* Log in welcome message  */
 .log-in-welcome-msg {

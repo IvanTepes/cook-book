@@ -16,6 +16,8 @@
     margin-bottom: 80px;
     border-radius: 30px;
     box-shadow: 0px 2px 20px 0px var(--shadow);
+    margin-top: 4rem;
+    width: 60%:
 }
 
 /* Position and style of dropdown menus */
@@ -28,8 +30,8 @@
     height: 210px;
 }
 
-.headers { 
-    top: 50px;
+.decorative-divider-top .row .l6 {
+    margin-top: 7rem;
 }
 
 /* Recipe cards edit de;ete button */
