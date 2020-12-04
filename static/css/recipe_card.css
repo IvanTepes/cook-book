@@ -133,11 +133,11 @@
     left: 0;
     max-width: 100%; */
     padding: 0px;
-    color: #eb5e28;
+    color: #252422;
     font-family: 'Pacifico';
-    text-shadow: 0px -3px 3px #000000;
-    text-decoration: underline;
-    letter-spacing: 2px;
+    /* text-shadow: 0px -3px 3px #000000; */
+    /* text-decoration: underline; */
+    /* letter-spacing: 2px; */
     position: relative;
 }
 
