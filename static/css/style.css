@@ -449,8 +449,13 @@ input {
     /* To control want to share message */
     .index-message h3 {
     font-size: 7vw;
-}
 
+   } 
+
+    /* To control recipe name in recipe card stylecss:147*/
+    .card .card-title {
+    font-size: 5.6vw;
+}
     
 
     /* Position carousel */
