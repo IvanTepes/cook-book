@@ -16,14 +16,14 @@ nav li{
 /* position of recipe container */
 .recipe-container {
     margin-bottom: 200px;
-    margin-top: -360px;
+    margin-top: -325px;
     position: relative;
     z-index: 1;
     background-color: var(--floral-white);
     border: 1px solid var(--eerie-black);
     width: 90%;
     border-radius: 30px;
-    box-shadow: 0px 1px 10px 3px #000000
+    box-shadow: 0px 1px 20px 0px #000000;
 }
 
 /* Braething space from top */

@@ -69,15 +69,15 @@ nav {
     position: fixed; /* Add fixed to keep navbar on top */
     font-family: 'Pacifico';
     font-weight: 500;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    /* border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px; */
 }
 
 /* Navbar bottom */
-.nav-wrapper {
+/* .nav-wrapper {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-}
+} */
 
 
 /* To position divider in middle of element */
@@ -377,7 +377,7 @@ input {
     transform-style: preserve-3d;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    margin-top: -50vw;
+    margin-top: -47vw;
     margin-bottom: 9vw;
 }
 
@@ -474,7 +474,7 @@ input {
 
     /* To control recipe name in recipe card stylecss:147*/
     .card .card-image .card-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
    }
 
    /* To center image because change of width */
