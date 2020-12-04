@@ -2,36 +2,8 @@
 {% block content %}
 
 
-<!-- ********************* START FROM HERE ********************** -->
-
-
-<!-- ********************* DON, TOUCH STYLES ******************** -->
-
-
-
-<!-- 
-        
-            FLOAT ACTION BUTTON BUTTONS
-            ---------------------------
-            CARD SOLUTION --- >> CAROUSEL CATEGORY MOBILE
-            --------------------------
-            FEATURE DISCOVERY --- >> RECIPE ADD OR MODAL
-            -----------------
-            MODAL DELETE RECIPE AGREED 
-            ------------------
-            ------------
-            WORKING PAGE Circular Flashing Colors
-            ---------------
-            PAGINATION
-            ------------
-            REGISTER REPEAT PASSWORD 
-            --------
-            
-
-
-
-
- -->
+ <!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
+    {% include 'components/helpers/floating_button.html' %}
 
     <!-- Link to my_recipes css files -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe.css') }}">
@@ -50,7 +22,7 @@
 		{% include 'components/text_dividers/divider_bottom.html' %}
         <div class="container info-container">
             <div class="row row-info">
-                <div class="col s3">Preparation time</div>
+                <div class="col s3">Prep time</div>
                 <div class="col s3">Cooking time</div>
                 <div class="col s3">Servings</div>
                 <div class="col s3">Difficulty</div>
