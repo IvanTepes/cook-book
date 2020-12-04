@@ -1,11 +1,11 @@
 {% block recipe_lunch %}
 
-<!-- Link to css files -->
+<!-- ---css \ static/css/recipe_card.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-
+    <!-- recipes_sort/recipe_lunch.html \ *** Loop -> recipe_card.html ***  -->
     <div class="container recipe-card">
-        <div class="row justify-center">
+        <div class="row">
             {% for recipe in lunch %}
                 {% include 'components/recipe_card/recipe_card.html' %}
             {% endfor %}
