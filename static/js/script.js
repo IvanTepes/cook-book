@@ -24,15 +24,16 @@ $(document).ready(function () {
     // Carousel
     $('.carousel').carousel( {
         fullWidth: false,
-        dist: -100,
-        shift: 5,
-        padding: 10,
+        dist: -150,
+        shift: 50,
+        /* padding: 100, */
         numVisible: 5,
         /* indicators:  true, */
         noWrap: false,
-        
+        /* onCycleTo: null */
 
     });
+    
 
     $('.scrollspy').scrollSpy();
 
