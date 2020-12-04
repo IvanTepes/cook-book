@@ -30,7 +30,13 @@
             {% for recipe in breakfast %}
                 {% include 'components/recipe_card/recipe_card.html' %}  
                 {% if loop.index == 4 %}
-                    {% include 'components/text_dividers/divider_middle.html' %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                {% include 'components/text_dividers/divider_middle.html' %}
+                            </div>
+                        </div>
+                    </div>  
                 {% endif %}
             {% endfor %}
         </div>

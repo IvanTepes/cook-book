@@ -23,11 +23,17 @@
 
 <!-- Add middle divider after 4 added recipes -->
 <div class="recipe-card container">
-    <div class="row justify-center">
+    <div class="row">
         {% for recipe in dinner %} 
             {% include 'components/recipe_card/recipe_card.html' %} 
             {% if loop.index == 4 %} 
-                {% include 'components/text_dividers/divider_middle.html' %} 
+                <div class="container">
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                {% include 'components/text_dividers/divider_middle.html' %}
+                            </div>
+                        </div>
+                    </div>  
             {% endif %} 
         {% endfor %}
     </div>
