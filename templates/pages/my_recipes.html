@@ -8,8 +8,11 @@
     <!-- Link to recipe card css files -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
+    <!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
+    {% include 'components/helpers/floating_button.html' %}
+
     <!-- Decoarative Text Divider Top -->
-    {% include 'components/text_dividers/divider_top_main.html' %}
+    {% include 'components/text_dividers/divider_top.html' %}
 
     <!-- User Recipes -->
     <div class="container">
