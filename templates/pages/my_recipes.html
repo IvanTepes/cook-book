@@ -36,7 +36,7 @@
 		<div class="row">
 			{% for recipe in my_recipes if my_recipes %}
 			    {% include 'components/recipe_card/recipe_card_user.html' %}
-                    {% if loop.index % 4 == 0 %}
+                    {% if loop.index % 3 == 0 %}
                         {% include 'components/text_dividers/divider_middle.html' %}
                     {% endif %}
 			{% else %}
