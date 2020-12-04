@@ -28,7 +28,7 @@ h1 {
 }
 
 h3 {
-    font-size: 50px;
+    font-size: 3rem;
     font-family: var(--header-font);
     text-shadow: -4px 4px 2px #eb5e28;
     color: #252422;
@@ -76,7 +76,9 @@ nav {
 
 /* Decorative divider middle */
 .decorative-divider-middle {
-    padding: 70px;
+    width: inherit;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 /* Recipe card margins */
@@ -114,11 +116,10 @@ nav {
 }
 /* To justify recipe cards to center */
 /* LAST POINT WHERE LAYOUD BREAKNG */
-/* .justify-center {
-    position: relative;
+.justify-center {
     display: flex;
     justify-content: center;
-} */
+}
 
 /* To remove padding from cards from materialize */
 .no-padding {
@@ -159,10 +160,10 @@ nav {
     top: 7vw;
 }
 
-/* To position search result below search bar */
+/* To position search result and message below search bar */
 .search-result-container {
-    margin-top: 8vw;
-    margin-bottom: 4vw;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     text-align: center;
 }
 
@@ -184,14 +185,14 @@ nav {
 
 /* Position message below search bar */
 .search-instruction-container {
-    margin-top: 165px;
+    margin-top: 10rem;
 }
 
 /* Error msg New search msg icons */
 .search-result-container .fa-smile,
 .new-search .fa-smile,
 .error-message .fa-sad-tear {
-    font-size: 10vw;
+    font-size: 7rem;
     text-shadow: 0px 6px 14px black;
 }
 
@@ -340,8 +341,8 @@ input {
     border: none;
     font-weight: 800;
     font-family: 'Roboto';
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
     background-color: var(--pale-silver);
     color: var(--pale-silver);
 }
@@ -448,13 +449,23 @@ input {
 
     /* To control want to share message */
     .index-message h3 {
-    font-size: 7vw;
-
+        font-size: 7vw;
    } 
+
+   /* Search bar on new_search */
+    .new-search-container {
+        top: 7rem;
+    }
+
+    /* Search bar buttons */
+    .btn, .btn-large, .btn-small, .btn-flat {
+        margin-left: 0px;
+        margin-right: 0px;
+}
 
     /* To control recipe name in recipe card stylecss:147*/
     .card .card-image .card-title {
-    font-size: 5.6vw;
+    font-size: 1.4rem;
    }
 
    /* To center image because change of width */
@@ -501,7 +512,7 @@ input {
 /* If the screen size is 601px wide or more */
 @media only screen and (min-width: 601px) {
     .message-container {
-    /* background-color: rgb(0 0 0 / 67%); */
+   
     position: relative;
     padding: 96px 0;
     text-align: center;
@@ -522,6 +533,12 @@ input {
     font-size: 2rem;
     padding: 10px;
     text-shadow: -2px 9px 4px var(--shadow);
+    }
+
+    /* Search bar position from top */
+    .new-search-container {
+    top: 7rem;
+}
 }
 
 
