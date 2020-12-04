@@ -162,7 +162,7 @@
    Override my custom styles for mobile screens 
    Because category stacks on top of each other
 */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .cooking-time,
   .allergens,
   .serves {
@@ -173,6 +173,6 @@
   .difficulty {
     border-bottom-left-radius: 20px;
   }
-}
+} */
 
 /* /recipe card */
