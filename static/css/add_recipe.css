@@ -13,8 +13,9 @@
 /* Recipes container style */
 .add-recipe {
     background-color: var(--pale-silver);
-    border: 2px solid black;
     margin-bottom: 80px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 20px 0px var(--shadow);
 }
 
 /* Position and style of dropdown menus */
@@ -29,4 +30,38 @@
 
 .headers { 
     top: 50px;
+}
+
+/* Recipe cards edit de;ete button */
+.edit-dlt-btn-border-top {
+    border-top: 1px solid #fffcf2;
+}
+
+/* Recipe cards edit/ delete btn margins */
+.edit-dlt-btn-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: #eb5e28;
+    border-radius: 15px;
+    color:#000000;
+    font-weight: 700;
+    box-shadow: 0px 0px 4px 0px #000000, 0px 0px 10px 2px #000000;
+}
+
+/* Edit Btn style */
+.edit-btn:hover {
+    background-color: #39c939;
+    box-shadow: inset 0px 0px 10px 2px #000000;
+    border: 1px solid black;
+}
+
+/* Delete btn style */
+.delete-btn:hover {
+    background-color: red;
+    box-shadow: inset 0px 0px 10px 2px #000000;
+    border: 1px solid black;
 }
