@@ -1,48 +1,47 @@
-{% extends "layout/base.html" %}
-
+{% extends "layout/base.html" %} 
 {% block content %}
 
-    <!-- Link recipe css.file -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
-    
-    <!-- Link search bar -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
-    <!-- Search -->
+<!-- Link recipe css.file -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-    <!-- If search true display results on search.html
+<!-- Link search bar -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
+<!-- Search -->
+
+<!-- If search true display results on search.html
         if search false display error
         if reset render search_new.html and display search instruction-->
-    {% include 'components/search_bar/search_bar_new.html' %}
-    {% if recipes|length > 0 %}
-        <div class="recipe-card container search-result-container">
-            <div class="row">
-                <h3 class="search-message col s12">
-                    We found something for you!
-                </h3>
-                <h3 class="search-message margin-b col s12">
-                    Happy Cooking and Careful Slicing!
-                </h3>            
-            </div>
-            <div class="row justify-center">
-            {% for recipe in recipes %}
-                {% include 'components/recipe_card/recipe_card.html' %}  
-                {% if loop.index == 4 %}
-                    {% include 'components/text_dividers/divider_middle.html' %}
-                {% endif %}
-            {% endfor %}
-            </div>
-        </div>
-    {% else %}
-    <div class="container">
-        <div class="row">
-            <div class="col s12 error-message">
-                <i class="fas fa-sad-tear"></i>
-                <h3>We're sorry. We ware not able to find a match.</h3>
-                <h3>Check the spelling, try a more general term or look up a specific ingredient or method.</h3>
-            </div>
+{% include 'components/search_bar/search_bar_new.html' %}
+
+{% if recipes|length > 0 %}
+<div class="recipe-card container search-result-container">
+    <div class="row">
+        <h3 class="search-message col s12">
+            We found something for you!
+        </h3>
+        <h3 class="search-message margin-b col s12">
+            Happy Cooking and Careful Slicing!
+        </h3>
+    </div>
+    <div class="row justify-center">
+        {% for recipe in recipes %} 
+            {% include 'components/recipe_card/recipe_card.html' %} 
+            {% if loop.index == 4 %} 
+                {% include 'components/text_dividers/divider_middle.html' %} 
+            {% endif %} 
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col s12 error-message">
+            <i class="fas fa-sad-tear"></i>
+            <h3>We're sorry. We ware not able to find a match.</h3>
+            <h3>Check the spelling, try a more general term or look up a specific ingredient or method.</h3>
         </div>
     </div>
-    {% endif %}
+</div>
+{% endif %}
 
 {% endblock %}
-
