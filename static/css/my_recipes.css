@@ -8,6 +8,12 @@
 
 /* Middle divider show after 4 recipes is added */
 
+.decorative-divider-middle {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
 
 /* Log in welcome message  */
 .log-in-welcome-msg {

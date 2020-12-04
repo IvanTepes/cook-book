@@ -268,6 +268,7 @@ nav {
     text-align: center;
     font-size: 30px;
     color:  var(--flame);
+    text-shadow: 3px 1px 0px black;    
 }
 
 /* Footer position and color*/
@@ -376,8 +377,8 @@ input {
     transform-style: preserve-3d;
     -webkit-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    margin-top: -35vw;
-    /* margin-bottom: -3vw; */
+    margin-top: -50vw;
+    margin-bottom: 9vw;
 }
 
     /*  Card title font */
@@ -585,7 +586,7 @@ input {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .card .card-image .card-title {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
     
     
@@ -649,6 +650,10 @@ input {
     margin-bottom: 8rem;
     }
     
+    /* Recipe cards title */
+    .card .card-image .card-title {
+    font-size: 2rem;
+}
     
     
     /* Hero messages */
