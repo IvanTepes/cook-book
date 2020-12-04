@@ -30,7 +30,8 @@ h1 {
 h3 {
     font-size: 3rem;
     font-family: var(--header-font);
-    text-shadow: -4px 4px 2px #eb5e28;
+    text-shadow: -2px 0px 2px #eb5e28;
+    color: #252422;
     color: #252422;
     padding: 3px;
 }

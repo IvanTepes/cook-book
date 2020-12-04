@@ -34,9 +34,9 @@
 }
 
 /* Register tab icons color */
-.register-container .prefix {
+/* .register-container .prefix {
   color: var(--eerie-black);
-}
+} */
 
 /* Input label color and font */
 .register-container .input-field > label {
