@@ -1,10 +1,11 @@
 $(document).ready(function () {
     // Nav mobile initalization
     $('.sidenav').sidenav({
-        /* closeOnClick: true,
-        draggable: false, */
+        closeOnClick: true,
+        draggable: true,
         edge: 'right',
     });
+   
 
     // Parallax initalization
     $('.parallax').parallax();
@@ -21,34 +22,24 @@ $(document).ready(function () {
     // Modal initalization
     $('.modal').modal();
 
-    // Carousel
-    $('.carousel').carousel( {
-        fullWidth: false,
-        dist: -150,
-        shift: 50,
-        /* padding: 100, */
-        numVisible: 5,
-        /* indicators:  true, */
-        noWrap: false,
-        /* onCycleTo: null */
-
-    });
-    
-
     $('.scrollspy').scrollSpy();
 
+    // Carousel
+     $('.carousel').carousel( {
+        dist: -200,
+        padding: 10,
+        numVisible: 4,
+        duration: 400
+    }); 
+
+    /* Floating action button to scroll back  */
     $('.fixed-action-btn').floatingActionButton();
 
-    /* $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  }); */
-
-
-
     // Character counter initalization
-    $('input#recipe_name,#recipe_cuisine,#recipe_cooking_time,#recipe_prep_time,         #recipe_ingredients,#recipe_method,#recipe_image').characterCounter();
+    $('input#recipe_name,#recipe_cuisine,#recipe_cooking_time,#recipe_prep_time,#recipe_ingredients,#recipe_method,#recipe_image').characterCounter();
 
+    
+	
     /* 
         Dropdown menus validation
         Check if user select any option 
@@ -56,6 +47,8 @@ $(document).ready(function () {
         https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js
 
     */
+
+    
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
