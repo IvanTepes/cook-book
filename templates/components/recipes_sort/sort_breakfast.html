@@ -1,0 +1,19 @@
+{% block sort_breakfast %}
+
+
+<!-- Link to recipe_card.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+
+
+<!-- Render last four recipes
+     from Breakfast Category -->
+<div class="container recipe-card show-on-medium-and-up">
+    <div class="row">
+        {% for recipe in breakfast %}
+            {% include 'components/recipe_card/recipe_card.html' %}
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
