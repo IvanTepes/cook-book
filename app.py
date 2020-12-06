@@ -30,24 +30,27 @@ mongo = PyMongo(app)
 @app.route("/index")
 def home():
     """
-    Display 4 recipe from each category
-    Create 4 lists from each recipe category to display on home page
-    Find all recipe for each category
-    Limit them on 4 entrys from database
-    Sort them to show last 4 added in db
+    Get all the recipes from the recipe category
+    Sort in list by last _id
+    Limit to four
+    Render recipe category on index.html
     """
     breakfast = {"recipe_category": "Breakfast"}
-    breakfast = list(mongo.db.recipes.find(breakfast).limit(4).sort("_id", -1))
+    breakfast_sort = list(
+        mongo.db.recipes.find(breakfast).limit(4).sort("_id", -1))
     lunch = {"recipe_category": "Lunch"}
-    lunch = list(mongo.db.recipes.find(lunch).limit(4).sort("_id", -1))
+    lunch_sort = list(
+        mongo.db.recipes.find(lunch).limit(4).sort("_id", -1))
     dinner = {"recipe_category": "Dinner"}
-    dinner = list(mongo.db.recipes.find(dinner).limit(4).sort("_id", -1))
+    dinner_sort = list(
+        mongo.db.recipes.find(dinner).limit(4).sort("_id", -1))
     desserts = {"recipe_category": "Desserts"}
-    desserts = list(mongo.db.recipes.find(desserts).limit(4).sort("_id", -1))
+    desserts_sort = list(
+        mongo.db.recipes.find(desserts).limit(4).sort("_id", -1))
 
     return render_template(
-        "pages/index.html", breakfast=breakfast,
-        dinner=dinner, lunch=lunch, desserts=desserts)
+        "pages/index.html", breakfast=breakfast_sort,
+        dinner=dinner_sort, lunch=lunch_sort, desserts=desserts_sort)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -56,27 +59,28 @@ def search():
     Search function, use search tutorial from
     Flask Mini-Project 20 | 08 - Searching Within
     The Database (8a - Text Index Searching)
-    offer user to search form db recipes collection
-    all fields category, name ,cook time,etc
-    Search use two pages one when user comes from home page
-    and one when reset search same page is used
-    for display error messages
+    A function that finds recipes on query
+    The query is the user's input
+    Recipes are a list of user queries
+    Render user's list recipes on search.html
     """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("pages/search.html", recipes=recipes)
 
 
-@app.route("/search_new")
-def search_new():
-    return render_template("pages/search_new.html")
+@app.route("/new_search")
+def new_search():
+    # A function that start new search
+    # Render search on new_search.html
+    return render_template("pages/new_search.html")
 
 
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     """
-    Function that finds a specific recipe from db and render it
-    to recipe page
+    A function that finds only one recipe by recipe id
+    Renders only one recipe on recipe.html
     """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("pages/recipe.html", recipe=recipe)
@@ -85,8 +89,10 @@ def recipe(recipe_id):
 @app.route('/breakfast')
 def breakfast():
     """
-    Renders breakfast recipe page and find all breakfast
-    Sort them by last entry in db
+    A function that finds all recipes in the recipe category
+    The breakfast is a list of recipes sorted by last _id
+    Renders them in breakfast.html
+    The following three functions apply the same logic
     """
     breakfast = {"recipe_category": "Breakfast"}
     breakfast = list(mongo.db.recipes.find(breakfast).sort("_id", -1))
@@ -96,10 +102,6 @@ def breakfast():
 
 @app.route('/lunch')
 def lunch():
-    """
-    Renders lunch recipe page and find all lunch
-    Sort them by last entry in db
-    """
     lunch = {"recipe_category": "Lunch"}
     lunch = list(mongo.db.recipes.find(lunch).sort("_id", -1))
     return render_template(
@@ -108,10 +110,6 @@ def lunch():
 
 @app.route('/dinner')
 def dinner():
-    """
-    Renders dinner recipe page and finds all dinner
-    Sort them by last entry in db
-    """
     dinner = {"recipe_category": "Dinner"}
     dinner = list(mongo.db.recipes.find(dinner).sort("_id", -1))
     return render_template(
@@ -120,10 +118,6 @@ def dinner():
 
 @app.route('/desserts')
 def desserts():
-    """
-    Render desserts recipe page and finds all desserts
-    Sort them by last entry in db
-    """
     desserts = {"recipe_category": "Desserts"}
     desserts = list(mongo.db.recipes.find(desserts).sort("_id", -1))
     return render_template(
@@ -133,10 +127,19 @@ def desserts():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Register function check if user is provide uniqe
-    username and email if registration is sucessful
-    If not he is returned to try again with message that something
-    is wrong (email or username is aready in db)
+    A function that check user input and register user in db
+    An existing_user is a register user
+    An existing_email is a register email
+    If the user's username form input is an existing_user
+    Flash message and redirect to register.html
+    If the user's email form input is an existing_email
+    Flash message and redirect to register.html
+    If the register user is not existing_user
+    Get register user username, email and password
+    Salt register password for security and
+    Insert one register user in db
+    Flash message and redirect to my_recipes.html
+    The registered user is saved in the session by username
     """
     if request.method == "POST":
         # check if username already exists in db
@@ -147,7 +150,6 @@ def register():
             flash("Username already exists!")
             return redirect(url_for("register"))
 
-        # check if email already exists in db
         existing_email = mongo.db.users.find_one(
             {"email": request.form.get("email").lower()})
 
@@ -162,24 +164,27 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
 
-        # if register sucessful rediret to My Recipe
         return redirect(url_for("my_recipes", username=session["user"]))
     return render_template("pages/register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+A Function that finds one existing_user in db
+Get its username from the user's username form input
+If checks_password_hash get existing_user password
+Flash message and redirect to my_recipes.html
+Else flash message and redirect to login.html
+    """
     if request.method == "POST":
-        # check if username exist in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # ensure password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
@@ -188,12 +193,10 @@ def login():
                 return redirect(url_for(
                     "my_recipes", username=session["user"]))
             else:
-                # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
-            # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -203,10 +206,12 @@ def login():
 @app.route("/my_recipes/<username>", methods=["GET", "POST"])
 def my_recipes(username):
     """
-    Grab the session user's username from db
-    When user is loged, search all recipe added by loged user
-    and sort them by last added recipes.
-    If log in is failed redirect them to login page
+    A function that find all recipes
+    created_by logged_user session username
+    If session user render my_recipes.html and
+    find my_recipes from logged_user username
+    Sort them by _id by last added recipe
+    If not redirect to login
     """
     logged_user = {"created_by": username}
     my_recipes = mongo.db.recipes.find(logged_user).sort("_id", -1)
@@ -222,6 +227,10 @@ def my_recipes(username):
 
 @app.route("/logout")
 def logout():
+    """
+    A Function that pop user from session
+    And redirect user to login.html
+    """
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
@@ -232,11 +241,14 @@ def logout():
 def add_recipe():
     if request.method == "POST":
         """
-        After Add redirected to my recipe page
-        what give him option to see recipe added and
-        process to edit if he make mistake
-        Set current time and date for recipe record 
-        
+        Function that if request method is post
+        Finds the recipe category and recipe difficulty
+        Render them to add_recipe.html and
+        Find one user username from the session
+        Inserts one recipe into the db and save user session username
+        In the recipe created_by and save today now in date_created
+        Flash message and redirect to my_recipes.html
+        If not render username my_recipes.html
         """
         today = datetime.datetime.now()
 
@@ -258,7 +270,10 @@ def add_recipe():
         }
 
         mongo.db.recipes.insert_one(recipe)
-        flash("Thank you for adding the recipe and for using the Cook Book app. You can find your recipes below, the last recipe added is always in the first place!")
+        flash(
+            "Thank you for adding the recipe and for using the"
+            "Cook Book app.You can find your recipes below,"
+            "the last recipe added is always in the first place!")
         return redirect(url_for("my_recipes", username=username))
 
     categories = mongo.db.categories.find()
@@ -272,10 +287,15 @@ def add_recipe():
 def edit_recipe(recipe_id):
     if request.method == "POST":
         """
-        Read recipe by _id to display user input
-        After edit recipe redirected to
-        own recipes
-        Grab datetime for update
+        Function that if request method is post
+        Finds one recipe by _id from db
+        And by the user username from the session
+        Find recipe category and recipe difficulty
+        Render recipe to edit_recipe.html and
+        Update recipe by user form input
+        Update date_created with today
+        Flash message and redirect to my_recipes.html
+        If not render edit_recipe.html
         """
         today = datetime.datetime.now()
 
@@ -311,8 +331,9 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     """
-    Delete recipe function
-    After delete redirected own recipes
+    Function that find one the user in the session
+    And remove recipe by recipe_id
+    Flash message and redirect to username my_recipes
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -323,6 +344,7 @@ def delete_recipe(recipe_id):
 
 
 if __name__ == "__main__":
+    """ DEBUG SET TO FALSE BEFORE SUBMIT PROJECT """
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
