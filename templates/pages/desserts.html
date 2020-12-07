@@ -1,41 +1,43 @@
-{% extends "layout/base.html" %} {% block content %}
+{% extends "layout/base.html" %}
 
-<!-- Link to category css file-->
+
+{% block content %}
+
+
+<!-- Link to recipes_category.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipes_category.css') }}">
 
-<!-- Link to recipes card css file-->
+
+<!-- Link to recipe_card.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-<!-- Decorative Text Divider Top -->
+
 {% include 'components/text_dividers/divider_top.html' %}
 
-<div class="headers">
-    <h1 class="center-align category-headers">
-        Desserts Recipes
-    </h1>
+
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">Desserts</h1>
+    </div>
 </div>
 
-<!-- Decorative Text Divider Bottom -->
+
 {% include 'components/text_dividers/divider_bottom.html' %}
 
-<!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
+
 {% include 'components/helpers/floating_button.html' %}
 
-<!-- Add middle divider after 4 added recipes -->
+
+<!-- For all recipe in db include recipe_card
+     If more than 4 include divider_middle -->
 <div class="recipe-card container">
     <div class="row">
-        {% for recipe in desserts %} 
+    {% for recipe in desserts %} 
         {% include 'components/recipe_card/recipe_card.html' %} 
-            {% if loop.index == 4 %} 
-                <div class="container">
-                        <div class="row">
-                            <div class="col s12 center-align">
-                                {% include 'components/text_dividers/divider_middle.html' %}
-                            </div>
-                        </div>
-                    </div>  
-            {% endif %} 
-        {% endfor %}
+        {% if loop.index % 4 == 0 %} 
+            {% include 'components/text_dividers/divider_middle.html' %}
+        {% endif %} 
+    {% endfor %}
     </div>
 </div>
 
