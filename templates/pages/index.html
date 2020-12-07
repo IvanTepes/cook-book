@@ -1,102 +1,106 @@
 {% extends "layout/base.html" %}
 
+
 {% block content %}
 
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
 <!-- 
     Hero image source
     https://downloads.canon.com/nw/learn/2019/june/top-tips-for-better-food-photos-on-social-media/liza-gershman-food-photos-social-parallax.jpg
 
  -->
 
-    <!-- Parallax and welcome message -->
-    {% include 'components/parallax/parallax.html' %}
 
-    <!-- SEARCH BAR / pages/index.html -> components/search_bar/search_bar.html -->
-    {% include 'components/search_bar/search_bar.html' %}
+{% include 'components/parallax/parallax.html' %}
 
-    <!-- DIVIDER TOP / pages/index.html -> components/text_dividers/divider_top.html   -->
-    {% include 'components/text_dividers/divider_top.html' %}
 
-    <!-- HEADER   \\ pages/index.html //-->
-    <div class="container">
-        <div class="row center-align margin-bottom">
-            <h1 class="center-align category-headers">For Great Morning</h1>
-        </div>
+{% include 'components/search_bar/search_bar.html' %}
+
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
+<!-- HEADER  // templates/pages/index.html-->
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">For Great Morning</h1>
     </div>
-
-    <!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
-    {% include 'components/helpers/floating_button.html' %}
-
-    <!-- DIVIDER BOTTOM / pages/index.html -> components/text_dividers/divider_bottom.html   -->
-    {% include 'components/text_dividers/divider_bottom.html' %}
-	
-    <!-- CAROUSEL \\ components/helpers/carousel.html -->
-    {% include 'components/carousel/carousel_breakfast.html' %}
-
-    <!-- RECIPES CARD / pages/index.html -> components/recipes_sort/recipe_breakfast  -->
-    {% include 'components/recipes_sort/recipe_breakfast.html' %}
+</div>
 
 
-    <!-- DIVIDER TOP / pages/index.html -> components/text_dividers/divider_top.html   -->
-    {% include 'components/text_dividers/divider_top.html' %}
+{% include 'components/helpers/floating_button.html' %}
 
-    <!-- HEADER   \\ pages/index.html //-->
-    <div class="container">
-        <div class="row center-align margin-bottom">
-           <h1 class="center-align category-headers">For Perfect Lunch</h1>
-        </div>
+
+{% include 'components/text_dividers/divider_bottom.html' %}
+
+
+{% include 'components/carousel/breakfast_carousel.html' %}
+
+
+{% include 'components/recipes_sort/sort_breakfast.html' %}
+
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
+<!-- HEADER  // templates/pages/index.html-->
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">For Perfect Lunch</h1>
     </div>
+</div>
 
-    <!-- DIVIDER BOTTOM / pages/index.html -> components/text_dividers/divider_bottom.html   -->
-    {% include 'components/text_dividers/divider_bottom.html' %}
 
-    <!-- CAROUSEL \\ components/helpers/carousel.html -->
-    {% include 'components/carousel/carousel_lunch.html' %}
+{% include 'components/text_dividers/divider_bottom.html' %}
 
-    <!-- RECIPES CARD / pages/index.html -> components/recipes_sort/recipe_lunch  -->
-    {% include 'components/recipes_sort/recipe_lunch.html' %}
 
-    <!-- DIVIDER TOP / pages/index.html -> components/text_dividers/divider_top.html   -->
-    {% include 'components/text_dividers/divider_top.html' %}
+{% include 'components/carousel/lunch_carousel.html' %}
 
-    <!-- HEADER   \\ pages/index.html //-->
-    <div class="container">
-        <div class="row center-align margin-bottom">
-           <h1 class="center-align category-headers">For Easy Dinner</h1>
-        </div>
+
+{% include 'components/recipes_sort/sort_lunch.html' %}
+
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
+<!-- HEADER  // templates/pages/index.html-->
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">For Easy Dinner</h1>
     </div>
+</div>
 
-    <!-- DIVIDER BOTTOM / pages/index.html -> components/text_dividers/divider_bottom.html   -->
-    {% include 'components/text_dividers/divider_bottom.html' %}
 
-    <!-- CAROUSEL \\ components/helpers/carousel.html -->
-    {% include 'components/carousel/carousel_dinner.html' %}
+{% include 'components/text_dividers/divider_bottom.html' %}
+
+
+{% include 'components/carousel/dinner_carousel.html' %}
+
+
+{% include 'components/recipes_sort/sort_dinner.html' %}
+
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
+<!-- HEADER  // templates/pages/index.html-->
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">Best From Desserts</h1>
+    </div>
+</div>
+
+
+{% include 'components/text_dividers/divider_bottom.html' %}
+
+
+{% include 'components/carousel/desserts_carousel.html' %}
+
+
+{% include 'components/recipes_sort/sort_desserts.html' %}
+
+
+{% include 'components/forms/index_login.html' %}
     
-    <!-- RECIPES CARD / pages/index.html -> components/recipes_sort/recipe_dinner  -->
-    {% include 'components/recipes_sort/recipe_dinner.html' %}
 
-    <!-- DIVIDER TOP / pages/index.html -> components/text_dividers/divider_top.html   -->
-    {% include 'components/text_dividers/divider_top.html' %}
-
-    <!-- HEADER   \\ pages/index.html //-->
-    <div class="container">
-        <div class="row center-align margin-bottom">
-           <h1 class="center-align category-headers">Best From Desserts</h1>
-        </div>
-    </div>
-    
-    <!-- DIVIDER BOTTOM / pages/index.html -> components/text_dividers/divider_bottom.html   -->
-    {% include 'components/text_dividers/divider_bottom.html' %}
-
-    <!-- CAROUSEL \\ components/helpers/carousel.html -->
-    {% include 'components/carousel/carousel_desserts.html' %}
-
-    <!-- RECIPES CARD / pages/index.html -> components/recipes_sort/recipe_desserts  -->
-    {% include 'components/recipes_sort/recipe_desserts.html' %}
-
-    <!-- LOG IN / pages/index.html -> components/forms/index_login.html   -->
-	{% include 'components/forms/index_login.html' %}
-    
 {% endblock %}
