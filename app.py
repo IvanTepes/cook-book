@@ -175,7 +175,7 @@ def register():
 def login():
     """
 A Function that finds one existing_user in db
-Get its username from the user's username form input
+Get its username from the user's form input
 If checks_password_hash get existing_user password
 Flash message and redirect to my_recipes.html
 Else flash message and redirect to login.html
@@ -208,7 +208,7 @@ def my_recipes(username):
     """
     A function that find all recipes
     created_by logged_user session username
-    If session user render my_recipes.html and
+    If session user render my_recipes and
     find my_recipes from logged_user username
     Sort them by _id by last added recipe
     If not redirect to login
