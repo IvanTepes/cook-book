@@ -1,56 +1,60 @@
 {% extends "layout/base.html" %}
 
+
 {% block content %}
 
-    <!-- Link to my_recipes css files -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/my_recipes.css') }}">
 
-    <!-- Link to recipe card css files -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+<!-- Link to my_recipes css files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/my_recipes.css') }}">
 
-    <!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
-    {% include 'components/helpers/floating_button.html' %}
 
-    <!-- Decoarative Text Divider Top -->
-    {% include 'components/text_dividers/divider_top.html' %}
+<!-- Link to recipe card css files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-    <!-- User Recipes -->
-    <div class="container">
-        <div class="row center-align">
-            <h1 class="center-align category-headers">
-                {{ username }}'s Recipes</h1>
-        </div>
+
+{% include 'components/helpers/floating_button.html' %}
+
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">
+            {{ username }}'s Recipes</h1>
     </div>
+</div>
 
-    <!-- Decoarative Text Divider Bottom -->
-    {% include '/components/text_dividers/divider_bottom.html' %}
 
-    <!-- Flash Message -->
-    {% include 'components/flash_msg/flash_message.html' %}
+{% include '/components/text_dividers/divider_bottom.html' %}
 
-    <!-- Check if user have add recipes
-        if true show recipes
-        if true and have more that 4 show middle divider
-        if false show message -->
-	<div class="recipe-card container my-recipe-card">
-		<div class="row">
-			{% for recipe in my_recipes if my_recipes %}
-			    {% include 'components/recipe_card/recipe_card_user.html' %}
-                    {% if loop.index % 3 == 0 %}
-                        {% include 'components/text_dividers/divider_middle.html' %}
-                    {% endif %}
-			{% else %}
-			<li><h2 class="center-align log-in-welcome-msg">
-                {% include 'components/text_dividers/divider_middle.html' %}
-				Welcome to the Cook Book app. The Cook Book application allows you to search our recipes, to add your own creation!
-				If you don't like the recipe you added, you can edit or delete your recipe!
-				Happy Cooking!
-                {% include 'components/text_dividers/divider_middle.html' %}
-               </h2>
-            </li>
-			{% endfor %}
-		</div>
-	</div>
+
+{% include 'components/flash_msg/flash_message.html' %}
+
+
+<!-- Check if register user add_recipes
+    if true show recipes
+    if true and add_recipe more that 4 show middle divider
+    if false show message -->
+<div class="recipe-card container my-recipe-card">
+    <div class="row">
+        {% for recipe in my_recipes if my_recipes %}
+            {% include 'components/recipe_card/user_recipe_card.html' %}
+                {% if loop.index % 4 == 0 %}
+                    {% include 'components/text_dividers/divider_middle.html' %}
+                {% endif %}
+        {% else %}
+        <li><h2 class="center-align log-in-welcome-msg">
+            {% include 'components/text_dividers/divider_middle.html' %}
+            Welcome to the Cook Book app. The Cook Book application allows you to search our recipes, to add your own creation!
+            If you don't like the recipe you added, you can edit or delete your recipe!
+            Happy Cooking!
+            {% include 'components/text_dividers/divider_middle.html' %}
+            </h2>
+        </li>
+        {% endfor %}
+    </div>
+</div>
+
 
 {% endblock %}
-

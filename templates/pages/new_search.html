@@ -1,0 +1,27 @@
+{% extends "layout/base.html" %}
+
+
+<!-- Link to search_bar.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}"> {% block content %}
+
+
+{% include 'components/search_bar/new_search_bar.html' %} 
+
+
+{% include 'components/helpers/floating_button.html' %}
+
+
+<!-- Search instruction -->
+<div class="container search-instruction-container">
+    <div class="row">
+        <div class="col s12 new-search">
+            <i class="fas fa-smile"></i>
+            <h3 class="search-message">
+                The search will help you find all the recipes with the desired keyword or number.
+            </h3>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

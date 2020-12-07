@@ -1,17 +1,24 @@
 {% extends "layout/base.html" %} 
+
+
 {% block content %}
 
-<!-- Link recipe css.file -->
+
+<!-- Link recipe_card.css file -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
-<!-- Link search bar -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
-<!-- Search -->
 
-<!-- If search true display results on search.html
-        if search false display error
-        if reset render search_new.html and display search instruction-->
-{% include 'components/search_bar/search_bar_new.html' %}
+<!-- Link search_bar.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
+
+<!-- Search -->
+<!-- If search true renders results on search.html
+        if search false renders error
+        if reset renders search_bar.html and display search instruction-->
+
+
+{% include 'components/search_bar/new_search_bar.html' %}
+
 
 {% if recipes|length > 0 %}
 <div class="recipe-card container search-result-container">
@@ -26,13 +33,14 @@
     <div class="row">
         {% for recipe in recipes %} 
             {% include 'components/recipe_card/recipe_card.html' %} 
-            {% if loop.index == 4 %} 
+            {% if loop.index % 4 == 0 %} 
                 {% include 'components/text_dividers/divider_middle.html' %} 
             {% endif %} 
         {% endfor %}
     </div>
 </div>
 {% else %}
+<!-- Error -->
 <div class="container">
     <div class="row">
         <div class="col s12 error-message">

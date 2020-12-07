@@ -1,90 +1,107 @@
 {% extends "layout/base.html" %}
+
+
 {% block content %}
 
 
- <!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
-    {% include 'components/helpers/floating_button.html' %}
-
-    <!-- Link to my_recipes css files -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe.css') }}">
+{% include 'components/helpers/floating_button.html' %}
 
 
-    <div class="parallax-container">
-        <div class="parallax message-container"><img src="{{ recipe.recipe_image}}"></div>
-	</div>
-	<div class="container recipe-container">
-		{% include 'components/text_dividers/divider_top.html' %}
-		<div class="headers">
-			<h1 class="center-align recipe-name">
-				{{ recipe.recipe_name }}
-			</h1>
-		</div>
-		{% include 'components/text_dividers/divider_bottom.html' %}
-        <div class="container info-container">
-            <div class="row row-info">
-                <div class="col s3">Prep time</div>
-                <div class="col s3">Cooking time</div>
-                <div class="col s3">Servings</div>
-                <div class="col s3">Difficulty</div>
-            </div>
-            <div class="row row-desc">
-                <div class="col s3">{{ recipe.recipe_prep_time }}</div>
-                <div class="col s3">{{ recipe.recipe_cooking_time }}</div>
-                <div class="col s3">{{ recipe.recipe_servings }}</div>
-                <div class="col s3">{{ recipe.recipe_difficulty }}</div>
-            </div>
+<!-- Link to my_recipes css files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe.css') }}">
+
+
+<!-- Recipe Parallax -->
+<div class="parallax-container">
+    <div class="parallax message-container"><img src="{{ recipe.recipe_image}}"></div>
+</div>
+<!-- Recipe Container -->
+<div class="container recipe-container">
+{% include 'components/text_dividers/divider_top.html' %}
+    <div class="row">
+        <h1 class="col s12 center-align">
+            {{ recipe.recipe_name }}
+        </h1>
+    </div>
+{% include 'components/text_dividers/divider_bottom.html' %}
+    <div class="container info-container">
+        <div class="row row-info">
+            <div class="col s3">Prep time</div>
+            <div class="col s3">Cooking time</div>
+            <div class="col s3">Servings</div>
+            <div class="col s3">Difficulty</div>
         </div>
-        <div class=" container show-on-small" style="display:none;">
-            <div class="row">
-                <div class="col s12">
-                    <div class="card">
-                        <div class="card-image show-on-small">
-                            <img class="show-on-small" src="{{ recipe.recipe_image}}">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row row-desc">
+            <div class="col s3">{{ recipe.recipe_prep_time }}</div>
+            <div class="col s3">{{ recipe.recipe_cooking_time }}</div>
+            <div class="col s3">{{ recipe.recipe_servings }}</div>
+            <div class="col s3">{{ recipe.recipe_difficulty }}</div>
         </div>
-        <div class="container prep-container">
-            <div class="row">
-                <div class="col s12 m4 l4">
-                    {% include 'components/text_dividers/divider_top.html' %}
-                    <h2 class="prep-headers">Ingredients</h2>
-                    {% include 'components/text_dividers/divider_bottom.html' %}
-                    <ul>
-                        {% for break in recipe.recipe_ingredients.splitlines() %}
-                            {% if loop.index % 2 !=0 %}
-                            <li class="odd-ingred">
-                            {% endif %}
-                                {{break}}
-                            </li>  
-                        {% endfor %}    
-                    </ul>     
-                </div>
-                <div class="col s12 m8 l8">
-                    {% include 'components/text_dividers/divider_top.html' %}
-                    <h2 class="prep-headers">Method</h2>
-                    {% include 'components/text_dividers/divider_bottom.html' %}
-                    <div class="card show-on-medium-and-up" style="display:none;">
-                        <div class="card-image">
-                            <img src="{{ recipe.recipe_image}}">
-                        </div>
+    </div>
+    <div class=" container show-on-small" style="display:none;">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-image show-on-small">
+                        <img class="show-on-small" src="{{ recipe.recipe_image}}">
                     </div>
-                    <div class="divider"></div>
-                    <ol class="method">
-                        {% for break in recipe.recipe_method.splitlines() %}
-                            <li>
-                                {{break}}
-                            </li>
-                        {% endfor %}    
-                    </ol> 
-                    <div class="row user-info">
-                        <div class="col s5">{{ recipe.created_by}}</div>
-                        <div class="col s5">{{ recipe.date_created}}</div>
-                    </div>         
                 </div>
             </div>
         </div>
     </div>
+    <div class="container prep-container">
+        <div class="row">
+            <div class="col s12 m4 l4">
+                {% include 'components/text_dividers/divider_top.html' %}
+                    <h2 class="prep-headers">Ingredients</h2>
+                {% include 'components/text_dividers/divider_bottom.html' %}
+                <ul>
+                    {% for break in recipe.recipe_ingredients.splitlines() %}
+                        {% if loop.index % 2 != 0 %}
+                            <li class="odd-ingred">
+                        {% endif %}
+                            {{break}}
+                        </li>  
+                    {% endfor %}    
+                </ul>     
+            </div>
+            <div class="col s12 m8 l8">
+                {% include 'components/text_dividers/divider_top.html' %}
+                <h2 class="prep-headers">Method</h2>
+                {% include 'components/text_dividers/divider_bottom.html' %}
+                <div class="card show-on-medium-and-up" style="display:none;">
+                    <div class="card-image">
+                        <img src="{{ recipe.recipe_image}}">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <ol class="method">
+                    {% for break in recipe.recipe_method.splitlines() %}
+                        <li>
+                            {{break}}
+                        </li>
+                    {% endfor %}    
+                </ol> 
+                <div class="row user-info">
+                    <div class="col s5">{{ recipe.created_by}}</div>
+                    <div class="col s5">{{ recipe.date_created}}</div>
+                </div>         
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Action button with options edit and delete for my recipes  make it work -->
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+</ul>
+</div>
+    
 
 {% endblock %}

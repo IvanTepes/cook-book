@@ -1,9 +1,12 @@
-{% extends "layout/base.html" %} {% block content %}
+{% extends "layout/base.html" %}
 
-<!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
+{% block content %}
+
+
 {% include 'components/helpers/floating_button.html' %}
 
 
+<!-- Login -->
 <div class="container register-container">
     <div class="row center-align z-depth-5">
         <ul id="tabs-swipe-demo" class="tabs">
@@ -15,19 +18,13 @@
             </li>
         </ul>
         <div id="test-swipe-1" class="col s12 ">
-
-
-            <!-- Log in Form -->
             {% include 'components/forms/log_in_form.html' %}
-
         </div>
         <div id="test-swipe-2" class="col s12 ">
-
-            <!-- Registration Form -->
             {% include 'components/forms/registration_form.html' %}
-
         </div>
     </div>
 </div>
+
 
 {% endblock %}
