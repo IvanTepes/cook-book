@@ -1,26 +1,32 @@
 {% extends "layout/base.html" %}
 
+
 {% block content %}
 
-<!-- Link to Add Recipe css -->
+
+<!-- Link to add_ecipe css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_recipe.css') }}" />
 
-<!-- Flash Message -->
+
 {% include 'components/flash_msg/flash_message.html' %}
 
 
-		<!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
-    {% include 'components/helpers/floating_button.html' %}
+{% include 'components/helpers/floating_button.html' %}
 
-<!-- <div class="container">
-    <div class="row"> -->
-        <div class="col s12 m6 l6 category-headers">
-            {% include 'components/text_dividers/divider_top.html' %}
-            <h1 class="center-align category-headers">Add Recipe</h1>
-            {% include 'components/text_dividers/divider_bottom.html' %}
-        </div>
- <!--    </div>
-</div> -->
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center-align">Add Recipe</h1>
+    </div>
+</div>
+
+
+{% include 'components/text_dividers/divider_bottom.html' %}
+ 
+ 
 <div class="container add-recipe">
     <div class="row">
         <form class="col s10 push-s1" method="POST" action="{{ url_for('add_recipe') }}">
@@ -158,5 +164,6 @@
         </form>
     </div>
 </div>
+
 
 {% endblock %}
