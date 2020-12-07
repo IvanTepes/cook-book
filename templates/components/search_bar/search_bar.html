@@ -1,29 +1,34 @@
 {% block search_bar %}
 
-    <!-- Home page search bar 
-        if search true render result on search.html
-        if search false render error on search.html 
-        if reset refresh home page
-        logic on search.html -->
-    <div class="container z-depth-5 search-container">
-        <div class="row card-panel search-panel">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <div class="row center-align">
-                    <div class="input-field col s12">
-                        <i class="fas fa-search prefix"></i>
-                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                        <label for="query">Search Recipes</label>
-                    </div>
-                    <div class="col s12 btn-container">
-                        <a href="{{ url_for('home') }}" class="reset-btn text-shadow btn">Reset</a>
-                        <button type="submit" class="btn search-btn  text-shadow">
-                            <i class="fas fa-search left"></i> Search
-                        </button>
-                    </div>
+
+<!-- Link to recipes_category.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
+
+
+<!-- Home search bar 
+    if search true render recipe on search
+    if search false render error on search
+    if reset refresh home
+    logic on search.html -->
+<div class="container z-depth-5 search-container">
+    <div class="row card-panel search-panel">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row center-align">
+                <div class="input-field col s12">
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Recipes</label>
                 </div>
-            </form>
-        </div>
+                <div class="col s12 btn-container">
+                    <a href="{{ url_for('home') }}" class="reset-btn text-shadow btn">Reset</a>
+                    <button type="submit" class="btn search-btn  text-shadow">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
+</div>
     
 
 {% endblock %}
