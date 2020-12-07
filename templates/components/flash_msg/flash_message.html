@@ -1,18 +1,20 @@
 {% block flash_message %}
 
-    <!-- Flash Messages -->
-    <div class="col s12 center-align">
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                <div class="row flashes flash-msg">
-                    <h4 class="center-align">
-                        {{ message }}
-                    </h4>
-                </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </div>
+
+<!-- Flash Messages // components/flash_msg/ -->
+<div class="col s12 center-align">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="row flashes flash-msg">
+                <h4 class="center-align">
+                    {{ message }}
+                </h4>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
 
 {% endblock %}
