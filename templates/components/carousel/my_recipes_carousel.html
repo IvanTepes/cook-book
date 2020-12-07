@@ -1,0 +1,57 @@
+{% block my_recipes_carousel %}
+
+
+<!-- Link to my_recipes css files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/my_recipes.css') }}">
+
+
+<!-- Link to recipe card css files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
+
+
+{% include 'components/text_dividers/divider_top_main.html' %}
+
+
+<!-- My Recipe  Carousel Container  -->
+<div class="container">
+    <div class="row center-align">
+        <h1 class="center-align">
+            {{ username }}'s Recipes
+        </h1>
+    </div>
+</div>
+
+
+{% include '/components/text_dividers/divider_bottom.html' %}
+
+
+{% include 'components/flash_msg/flash_message.html' %}
+
+
+<!-- Check recipe in my_recipes
+    if true show recipes
+    if true and add_recipe more that 4 include  middle divider
+    if false show message -->
+{% for recipe in my_recipes if my_recipes %}
+{% include 'components/recipe_card/user_recipe_card.html' %}
+<div class="carousel show-on-small">
+    <div class="row">    
+        {% if loop.index % 4 == 0 %}
+            {% include 'components/text_dividers/divider_middle.html' %}
+        {% endif %}
+    {% else %}
+    <li>
+        <h2 class="center-align log-in-welcome-msg">
+            {% include 'components/text_dividers/divider_middle.html' %}
+                Welcome to the Cook Book app. The Cook Book application allows you to search our recipes, to add your own creation!
+                If you don't like the recipe you added, you can edit or delete your recipe!
+                Happy Cooking!
+            {% include 'components/text_dividers/divider_middle.html' %}
+        </h2>
+    </li>
+    {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
