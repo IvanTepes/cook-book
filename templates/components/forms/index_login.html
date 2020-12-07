@@ -1,10 +1,11 @@
 {% block indexlogin %}
 
-<!-- Link css file -->
+
+<!-- Link to register.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 
 
-<!-- Login index form -->
+<!-- Index Login // components/forms/ -->
 <div class="container login-index-container">
 	<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
 		<div class="card-panel">
@@ -48,5 +49,6 @@
 		</div>
 	</form>
 </div>
+
 
 {% endblock %}
