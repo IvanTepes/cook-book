@@ -1,12 +1,13 @@
 {% block sort_lunch %}
 
 
-<!-- ---css \ static/css/recipe_card.css -->
+<!-- Link to recipe_card.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe_card.css') }}">
 
 
-<!-- Render last four recipes
-     from Lunch Category -->
+<!-- Render last four recipes from Breakfast Category
+     Sorted list by last added _id 
+     app.py: 106 -->
 <div class="container recipe-card show-on-medium-and-up">
     <div class="row">
         {% for recipe in lunch %}
