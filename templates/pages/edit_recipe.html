@@ -1,31 +1,36 @@
 {% extends "layout/base.html" %} 
 
+
 {% block content %}
 
-
-
+<!-- Link to add_recipes.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_recipe.css') }}" />
 
 
-<!-- FLOATING BUTTON \\ components/helpers/floating_button.html -->
-    {% include 'components/helpers/floating_button.html' %}
-<!-- Flash Message -->
+{% include 'components/helpers/floating_button.html' %}
+
 
 {% include 'components/flash_msg/flash_message.html' %}
+
+
+{% include 'components/text_dividers/divider_top.html' %}
+
+
 <div class="container">
     <div class="row">
-        <div class="col s12 center-align">
-            {% include 'components/text_dividers/divider_top.html' %}
-            <h1 class="center-align">Edit Recipe</h1>
-            {% include 'components/text_dividers/divider_bottom.html' %}
-        </div>
+        <h1 class="col s12 center-align">Edit Recipe</h1>
     </div>
-</div>
+</div>  
+
+
+{% include 'components/text_dividers/divider_bottom.html' %}
+
+
 <div class="container add-recipe">
     <div class="row">
         <form class="col s10 push-s1" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
             <div class="row">
-                <!-- Dropdown Recipe Category -->
+                <!-- Dropdown Menu Recipe Category -->
                 <div class="input-field col s12 m8 offset-m2">
                     <select id="recipe_category" name="recipe_category" class="validate" required>
                         <option value="" disabled>Choose Recipe Category</option>
@@ -38,7 +43,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <!-- Dropdown Recipe Difficulty -->
+                <!-- Dropdown Menu Recipe Difficulty -->
                 <div class="input-field col s12 m8 offset-m2">
                     <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
                         <option value="" disabled>Recipe Difficulty</option>
@@ -87,7 +92,7 @@
                     />
                     <label for="recipe_cooking_time">Recipe Cooking Time</label>
                 </div>
-                <!-- Recipe preparation time -->
+                <!-- Recipe Preparation Time -->
                 <div class="input-field col s12 m8 offset-m2">
                     <input
                         id="recipe_prep_time"
@@ -105,7 +110,7 @@
                     />
                     <label for="recipe_prep_time">Recipe Preparation Time</label>
                 </div>
-                <!-- Text Input Recipe Size -->
+                <!-- Text Input Recipe Servings -->
                 <div class="input-field col s12 m8 offset-m2">
                     <input
                         id="recipe_servings"
@@ -123,7 +128,7 @@
                     />
                     <label for="recipe_size">Recipe Servings</label>
                 </div>
-                <!-- Text input Recipe Image -->
+                <!-- Text Input Recipe Image -->
                 <div class="input-field col s12 m8 offset-m2">
                     <input
                         id="recipe_image"
@@ -174,7 +179,7 @@
                     </label>
                 </div>
             </div>
-            <!-- Edit Button -->
+            <!-- Edit/Cancel Button -->
             <div class="row">
                 <div class="col s12 center-align">
                     <a href="{{ url_for('my_recipes', username=session['user']) }}" class="btn waves-effect delete-btn waves-lightcol col s5 m3 offset-m2 ">Cancel</a>
@@ -184,4 +189,6 @@
         </form>
     </div>
 </div>
+
+
 {% endblock %}
