@@ -1,65 +1,67 @@
 {% block registration_form %}
 
 
-<!-- link css file -->
+<!-- Link toregistration_form.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 
-    <!-- Registration Form -->
-    <div class="container">
-        <h3 class="sign-msg">
-            Sign up and reveal the secret of your specialty!
-        </h3>
-        <!-- Flash Message -->
-            {% include 'components/flash_msg/flash_message.html' %}
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-            <div class="card-panel">
-                <!-- Username -->
-                <div class="row">
-                    <div class="input-field col s12">
-                    <i class="fas fa-user-plus prefix"></i>
-                    <input id="username" name="username" type="text"
-                        minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
-                        class="validate" required>
-                    <label for="username">Username</label>
-                    </div>
-                </div>
-                <!-- Password -->
-                <div class="row">
-                    <div class="input-field col s12">
-                    <i class="fas fa-user-lock prefix"></i>
-                    <input id="password" name="password"
-                        minlength="5" maxlength="15" type="password"
-                        pattern="^[a-zA-Z0-9]{5,15}$" 
-                        class="validate" required>
-                    <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- Email -->
-                <div class="row">
-                    <div class="input-field col s12">
-                    <i class="fas fa-at prefix"></i>
-                    <input id="email" name="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                    </div>
-                </div>
-                <!-- Register -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large forms-btn">
-                    Register 
-                    </button>
+
+<!-- Registration Form // components/forms/ -->
+<div class="container">
+    <h3 class="sign-msg">
+        Sign up and reveal the secret of your specialty!
+    </h3>
+    <!-- Flash Message -->
+        {% include 'components/flash_msg/flash_message.html' %}
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- Username -->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-user-plus prefix"></i>
+                <input id="username" name="username" type="text"
+                    minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                    class="validate" required>
+                <label for="username">Username</label>
                 </div>
             </div>
-        </form>
-        <div class="row">
-            <div class="col s12 new-here-msg">
-                <p class="center-align">
-                    Already Registered?
-                    <a class="register-acc" href="{{ url_for('login') }}">
-                    Log In 
-                    </a>
-                </p>
+            <!-- Password -->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-user-lock prefix"></i>
+                <input id="password" name="password"
+                    minlength="5" maxlength="15" type="password"
+                    pattern="^[a-zA-Z0-9]{5,15}$" 
+                    class="validate" required>
+                <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-at prefix"></i>
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email">Email</label>
+                </div>
+            </div>
+            <!-- Register -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large forms-btn">
+                Register 
+                </button>
             </div>
         </div>
+    </form>
+    <div class="row">
+        <div class="col s12 new-here-msg">
+            <p class="center-align">
+                Already Registered?
+                <a class="register-acc" href="{{ url_for('login') }}">
+                Log In 
+                </a>
+            </p>
+        </div>
     </div>
+</div>
+
 
 {% endblock %}
