@@ -10,7 +10,7 @@
     if search false render error on search
     if reset refresh home
     logic on search.html -->
-<div class="container z-depth-5 search-container">
+<div class="container search-container">
     <div class="row card-panel search-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row center-align">
@@ -20,8 +20,8 @@
                     <label for="query">Search Recipes</label>
                 </div>
                 <div class="col s12 btn-container">
-                    <a href="{{ url_for('home') }}" class="reset-btn text-shadow btn">Reset</a>
-                    <button type="submit" class="btn search-btn  text-shadow">
+                    <a href="{{ url_for('home') }}" class="reset-btn card-shadow btn">Reset</a>
+                    <button type="submit" class="btn card-shadow search-btn">
                         <i class="fas fa-search left"></i> Search
                     </button>
                 </div>
