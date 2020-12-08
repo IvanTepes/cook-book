@@ -6,7 +6,7 @@
 
 
 <!-- Index Login // components/forms/ -->
-<div class="container login-index-container">
+<div class="container">
 	<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
 		<div class="card-panel">
 			<div class="row">
@@ -14,7 +14,7 @@
 			</div>
 			<!-- Username -->
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s8 push-s2">
 					<i class="fas fa-user prefix"></i>
 					<input id="username" name="username" type="text"
                         minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
@@ -24,7 +24,7 @@
 			</div>
 			<!-- Password -->
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s8 push-s2">
 					<i class="fas fa-user-lock prefix"></i>
 					<input id="password" name="password"
                         minlength="5" maxlength="15" type="password"
@@ -34,7 +34,7 @@
 			</div>
 			<!-- Log in  -->
 			<div class="row">
-				<button type="submit" class="col s6 push-s3 forms-btn btn-large card-shadow">
+				<button type="submit" class="col s6 push-s3 form-btn btn-large main-shadow">
                         Log In 
                     </button>
 				<div class="col s12">
