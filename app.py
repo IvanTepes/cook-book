@@ -271,9 +271,9 @@ def add_recipe():
 
         mongo.db.recipes.insert_one(recipe)
         flash(
-            "Thank you for adding the recipe and for using the"
+            "Thank you for adding the recipe and for using the "
             "Cook Book app.You can find your recipes below,"
-            "the last recipe added is always in the first place!")
+            "the last recipe added is in the first place!")
         return redirect(url_for("my_recipes", username=username))
 
     categories = mongo.db.categories.find()
