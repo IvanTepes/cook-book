@@ -1,116 +1,87 @@
 /* Register Container  */
 
-/* Position of register/login container */
-.register-container {
-    border-radius: 30px;
-    top: 100px;
-    position: relative;
-    display: block;
-    margin-bottom: 142px;
-    background-color: var(--pale-silver);
-    border-top-left-radius: 30px;
-    box-shadow: 0px 2px 20px 0px var(--shadow);
+
+/* Register and login panel */
+
+.register-panel {
+   padding: 0px;
+   box-shadow: none;
 }
 
-/* Container style */
-.register-container .row {
-    border-radius: 30px;
+
+/* Position of register/login container */
+
+.register-container {
+   border-radius: 20px;
+   top: 100px;
+   position: relative;
+   display: block;
+   margin-bottom: 142px;
+   background-color: var(--pale-silver);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
+   border: 0.5px solid var(--floral-white);
 }
+
 
 /* Top left and right tabs border radius */
+
 .register-container .row .tabs {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
 }
 
-
-/* Form buttons */
-.forms-btn {
-    background-color: var(--flame);
-    font-family: "Roboto";
-    font-weight: 600;
-    color: var(--eerie-black);
-}
-    
-
-.forms-btn:hover {
-    background-color: var(--eerie-black);
-    color: var(--flame);
-}
-
-/* Register tab icons color */
-/* .register-container .prefix {
-  color: var(--eerie-black);
-} */
 
 /* Input label color and font */
-.register-container .input-field > label {
-  color: var(--flame);
-  font: "Roboto";
-  font-weight: 600;
+
+.register-container .input-field>label {
+   color: var(--flame);
+   font: "Roboto";
+   font-weight: 600;
 }
 
-/* Register and log in card */
-/* .card-panel {
-  background-color: var(--pale-silver); */
-  /* box-shadow: none; */
-  /* padding: 0px; */
 
+/* Active register or log tab  */
 
-/* Register button */
-/* .btn-large,
-.btn-large:hover,
+.tabs .tab a:hover,
 .tabs .tab a.active {
-  background-color: var(--flame);
-  font-family: "Roboto";
-  font-weight: 600;
-  color: var(--eerie-black);
-} */
-
-/* Tabs color on hover */
-.tabs .tab a:hover {
-  background-color: var(--black-olive);
+   background-color: #eb5e28;
+   color: #252422;
+   font-weight: 600;
 }
 
-/* Registration button on hover  */
-.btn-large:hover {
-  background-color: var(--eerie-black);
-  color: var(--flame);
-}
 
 /* Tabs color on focus */
+
 .tabs .tab a:focus,
 .tabs .tab a:focus.active {
-  background-color: var(--flame);
+   background-color: var(--flame);
 }
 
-/* Register invite message */
-/* .sign-msg {
-    font-size: 50px;
-    font-family: var(--header-font);
-    text-shadow: 0px 3px 3px #eb5e28;
-    color: #252422;
-    padding: 3px;
-    -----DELETE-----
-}
- */
+
 /* Tabs text color when is inactive */
+
 .tabs .tab a {
-  color: var(--flame);
+   color: var(--flame);
 }
+
 
 /* Tabs bg color and active tab indicator */
+
 .tabs,
 .tabs .indicator {
-  background-color: var(--eerie-black);
+   background-color: var(--eerie-black);
 }
+
 
 /* Active tab indicator height */
+
 .tabs .indicator {
-  height: 4px;
+   height: 4px;
 }
 
+
 /* Input color */
+
 .card-panel input {
-  color: var(--eerie-black);
+   color: var(--eerie-black);
 }

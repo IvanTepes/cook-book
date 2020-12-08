@@ -1,506 +1,504 @@
 /* Color Pattern */
+
 :root {
-    --floral-white: #fffcf2;
-    --pale-silver: #ccc5b9;
-    --black-olive: #403d39;
-    --eerie-black: #252422;
-    --flame: #eb5e28;
-    --shadow: #000000;
+   --floral-white: #fffcf2;
+   --pale-silver: #ccc5b9;
+   --black-olive: #403d39;
+   --eerie-black: #252422;
+   --flame: #eb5e28;
+   --shadow: #000000;
 }
 
 
 /* Font-Family */
+
 :root {
-    --header-font: "Pacifico", sans-serif;
-    --text-font: "Roboto", sans-serif;
+   --header-font: "Pacifico", sans-serif;
+   --text-font: "Roboto", sans-serif;
 }
 
 
 /* Body Bg Color */
+
 body {
-    background-color: var(--floral-white);
-    height: 100vh;
-    margin: 0;
+   background-color: var(--floral-white);
+   height: 100vh;
+   margin: 0;
+}
+
+.shadow {
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
+   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+   border: 0.5px solid var(--floral-white);
 }
 
 
-/* H1 style  */
+/* Main hovable elements shadow / global style  */
+
+.main-shadow {
+   border: 0.5px solid var(--floral-white);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
+   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.main-shadow:hover {
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+/* H1 headers style  */
+
 h1 {
-    font-family: var(--header-font);
-    color: var(--flame);
-    text-shadow: -1px 3px 2px #000000;
-    margin: 0px;
-    padding: 1rem;
-    font-size: 4rem;
+   font-family: var(--header-font);
+   color: var(--flame);
+   text-shadow: -1px 3px 2px #000000;
+   margin: 0px;
+   padding: 1rem;
+   font-size: 4rem;
 }
-
 
 h3 {
-    font-size: 3rem;
-    font-family: var(--header-font);
-    text-align: center;
-    padding: 3px;
-    text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
-    color: #eb5e28;
+   font-size: 3rem;
+   font-family: var(--header-font);
+   text-align: center;
+   padding: 3px;
+   text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
+   color: #eb5e28;
 }
 
 
 /* Parallax overlay  */
+
 .message-container {
-    background-color: rgb(0 0 0 / 50%);
+   background-color: rgb(0 0 0 / 50%);
 }
 
 
 /* Parallax shadow */
+
 .parallax-container {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/*  */
+.parallax-container p {
+   font-size: 3vw;
+   font-family: 'Pacifico';
+   text-shadow: -4px 4px 2px var(--shadow);
+   color: var(--pale-silver);
+   padding: 1px;
+}
+
+
 /* 
     Classes for hide not working without this
     Small an medium screens
  */
+
 .show-on-small {
-    display: none;
+   display: none;
 }
 
 .show-on-medium-and-up {
-    display: none;
+   display: none;
 }
 
 .show-on-large: {
-    display: none;
+   display: none;
 }
 
-/* Use as global shadow for elements */
-/* .main-shadow {
-    box-shadow: 0px 2px 7px 0px var(--shadow);
-}
- */
-
-/* Navbar position  */
-nav {
-    background-color: var(--eerie-black);
-    height: 70px;
-    z-index: 5;
-    position: fixed; /* Add fixed to keep navbar on top */
-    font-family: 'Pacifico';
-    font-weight: 500;
-    box-shadow: 0px 1px 20px 7px black;
-}
+/* Decorative divider position  */
 
 .decorative-divider-top {
-    padding-top: 6rem;
+   padding-top: 7rem;
 }
+
 
 /* To position decorative divider in middle*/
+
 .decorative-divider-top .row .col,
 .decorative-divider-bottom .row .col {
-    float: none;
+   float: none;
 }
 
+/* Decorative divider middle margin */
 
 .decorative-divider-middle {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+   margin-top: 5rem;
+   margin-bottom: 5rem;
 }
 
 
 /* Recipe card margins */
+
 .recipe-card {
-    margin-top: 4vw;
-    margin-bottom: 4vw;
+   margin-top: 4vw;
+   margin-bottom: 4vw;
 }
 
-/* Login form message */
-/* .page-message h3 {
-    font-family: var(--header-font);
-    font-size: 2.5rem;
-    padding-top: 30px;
-} */
-
-.login-index-container {
-   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    border-radius: 30px;
-}
 
 /* Position search bar on search page and error*/
+
 .new-search-container {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    position: relative;
-    top: 7vw;
+   margin-top: 0px !important;
+   margin-bottom: 0px !important;
+   position: relative;
+   top: 7vw;
 }
+
 
 /* To position search result and message below search bar */
+
 .search-result-container {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    text-align: center;
+   margin-top: 10rem;
+   margin-bottom: 10rem;
+   text-align: center;
 }
 
-/* Centering error message in middle
-    Push footer to bottom
- */
-.error-message {
-    position: relative;
-    margin-top: 133px;
-    text-align: center;
-    margin-bottom: 32px;;
-}
 
 /* Align instruction message to middle */
+
 .new-search {
-    text-align: center;
-    /* margin: 0px !important; */ 
+   text-align: center;
+   /* margin: 0px !important; */
 }
+
 
 /* Position message below search bar */
+
 .new-search {
-    margin-top: 10rem;
-    font-family: 'Roboto';
+   margin-top: 10rem;
+   font-family: 'Roboto';
 }
 
+
 /* Search instructions style  */
+
 .new-search h3 {
-    font-size: 3rem;
-    font-family: var(--text-font);
-    padding: 3px;
-    color: #252422;
-    font-weight: 600;
-    text-shadow: none;
-    margin-bottom: 100px;
+   font-size: 3rem;
+   font-family: var(--text-font);
+   padding: 3px;
+   color: #252422;
+   font-weight: 600;
+   text-shadow: none;
+   /* margin-bottom: 100px; */
 }
 
 
 /* To position welcome message */
+
 .welcome-message {
-    margin-bottom: 0px;
-    font-size: 3rem;
-    font-family: var(--text-font);
-    /* padding: 3px; */
-    color: #252422;
-    font-weight: 600;
-    text-shadow: none;
+   margin-bottom: 0px;
+   font-size: 3rem;
+   font-family: var(--text-font);
+   color: #252422;
+   font-weight: 600;
+   text-shadow: none;
 }
 
 h4 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
+
 
 /* Error msg New search msg icons */
+
 .search-result-container .fa-smile,
 .new-search .fa-smile,
-.error-message .fa-sad-tear {
-    font-size: 8rem;
+.fa-sad-tear {
+   font-size: 8rem;
 }
 
+
 /* Remove margins from search_bar.css:188 */
+
 .new-search-container .new-search {
-    margin-top: 0px;
-    margin-bottom: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
 
 .new-search-container .recipe-card {
-    margin-top: 158px;
+   margin-top: 158px;
 }
 
-/* Flash messahes container */
+
+/* Flash messages container */
+
+.flash-container {
+   width: 100%;
+}
+
+
+/* Flash message container */
+
 .flash-msg {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)!important;
-    margin-top: 4rem;
+   border: 0.5px solid #ff0000;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
+   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+   margin-top: 2vw;
 }
-
 
 
 /* Flash messages style and position */
+
 .flashes h4 {
-    font-size: 30px;
-    font-family: 'Roboto';
-    background-color: var(--pale-silver);
-    color: var(--eerie-black);;
-    /* padding: 3px; */
-    padding: 10px;
-    /* margin-top: 30px;
-    padding-top: 20px; */
-    letter-spacing: 1.5px;
-    font-weight: 500;
+   font-size: 30px;
+   font-family: 'Roboto';
+   background-color: var(--floral-white);
+   color: var(--eerie-black);
+   ;
+   padding: 10px;
+   letter-spacing: 1.5px;
+   font-weight: 500;
+   box-shadow: inset 0 0 2px 2px red;
 }
+
 
 /* New here msg on login form */
+
 .new-here-msg {
-    font-weight: 600;
-    font-size: 20px;
-    color: #252422;
+   font-weight: 600;
+   font-size: 20px;
+   color: #252422;
 }
+
 
 /* Register account style */
+
 .register-acc {
-    color: #eb5e28;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+   color: #eb5e28;
+   text-decoration: none;
+   -webkit-tap-highlight-color: transparent;
 }
 
+
 /* Register in form on hover */
+
 .register-acc:hover {
-    color: #039be5;
-    text-decoration: underline;
-    -webkit-tap-highlight-color: transparent;
+   color: #039be5;
+   text-decoration: underline;
+   -webkit-tap-highlight-color: transparent;
 }
 
 .edit-delete-btn {
-    border-top: 1px solid black;
+   border-top: 1px solid black;
 }
+
 
 /* Icons style and color */
+
 .fas {
-    text-align: center;
-    font-size: 30px;
-    color:  var(--flame);
-    text-shadow: 0px 1px 0px var(--shadow);    
+   text-align: center;
+   font-size: 30px;
+   color: var(--flame);
+   text-shadow: 0px 1px 0px var(--shadow);
 }
+
 
 /* Footer position and color*/
+
 .page-footer {
-    background-color: var(--eerie-black);
-    position: relative;
-    bottom: 0;
-    left:0;
-    width: 100%;
-    margin-top: 5rem;S
+   background-color: var(--eerie-black);
+   position: relative;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   margin-top: 10.6rem;
 }
+
 
 /* Search Bar Input color and text position */
+
 #form-search {
-    height: 70px;
-    border-radius: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: var(--eerie-black);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+   height: 70px;
+   border-radius: 10px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   background-color: var(--eerie-black);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
 }
+
 
 /* Text position inside search bar */
+
 .search {
-    text-align: center;
+   text-align: center;
 }
 
+
 /* Search bar input text color */
+
 .search,
 #query::placeholder,
 input {
-    color: var(--flame);
-} 
+   color: var(--flame);
+}
+
 
 /* Search bar Button */
+
 .search-bar-button {
-    margin: 20px;
-    color: var(--eerie-black);
-    background-color: var(--flame);
-    height: 30px;
-    width: 85px;
-    border-radius: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+   margin: 20px;
+   color: var(--eerie-black);
+   background-color: var(--flame);
+   height: 30px;
+   width: 85px;
+   border-radius: 10px;
+   font-family: "Roboto", sans-serif;
+   font-weight: 600;
 }
 
-/* Cards shadows */
-.card-shadow {
-    border: 0.5px solid var(--floral-white);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12),
-                0 1px 2px rgba(0,0,0,0.24),
-                -3px 0px 3px rgba(0,0,0,0.12),
-                1px 0px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
 
-.card-shadow:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
+/* Search bar panel style */
 
 .card-panel {
-    background-color: var(--pale-silver);
-    box-shadow: none;
-    padding: 0px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24), -3px 0px 3px rgba(0,0,0,0.12), 1px 0px 2px rgba(0,0,0,0.24);
-    border: 0.5px solid var(--floral-white);
-
+   background-color: var(--pale-silver);
+   box-shadow: none;
+   padding: 0px;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
+   border: 0.5px solid var(--floral-white);
+   margin-top: 9vw;
+   border-radius: 20px;
 }
 
 
- /* Floating action button arrow up */
+/* Floating action button arrow up */
+
 .btn-floating.btn-large i {
-    display: block;
-    color: #ccc5b9;
-    text-shadow: 0px 4px 3px black;
+   display: block;
+   color: #ccc5b9;
+   text-shadow: 0px 4px 3px black;
 }
+
 
 /* Floating btn shadow*/
+
 .btn-floating.btn-large {
-    box-shadow: 0px 0px 7px 2px black;;
+   box-shadow: 0px 0px 7px 2px black;
+   ;
 }
 
+
 /* Search bar button search_bar.css:39 disabled */
-.btn, .btn-large, .btn-small, .btn-flat {
-    border: none;
-    font-weight: 800;
-    font-family: 'Roboto';
-    /* margin-left: 20px;
-    margin-right: 20px; */
-    background-color: var(--pale-silver);
-    color: var(--pale-silver);
+
+.btn,
+.btn-large,
+.btn-small,
+.btn-flat {
+   border: none;
+   font-weight: 800;
+   font-family: 'Roboto';
+   background-color: var(--pale-silver);
+   color: var(--pale-silver);
+}
+
+
+/* Forms button */
+
+.form-btn {
+   background-color: var(--eerie-black);
+   color: var(--flame);
+}
+
+
+/* Forms button on hover  */
+
+.btn-large:hover {
+   background-color: var(--flame);
+   color: var(--eerie-black);
 }
 
 
 /* Carousel position on index.html to display recipes */
-   .carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 690px;
-    -webkit-perspective: 500px;
-    perspective: 500px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    margin-top: -50vw;
-    margin-bottom: 7vw;
-}
 
+.carousel {
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+   height: 690px;
+   -webkit-perspective: 500px;
+   perspective: 500px;
+   -webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+   -webkit-transform-origin: 0% 50%;
+   transform-origin: 0% 50%;
+   margin-top: -50vw;
+   margin-bottom: 7vw;
+}
 
 
 /* ******************* MEDIA QUERY ********************** */
 
 
 /* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
-
-    /* Added dimmed background for better contrast */
-    .message-container {
-    padding-top: 105px;
-    text-align: center;
-    height: 100%;
-  }
-
-   .parallax-container p {
-    text-align: center;
-    font-family: var(--header-font);
-    font-size: 7vw;
-    text-shadow: 0px 4px 2px var(--shadow);
-    color: var(--pale-silver);
-    padding: 5px;
-  }
-
-   /* Remove margin for responsivnes */
-  .btn, .btn-large, .btn-small, .btn-flat {
-    font-size: 1rem;
-}
-    /* to control font size */
-    .new-here-msg {
-        font-size: 4vw;
-    }
-
-
-   /* Search bar on new_search */
-    .new-search-container {
-        top: 7rem;
-    }
-
-    /* Search bar buttons */
-    .btn, .btn-large, .btn-small, .btn-flat {
-        margin-left: 0px;
-        margin-right: 0px;
-}
-
-    /* To control recipe name in recipe card stylecss:147*/
-    .card .card-image .card-title {
-    font-size: 1.6rem;
+   /* Added dimmed background for better contrast */
+   .message-container {
+      padding-top: 105px;
+      text-align: center;
+      height: 100%;
    }
-
-    
+   .parallax-container p {
+      text-align: center;
+      font-family: var(--header-font);
+      font-size: 7vw;
+      text-shadow: 0px 4px 2px var(--shadow);
+      color: var(--pale-silver);
+      padding: 5px;
+   }
+   /* Remove margin for responsivnes */
+   .btn,
+   .btn-large,
+   .btn-small,
+   .btn-flat {
+      font-size: 1rem;
+   }
+   /* to control font size */
+   .new-here-msg {
+      font-size: 4vw;
+   }
+   /* Search bar on new_search */
+   .new-search-container {
+      top: 7rem;
+   }
+   /* Search bar buttons */
+   .btn,
+   .btn-large,
+   .btn-small,
+   .btn-flat {
+      margin-left: 0px;
+      margin-right: 0px;
+   }
+   /* To control recipe name in recipe card stylecss:147*/
+   .card .card-image .card-title {
+      font-size: 1.6rem;
+   }
 }
 
 
 /* If the screen size is 601px wide or more */
+
 @media only screen and (min-width: 601px) {
-    .message-container {
-   
-    position: relative;
-    padding: 96px 0;
-    text-align: center;
-    width: 100%;
-    padding-right: 45vw;
-    height: 100%;
-  }
-
+   .message-container {
+      position: relative;
+      padding: 96px 0;
+      text-align: center;
+      width: 100%;
+      padding-right: 45vw;
+      height: 100%;
+   }
    .parallax-container p {
-    font-size: 3vw;
-    font-family: 'Pacifico';
-    text-shadow: -4px 4px 2px var(--shadow);
-    color:  var(--pale-silver);
-    padding: 1px;
-  }
-
-
-    /* Search bar position from top */
-    .new-search-container {
-    top: 7rem;
+      font-size: 3vw;
+      font-family: 'Pacifico';
+      text-shadow: -4px 4px 2px var(--shadow);
+      color: var(--pale-silver);
+      padding: 1px;
+   }
+   /* Search bar position from top */
+   .new-search-container {
+      top: 7rem;
+   }
 }
-
-
-/* To remove b */
-.no-margin {
-    margin-bottom: 0px;
-}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
-
-
-  .card .card-image .card-title {
-    font-size: 2.5rem;
-}
- */
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {
-    .card .card-image .card-title {
-    font-size: 2rem;
-    }
-
-} */
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1100px) {
-    .message-container {
-    padding-right: 55vw;
-    }
-
-    .parallax-container p {
-    font-size: 2vw;
-    }
-
-    .card .card-image .card-title {
-        font-size: 1.2rem;
-    }
-} */
-
-/*  Screens 1400px and up */
-/* @media only screen and (min-width: 1400px) { */
-
-    /* Recipe cards title */
- /*    .card .card-image .card-title {
-    font-size: 2rem;
-    }
-} */
-
-/* .decorative-divider-top {
-    padding-top: 7rem;
-}
- */
