@@ -39,8 +39,6 @@ h3 {
     font-size: 3rem;
     font-family: var(--header-font);
     text-align: center;
-    /* text-shadow: -2px 0px 2px #eb5e28; */
-    /* color: #252422; */
     padding: 3px;
     text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
     color: #eb5e28;
