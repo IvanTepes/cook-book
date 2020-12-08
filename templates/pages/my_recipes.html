@@ -36,7 +36,7 @@
     if true show recipes
     if true and add_recipe more that 4 show middle divider
     if false show message -->
-<div class="recipe-card container my-recipe-card">
+<div class="recipe-card container welcome-container">
     <div class="row">
         {% for recipe in my_recipes if my_recipes %}
             {% include 'components/recipe_card/user_recipe_card.html' %}
@@ -44,13 +44,14 @@
                     {% include 'components/text_dividers/divider_middle.html' %}
                 {% endif %}
         {% else %}
-        <li><h2 class="center-align log-in-welcome-msg">
-            {% include 'components/text_dividers/divider_middle.html' %}
-            Welcome to the Cook Book app. The Cook Book application allows you to search our recipes, to add your own creation!
-            If you don't like the recipe you added, you can edit or delete your recipe!
-            Happy Cooking!
-            {% include 'components/text_dividers/divider_middle.html' %}
-            </h2>
+        <li>
+            <div class="container search-container">
+                <div class="row">
+                    <div class="col s12 ">
+                        <h3 class="welcome-message">Welcome to the Cook Book app. The Cook Book application allows you to search our recipes, to add your own creation! If you don't like the recipe you added, you can edit or delete your recipe! Happy Cooking!SS</h3>
+                    </div>
+                </div>
+            </div>
         </li>
         {% endfor %}
     </div>
