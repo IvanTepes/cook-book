@@ -24,7 +24,7 @@
         </h1>
     </div>
 {% include 'components/text_dividers/divider_bottom.html' %}
-    <div class="container info-container">
+    <div class="container card-shadow info-container">
         <div class="row row-info">
             <div class="col s3">Prep time</div>
             <div class="col s3">Cooking time</div>
@@ -49,11 +49,11 @@
             </div>
         </div>
     </div>
-    <div class="container prep-container">
+    <div class="container prep-container ">
         <div class="row">
             <div class="col s12 m4 l4">
                 {% include 'components/text_dividers/divider_top.html' %}
-                    <h2 class="prep-headers">Ingredients</h2>
+                    <h2 class="prep-headers center-align">Ingredients</h2>
                 {% include 'components/text_dividers/divider_bottom.html' %}
                 <ul>
                     {% for break in recipe.recipe_ingredients.splitlines() %}
@@ -65,16 +65,15 @@
                     {% endfor %}    
                 </ul>     
             </div>
-            <div class="col s12 m8 l8">
+            <div class="col s12 m8 l8 ">
                 {% include 'components/text_dividers/divider_top.html' %}
-                <h2 class="prep-headers">Method</h2>
+                <h2 class="prep-headers center-align">Method</h2>
                 {% include 'components/text_dividers/divider_bottom.html' %}
                 <div class="card show-on-medium-and-up" style="display:none;">
                     <div class="card-image">
                         <img src="{{ recipe.recipe_image}}">
                     </div>
                 </div>
-                <div class="divider"></div>
                 <ol class="method">
                     {% for break in recipe.recipe_method.splitlines() %}
                         <li>
