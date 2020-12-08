@@ -7,7 +7,7 @@
         <div class="col s12 carousel show-on-small">
         {% for recipe in lunch %}
             <a class=" carousel-item" href="{{ url_for('recipe', recipe_id=recipe._id) }}">
-                <div class="card main-shadow">
+                <div class="card card-shadow">
                     <div class="card-image">
                         <img src="{{ recipe.recipe_image }}">
                         <span class="card-title">{{ recipe.recipe_name }}</span>
