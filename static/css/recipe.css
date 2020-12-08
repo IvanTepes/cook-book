@@ -16,14 +16,12 @@ nav li{
 /* position of recipe container */
 .recipe-container {
     margin-bottom: 200px;
-    margin-top: -325px;
+    margin-top: -220px;
     position: relative;
     z-index: 1;
     background-color: var(--floral-white);
-    border: 1px solid var(--eerie-black);
     width: 90%;
-    border-radius: 30px;
-    box-shadow: 0px 1px 20px 0px #000000;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 }
 
 /* Braething space from top */
@@ -64,11 +62,12 @@ nav li{
     background-color: var(--pale-silver);
     width: 90%;
     text-align: center;
+    border-radius: 30px;
     position: relative;
     margin-bottom: 20px;
     margin-top: 30px;
-    border-radius: 10px;
     padding: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 }
 
 /* Recipe information row style */
@@ -87,11 +86,13 @@ nav li{
     padding: 0px;
 }
 
+
 /* Recipe description row style */
   .container .row-desc {
     font-family: 'Pacifico';
     color: #eb5e28;
     padding: 5px;
+    text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
 }
 
 /* To override materialize row bottom margin */
@@ -110,7 +111,7 @@ nav li{
 .prep-headers {
     font-family: 'Roboto';
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /* To match right size dividers */
@@ -331,4 +332,3 @@ ul {
     font-size: 1.5vw;
    }
 }
-
