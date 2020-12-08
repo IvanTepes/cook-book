@@ -11,6 +11,7 @@
 
 .search-container {
     border-radius: 50px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 /* Search icon size and location  */
@@ -49,24 +50,29 @@
 /* Search btn */
 .search-btn {
     background-color: var(--eerie-black);
-    border-radius: 51px;
 }
 
 /* Reset btn */
 .reset-btn {
     background-color: var(--flame);
+    color: var(--eerie-black);
 }
 
 /* Border radius */
-.search-btn,
+/* .search-btn,
 .reset-btn {
     border-radius: 10px;
 }
-
-/* Search on hover */
+ */
+/* Search btn on hover */
 .search-btn:hover {
-    background-color:  var(--eerie-black);
-    color:  var(--flame);
+    background-color: var(--flame);
+    color:  var(--eerie-black);
+}
+/* Reset btn on hover */
+.reset-btn:hover {
+    background-color: var(--eerie-black);
+    color: var(--flame);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -124,7 +130,7 @@
     /* Search bar buttons position */
     .btn-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
 
