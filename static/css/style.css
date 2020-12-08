@@ -8,10 +8,13 @@
     --shadow: #000000;
 }
 
+
+/* Font-Family */
 :root {
     --header-font: "Pacifico", sans-serif;
     --text-font: "Roboto", sans-serif;
 }
+
 
 /* Body Bg Color */
 body {
@@ -20,30 +23,42 @@ body {
     margin: 0;
 }
 
-/* H1 for all headers on page
-    remove all margins from H1 */
+
+/* H1 style  */
 h1 {
     font-family: var(--header-font);
     color: var(--flame);
-    text-shadow: 0px 7px 7px var(--eerie-black);
+    text-shadow: -1px 3px 2px #000000;
     margin: 0px;
     padding: 1rem;
+    font-size: 4rem;
 }
+
 
 h3 {
     font-size: 3rem;
     font-family: var(--header-font);
-    text-shadow: -2px 0px 2px #eb5e28;
-    color: #252422;
-    color: #252422;
+    text-align: center;
+    /* text-shadow: -2px 0px 2px #eb5e28; */
+    /* color: #252422; */
     padding: 3px;
+    text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
+    color: #eb5e28;
 }
+
 
 /* Parallax overlay  */
 .message-container {
     background-color: rgb(0 0 0 / 50%);
 }
 
+
+/* Parallax shadow */
+.parallax-container {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/*  */
 /* 
     Classes for hide not working without this
     Small an medium screens
@@ -61,34 +76,38 @@ h3 {
 }
 
 /* Use as global shadow for elements */
-.main-shadow {
-    box-shadow: 0px 2px 20px 0px  var(--shadow);
+/* .main-shadow {
+    box-shadow: 0px 2px 7px 0px var(--shadow);
 }
+ */
 
 /* Navbar position  */
 nav {
     background-color: var(--eerie-black);
     height: 70px;
-    z-index: 2;
+    z-index: 5;
     position: fixed; /* Add fixed to keep navbar on top */
     font-family: 'Pacifico';
     font-weight: 500;
-    /* border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px; */
+    box-shadow: 0px 1px 20px 7px black;
 }
 
-/* Navbar bottom */
-/* .nav-wrapper {
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-} */
+.decorative-divider-top {
+    padding-top: 6rem;
+}
 
-
-/* To position divider in middle of element */
+/* To position decorative divider in middle*/
 .decorative-divider-top .row .col,
 .decorative-divider-bottom .row .col {
     float: none;
 }
+
+
+.decorative-divider-middle {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
 
 /* Recipe card margins */
 .recipe-card {
@@ -96,80 +115,15 @@ nav {
     margin-bottom: 4vw;
 }
 
-/* To remove margins left/right from materialize */
-.no-margin-lr .col {
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-/* Custom top margin used od my recipes.html
-    to position top divider
- */
-
-
-
-/* Custom margin style */
-.margin-b {
-    margin-bottom: 2rem;
-}
-
-/* To remove bottom margin from materialize rows */
-.no-bottom-margin {
-    margin-bottom: 0px;
-}
-
-.no-top-margin {
-    margin-top: 0px;
-}
-
-/* No margin left */
-.no-margin-left{
-    margin-left: 0px! important;
-}
-/* To justify recipe cards to center */
-/* LAST POINT WHERE LAYOUD BREAKNG */
-.justify-center {
-    display: flex;
-    justify-content: center;
-}
-
-/* To remove padding from cards from materialize */
-.no-padding {
-    padding: 0px;
-}
-
-/* To control margin from rows -> 20px default */
-.margin-bottom {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-/* Category headers 
-    to remove margin from h1*/
-/* .category-headers {
-    margin: 0px; */
-/*     font-family: "Pacifico", sans-serif;
-    color: var(--flame); */
-/*     text-shadow: 0px 7px 7px var(--shadow);
-} */
-
-
-
-
-
 /* Login form message */
-.index-message h3 {
+/* .page-message h3 {
     font-family: var(--header-font);
     font-size: 2.5rem;
-    text-align: center;
     padding-top: 30px;
-}
+} */
 
 .login-index-container {
-    box-shadow: 0px 2px 20px 0px var(--shadow);
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     border-radius: 30px;
 }
 
@@ -205,16 +159,44 @@ nav {
 }
 
 /* Position message below search bar */
-.search-instruction-container {
+.new-search {
     margin-top: 10rem;
+    font-family: 'Roboto';
+}
+
+/* Search instructions style  */
+.new-search h3 {
+    font-size: 3rem;
+    font-family: var(--text-font);
+    padding: 3px;
+    color: #252422;
+    font-weight: 600;
+    text-shadow: none;
+    margin-bottom: 100px;
+}
+
+
+/* To position welcome message */
+.welcome-message {
+    margin-bottom: 0px;
+    font-size: 3rem;
+    font-family: var(--text-font);
+    /* padding: 3px; */
+    color: #252422;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Error msg New search msg icons */
 .search-result-container .fa-smile,
 .new-search .fa-smile,
 .error-message .fa-sad-tear {
-    font-size: 7rem;
-    text-shadow: 0px 6px 14px black;
+    font-size: 8rem;
 }
 
 /* Remove margins from search_bar.css:188 */
@@ -229,32 +211,31 @@ nav {
 
 /* Flash messahes container */
 .flash-msg {
-    box-shadow: 0px 0px 10px 7px red;
-    border-radius: 30px;
-    background-color: #252422;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)!important;
+    margin-top: 4rem;
 }
+
 
 
 /* Flash messages style and position */
 .flashes h4 {
     font-size: 30px;
     font-family: 'Roboto';
-    text-shadow: 0px 0px 10px #000000;
-    color: #ff0000;
+    background-color: var(--pale-silver);
+    color: var(--eerie-black);;
     /* padding: 3px; */
     padding: 10px;
-    margin-top: 30px;
-    padding-top: 20px;
+    /* margin-top: 30px;
+    padding-top: 20px; */
     letter-spacing: 1.5px;
+    font-weight: 500;
 }
 
 /* New here msg on login form */
 .new-here-msg {
-    font-family: 'Pacifico';
     font-weight: 600;
     font-size: 20px;
-    text-shadow: 0px 0px 7px #000000, 3px -1px 1px #000000, 1px -2px 1px #000000;
-    color: #fffcf2;
+    color: #252422;
 }
 
 /* Register account style */
@@ -266,10 +247,9 @@ nav {
 
 /* Register in form on hover */
 .register-acc:hover {
-    color: #000000;
+    color: #039be5;
     text-decoration: underline;
     -webkit-tap-highlight-color: transparent;
-    text-shadow: 2px -2px 3px #eb5e28, -2px -2px 0px #eb5e28, 0px 0px 1px #eb5e28;
 }
 
 .edit-delete-btn {
@@ -281,7 +261,7 @@ nav {
     text-align: center;
     font-size: 30px;
     color:  var(--flame);
-    text-shadow: 3px 1px 0px black;    
+    text-shadow: 0px 1px 0px var(--shadow);    
 }
 
 /* Footer position and color*/
@@ -291,6 +271,7 @@ nav {
     bottom: 0;
     left:0;
     width: 100%;
+    margin-top: 5rem;S
 }
 
 /* Search Bar Input color and text position */
@@ -329,22 +310,29 @@ input {
     font-weight: 600;
 }
 
-/* To position log in */
-.index-log-btn {
-    width: 80% !important;
-    transform: translate(13%,-10%);
+/* Cards shadows */
+.card-shadow {
+    border: 0.5px solid var(--floral-white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+                0 1px 2px rgba(0,0,0,0.24),
+                -3px 0px 3px rgba(0,0,0,0.12),
+                1px 0px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-/* To add breading space between dividers and headers */
-/* .decorative-divider-top {
-    margin-top: 70px;
-} */
-
-/* .decorative-divider-bottom {
-    margin-top: 40px;
-    margin-bottom: 70px;
+.card-shadow:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
- */
+
+.card-panel {
+    background-color: var(--pale-silver);
+    box-shadow: none;
+    padding: 0px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24), -3px 0px 3px rgba(0,0,0,0.12), 1px 0px 2px rgba(0,0,0,0.24);
+    border: 0.5px solid var(--floral-white);
+
+}
+
 
  /* Floating action button arrow up */
 .btn-floating.btn-large i {
@@ -355,7 +343,7 @@ input {
 
 /* Floating btn shadow*/
 .btn-floating.btn-large {
-    box-shadow: 0px 1px 10px 3px black;
+    box-shadow: 0px 0px 7px 2px black;;
 }
 
 /* Search bar button search_bar.css:39 disabled */
@@ -369,14 +357,6 @@ input {
     color: var(--pale-silver);
 }
 
-/* .headers {
-    position: relative;
-    top: 100px;
-    padding-bottom: 50px;
-    font-family: "Pacifico", sans-serif;
-    color: var(--flame);
-    text-shadow: 0px 7px 7px var(--shadow);
-} */
 
 /* Carousel position on index.html to display recipes */
    .carousel {
@@ -394,12 +374,6 @@ input {
     margin-bottom: 7vw;
 }
 
-    /*  Card title font */
-/*     .card .card-title {
-    font-size: 8vw;
-    font-weight: 300;
-}
- */
 
 
 /* ******************* MEDIA QUERY ********************** */
@@ -410,7 +384,6 @@ input {
 
     /* Added dimmed background for better contrast */
     .message-container {
-    /* background-color: rgb(0 0 0 / 67%); */
     padding-top: 105px;
     text-align: center;
     height: 100%;
@@ -425,17 +398,8 @@ input {
     padding: 5px;
   }
 
-  h1 {
-      font-size: 3.1rem;
-      color: var(--flame);
-      text-shadow: 0px 7px 7px var(--shadow);
-      padding: 10px;
-  }
-
    /* Remove margin for responsivnes */
   .btn, .btn-large, .btn-small, .btn-flat {
-    /* margin-left: 0px;
-    margin-right: 0px; */
     font-size: 1rem;
 }
     /* to control font size */
@@ -443,10 +407,6 @@ input {
         font-size: 4vw;
     }
 
-    /* To control want to share message */
-    .index-message h3 {
-        font-size: 7vw;
-   } 
 
    /* Search bar on new_search */
     .new-search-container {
@@ -464,44 +424,7 @@ input {
     font-size: 1.6rem;
    }
 
-   /* To center image because change of width */
-    .carousel .carousel-item {
-   /*  visibility: hidden;
-    width: 56vw;
-    height: 200px;
-    position: absolute;
-    top: 0; */
-    /* left: -17px; */
-}
-
     
-
-    /* Position carousel */
-    /* ONLY SHOW ON SMALL NO NEED TO BE IN MEDIA 
-    CHECK DELETE */
-    /* .carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 670px;
-    -webkit-perspective: 500px;
-    perspective: 500px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-    margin-top: -35vw;
-    margin-bottom: -3vw;
-} */
-
-    /*  Card title font */
-   /*  .card .card-title {
-    font-size: 8vw;
-    font-weight: 300;
-} */
-    /* Carousel active card */
-    
-
 }
 
 
@@ -525,146 +448,61 @@ input {
     padding: 1px;
   }
 
-  h1 {
-    font-size: 2rem;
-    padding: 10px;
-    text-shadow: -2px 9px 4px var(--shadow);
-    }
 
     /* Search bar position from top */
     .new-search-container {
     top: 7rem;
 }
+
+
+/* To remove b */
+.no-margin {
+    margin-bottom: 0px;
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-   /* .message-container {
-    background-color: rgb(0 0 0 / 67%);
-    position: relative;
-    margin: auto;
-    width: 100%;
-    padding: 100px 0;
-    padding-right: 48vw;
-    text-align: center;
-} */
-    /* Submesage style */
-   /* .parallax-container p {
-    font-size: 3vw;
-    text-shadow: -4px 4px 2px var(--shadow);
-    color: var(--pale-silver);
-    padding: 1px;
-  } */
-    /* Start Cooking message */
-  h1 {
-    font-size: 3rem;
-    /* padding: 10px;
-    text-shadow: -2px 9px 4px var(--shadow); */
-  }
+/* @media only screen and (min-width: 768px) {
+
+
   .card .card-image .card-title {
     font-size: 2.5rem;
 }
-    /* .decorative-divider-middle {
-        position: relative;
-        width: inherit;
-    } */
-
+ */
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
     .card .card-image .card-title {
     font-size: 2rem;
-}
-    
-    
-    /* .message-container {
-    background-color: rgb(0 0 0 / 67%);
-    position: relative;
-    margin: auto;
-    width: 100%;
-    padding: 70px 0;
-    padding-right: 48vw;
-    text-align: center;
-  } */
-   /* .parallax-container p {
-    font-size: 3vw;
-    text-shadow: -4px 4px 2px var(--shadow);
-    color: var(--pale-silver);
-    padding: 1px;
-  }
-     */
-  /* h1 {
-      font-size: 5vw;
-      padding: 10px;
-      text-shadow: -2px 9px 4px var(--shadow);
-  } */
-}
+    }
+
+} */
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1100px) {
+/* @media only screen and (min-width: 1100px) {
     .message-container {
-    /* background-color: rgb(0 0 0 / 67%); */
-    /* position: relative;
-    margin: auto;
-    width: 100%;
-    padding: 70px 0;
-    text-align: center; */
     padding-right: 55vw;
     }
 
     .parallax-container p {
     font-size: 2vw;
-    /* text-shadow: -4px 4px 2px var(--shadow);
-    color: var(--pale-silver);
-    padding: 1px; */
     }
-
-  h1 {
-      font-size: 4vw;
-  }
 
     .card .card-image .card-title {
         font-size: 1.2rem;
-}
-
+    }
+} */
 
 /*  Screens 1400px and up */
-@media only screen and (min-width: 1400px) {
-    /* Decorative divider middle */
-    /* to control size oves screens */
-    /* .decorative-divider-middle {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
-    } */
-    
+/* @media only screen and (min-width: 1400px) { */
+
     /* Recipe cards title */
-    .card .card-image .card-title {
+ /*    .card .card-image .card-title {
     font-size: 2rem;
+    }
+} */
+
+/* .decorative-divider-top {
+    padding-top: 7rem;
 }
-    
-    
-    /* Hero messages */
-    /* .message-container {
-    background-color: rgb(0 0 0 / 67%);
-    position: relative;
-    margin: auto;
-    width: 100%;
-    padding-right: 55vw;
-    text-align: center;
-    padding: 70px 0;
-    } */
-
-    /* .parallax-container p {
-    font-size: 2vw;
-    text-shadow: -4px 4px 2px var(--shadow);
-    color: var(--pale-silver);
-    padding: 1px;
-    } */
-
-  /* h1 {
-      font-size: 4vw;
-  }
  */
-  /* Search bar position */
-}
-}
