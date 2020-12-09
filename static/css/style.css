@@ -364,20 +364,39 @@ input {
 }
 
 
-/* Floating action button arrow up */
+/* Floating action button style */
 
 .btn-floating.btn-large i {
    display: block;
-   color: #ccc5b9;
-   text-shadow: 0px 4px 3px black;
+   color: var(--flame);
 }
 
+/* floating home and up */ 
+
+.btn-floating i {
+    color: #252422;
+}
+
+/* Home and up floating icon style */
+
+.btn-floating {
+    background-color: var(--flame);
+    border-radius: 50%;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.fa-arrow-left .fa-cog {
+    color: var(--eerie-black);
+}
 
 /* Floating btn shadow*/
 
 .btn-floating.btn-large {
-   box-shadow: 0px 0px 7px 2px black;
-   ;
+   box-shadow: 0px 0px 4px 1px black;
+   background-color: #252422 !important;
 }
 
 
@@ -435,7 +454,30 @@ input {
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
-   /* Added dimmed background for better contrast */
+
+    h1, h3 {
+        font-size: 2.5rem;
+    }
+
+    /* Recipe container */
+    /* To position recipe container
+        override recipe.css:21 */
+   .recipe-container {
+      margin-top: -380px!important;
+    }
+
+    .recipe-container .decorative-divider-top {
+      padding-top: 0px;
+    }
+
+    /* To position info container belove divider
+        override recipe.css:67
+     */
+    .info-container {
+    margin-top: 0px!important;
+   
+}
+   /* Dimmed background for better contrast */
    .message-container {
       padding-top: 105px;
       text-align: center;
@@ -476,12 +518,22 @@ input {
    .card .card-image .card-title {
       font-size: 1.6rem;
    }
+
+   /* .delete-btn {
+        padding: 0 5px;
+   } */
+
+    /* To position delete and edit button  */
+
+
 }
 
 
 /* If the screen size is 601px wide or more */
 
 @media only screen and (min-width: 601px) {
+
+    
    .message-container {
       position: relative;
       padding: 96px 0;
@@ -501,4 +553,5 @@ input {
    .new-search-container {
       top: 7rem;
    }
+   
 }

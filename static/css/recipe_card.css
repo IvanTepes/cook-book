@@ -16,10 +16,9 @@
 /* Recipe cards edit/ delete btn margins */
 
 .edit-dlt-btn-margin {
-   margin-top: 20px;
-   margin-bottom: 20px;
+   margin-top: 10px;
+   margin-bottom: 5px;
 }
-
 
 /* Edit and delete button bu */
 
@@ -138,4 +137,13 @@
    position: relative;
    z-index: 3;
    padding: 0px;
+}
+
+
+/* User recipe card style */
+
+/* Carousel height */
+.my-recipe-carousel {
+    height: 1000px!important;
+    margin-top: -400px;
 }

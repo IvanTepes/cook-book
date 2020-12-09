@@ -306,9 +306,3 @@ ul {
 }
 
 
-/* Floating button position */
-.fixed-action-btn {
-    position: fixed;
-    right: 3rem;
-    bottom: 8rem;
-}

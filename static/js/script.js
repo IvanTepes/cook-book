@@ -25,16 +25,27 @@ $(document).ready(function () {
     $('.scrollspy').scrollSpy();
 
     // Carousel
-     $('.carousel').carousel( {
+    $('.carousel').carousel( {
         dist: -200,
         padding: 10,
         numVisible: 4,
         duration: 400
     }); 
 
-    /* Floating action button to scroll back  */
-    $('.fixed-action-btn').floatingActionButton();
+    
 
+    /* Floating action button to scroll back  */
+    /* $('.fixed-action-btn').floatingActionButton(); */
+
+   
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'top',
+      hoverEnabled: false
+    });
+  });
+       
     // Character counter initalization
     $('input#recipe_name,#recipe_cuisine,#recipe_cooking_time,#recipe_prep_time,#recipe_ingredients,#recipe_method,#recipe_image').characterCounter();
 
