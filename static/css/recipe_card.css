@@ -131,12 +131,12 @@
 /* Recipe name 3d-effect */
 
 .card .card-image .card-title {
-   color: #eb5e28;
-   font-family: 'Pacifico';
-   text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
-   position: relative;
-   z-index: 3;
-   padding: 0px;
+    color: #252422;
+    font-family: 'Pacifico';
+    text-shadow: -1px 0px 0px #fffcf2, 0px 1px 0px #fffcf2, 1px 0px 0px #fffcf2, -1px 0px 0px #fffcf2, -1px 0px 0px #fffcf2;
+    position: relative;
+    z-index: 3;
+    padding: 0px;
 }
 
 
