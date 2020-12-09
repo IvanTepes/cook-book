@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('.carousel').carousel( {
         dist: -200,
         padding: 10,
-        numVisible: 4,
+        numVisible: 5,
         duration: 400
     }); 
 
