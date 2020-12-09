@@ -5,7 +5,7 @@
 <a class="col s6 m6 l3 " href="{{ url_for('recipe', recipe_id=recipe._id) }}">
     <div class="card main-shadow">
         <div class="card-image">
-            <img src="{{ recipe.recipe_image }}">
+            <img src="{{ recipe.recipe_image }}" alt="recipe image">
             <span class="card-title">{{ recipe.recipe_name }}</span>
         </div>
         <div class="card-content">
