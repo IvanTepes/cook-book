@@ -73,3 +73,21 @@
    background-color: red;
    box-shadow: inset 0px 0px 10px 2px #000000;
 }
+
+/* Help modals */
+
+.info-modal {
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-btn {
+    background-color: #eb5e28;
+    color: #252422;
+}
+
+/* Modals Gif */
+
+.gif-instruction {
+    border: 1px solid black;
+}
