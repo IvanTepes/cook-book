@@ -102,8 +102,8 @@
                     <div class="modal-content info-modal">
                     <h4>RECIPE COOKING TIME</h4>
                     <p>                      
-                        Please start the cooking time of the recipe with a number but not with zero, also end the cooking time with h for hour or min for minutes select what you think best describes the cooking time. The time and the unit of measurement must be separated by a space.
-                        Example 1 h or 10 h for hour and 1 min or 10 min for minute.
+                        Please start the cooking time of the recipe with a number but not with zero, also end the cooking time with h for hour or min for minutes select what you think best describes the cooking time. The time and the unit of measurement must be separated by a space.<br>
+                        Example 1 h or 10 h for hour and 1 min or 10 min for minute.<br>
                         The cooking time cannot be longer than two numbers.                  
                        </p>
                     </div>
@@ -135,8 +135,8 @@
                     <div class="modal-content info-modal">
                     <h4>RECIPE PREPARATION TIME</h4>
                     <p>                      
-                        Please start the preparation time of the recipe with a number but not with zero, also end the preparation time with h for hour or min for minutes select what you think best describes the preparation time. The time and the unit of measurement must be separated by a space.
-                        Example 1 h or 10 h for hour and 1 min or 10 min for minute.
+                        Please start the preparation time of the recipe with a number but not with zero, also end the preparation time with h for hour or min for minutes select what you think best describes the preparation time. The time and the unit of measurement must be separated by a space.<br>
+                        Example: 1 h or 10 h for hour and 1 min or 10 min for minute.<br>
                         The preparation time cannot be longer than two numbers.                  
                        </p>
                     </div>
@@ -186,15 +186,29 @@
                         maxlength="250"
                         class="validate"
                         data-length="250"
-                        pattern="https?://.*"
+                        pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         title="Image URL must start with http:// or https://"
                         data-error="wrong"
                         required
                     />
                     <label for="recipe_image">Recipe Image ULR</label>
                 </div>
-                 <div class="col s2">
-                    <i class="fas fa-info-circle"></i>
+                <div class="col s2">
+                    <a class="modal-trigger" href="#info-img"><i class="fas fa-info-circle"></i></a>
+                    <div id="info-img" class="modal">
+                    <div class="modal-content info-modal">
+                    <h4>RECIPE IMAGE</h4>
+                    <p>                      
+                        Please make shure that image link starts with http or https and ends with jpg, gif or png. See instruction below.<br>
+                        1. Find the image of your recipe<br>
+                        2. Open image in new tab<br>
+                        3. Copy image address by right mouse<br> click on image or hold 3 sec on mobile devices and tablets.
+                       </p>
+                    </div>
+                    <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect modal-btn btn-flat">Agree</a>
+                    </div>
+                </div>
                 </div>
                 <!-- Text Input Recipe Ingredients -->
                 <div class="input-field col s10 m8 offset-m2">
@@ -207,7 +221,7 @@
                     data-error="wrong"
                     required></textarea>
                     <label for="recipe_ingredients">
-                        Enter here recipe ingredients 
+                        Enter recipe ingredients 
                     </label>
                 </div>
                 <div class="col s2">
@@ -216,9 +230,10 @@
                     <div class="modal-content info-modal">
                     <h4>RECIPE INGREDIENTS</h4>
                     <p>                                          
-                        Please enter each ingredient and quantity on a new line. See instructions below. Recipe ingredients cannot be longer than 800 characters              
+                        Please enter each ingredient and quantity on a new line.<br> 
+                        See instructions below. Recipe ingredients cannot be longer than 800 characters              
                        </p>
-                        <img src="static/img/add_recipe_instruction/ing-instruction.gif" alt="this slowpoke moves" class="gif-instruction"/>
+                        <img src="static/img/add_recipe_instruction/ing-instruction.gif" alt="instruction" class="gif-instruction"/>
                    </div>
                     <div class="modal-footer">
                     <a href="#!" class="modal-close waves-effect modal-btn btn-flat">Agree</a>
@@ -229,17 +244,18 @@
                 <div class="input-field col s10 m8 offset-m2">
                     <textarea id="recipe_method" name="recipe_method" class="materialize-textarea validate" minlength="5" maxlength="3000" data-length="3000" required></textarea>
                     <label for="recipe_method">
-                        Add here recipe cooking instructions and place every instruction on a new line
+                        Enter recipe cooking method
                     </label>
                 </div>
                  <div class="col s2">
                     <a class="modal-trigger" href="#info-method"><i class="fas fa-info-circle"></i></a>
                     <div id="info-method" class="modal">
                     <div class="modal-content info-modal">
-                    <h4>RECIPE INGREDIENTS</h4>
+                    <h4>RECIPE METHOD</h4>
                     <p>                                          
-                        Please enter each method on a new line. See instructions below. Recipe method cannot be longer than 3000 characters    </p>
-                        <img src="static/img/add_recipe_instruction/ing-instruction.gif" alt="this slowpoke moves" class="gif-instruction"/>     
+                        Please enter each method on a new line.<br>
+                        See instructions below. Recipe method cannot be longer than 3000 characters    </p>
+                        <img src="static/img/add_recipe_instruction/method-instruction.gif" alt="instruction" class="gif-instruction"/>     
                    </div>
                     <div class="modal-footer">
                     <a href="#!" class="modal-close waves-effect modal-btn btn-flat">Agree</a>
