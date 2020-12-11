@@ -259,7 +259,7 @@ def add_recipe():
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
             "created_by": session["user"],
-            "date_created": today.strftime("%d/%m/%Y, %H:%M:%S")
+            "date_created": today.strftime("%d.%m.%Y")
         }
 
         mongo.db.recipes.insert_one(recipe)
