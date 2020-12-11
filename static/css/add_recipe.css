@@ -21,7 +21,6 @@
    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
    border: 0.5px solid var(--floral-white);
    margin-top: 4rem;
-   width: 60%:
 }
 
 
@@ -53,7 +52,7 @@
 
 .edit-btn,
 .delete-btn {
-   background-color: #eb5e28;
+   background-color: var(--flame);
    color: #000000;
    font-weight: 700;
 }
@@ -82,12 +81,35 @@
 }
 
 .modal-btn {
-    background-color: #eb5e28;
-    color: #252422;
+    background-color: var(--flame);
+    color: var(--eerie-black);
 }
 
 /* Modals Gif */
 
 .gif-instruction {
     border: 1px solid black;
+}
+
+/* Input fileds */
+.input-field>label {
+    color: var(--flame);
+}
+
+.dropdown-triger {
+    color: var(--flame);
+}
+
+/* Text area font color*/
+textarea.materialize-textarea {
+    color: var(--flame);
+}
+
+#query::placeholder, input {
+    color: black;
+}
+
+/* To position info buttons */
+.fa-info-circle {
+    margin-top: 25px;
 }
