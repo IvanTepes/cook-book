@@ -169,9 +169,9 @@ ul {
 .user-info {
    position: relative;
    display: flex;
-   font-size: 20px;
+   font-size: 2rem;
    font-family: 'Pacifico';
-   color: red;
+   color: #eb5e28;
 }
 
 .user-info .col {
@@ -189,10 +189,14 @@ ul {
    /* Recipe Description row font size */
    .container .row-desc {
       font-size: 5vw;
+      margin-bottom: 0px;
+      margin-top: 0px;
    }
    /* Recipe information row style */
    .info-container .row-info {
       font-size: 2.6vw;
+      margin-bottom: 0px;
+      margin-top: 0px;
    }
    .prep-headers {
       font-size: 7vw;
@@ -294,7 +298,7 @@ ul {
    }
    /* Recipe information row style */
    .info-container .row-info {
-      font-size: 1vw;
+      font-size: 1.5rem;
    }
    .prep-headers {
       font-size: 2.2vw;
