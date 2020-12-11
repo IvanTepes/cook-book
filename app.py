@@ -69,13 +69,6 @@ def search():
     return render_template("pages/search.html", recipes=recipes)
 
 
-@app.route("/new_search")
-def new_search():
-    # A function that start new search
-    # Render search on new_search.html
-    return render_template("pages/new_search.html")
-
-
 @app.route("/recipe/<recipe_id>")
 def recipe(recipe_id):
     """
