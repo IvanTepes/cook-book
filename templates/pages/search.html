@@ -11,13 +11,16 @@
 <!-- Link search_bar.css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/search_bar.css') }}">
 
+
+<!-- Link searc.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+
+
 <!-- Search -->
-<!-- If search true renders results on search.html
+<!-- If search true renders results 
         if search false renders error
-        if reset renders search_bar.html and display search instruction-->
-
-
-{% include 'components/search_bar/new_search_bar.html' %}
+        if reset go back to home-->
+{% include 'components/search_bar/search_bar.html' %}
 
 
 {% if recipes|length > 0 %}
@@ -55,18 +58,5 @@
 </div>
 {% endif %}
 
-{% endblock %}
 
-<div class="container search-container">
-    <div class="row">
-        <div class="col s12 new-search">
-            <i class="fas fa-smile"></i>
-            <h3 class="search-message col s12">
-                We found something for you!
-            </h3>
-                <h3 class="search-message margin-b col s12">
-                Happy Cooking and Careful Slicing!
-            </h3>
-        </div>
-    </div>
-</div>
+{% endblock %}
