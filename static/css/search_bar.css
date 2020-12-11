@@ -1,15 +1,11 @@
 /* Search panel style */
-
-
 /* Search bar border radius */
-
 .search-container {
    border-radius: 50px;
 }
 
 
 /* Search icon size and location  */
-
 .input-field .prefix {
    position: absolute;
    width: 4rem;
@@ -21,14 +17,12 @@
 
 
 /* Icon color */
-
 .fas {
    color: var(--flame);
 }
 
 
 /* Search filed size */
-
 .input-field .prefix~input,
 .input-field .prefix~textarea,
 .input-field .prefix~label,
@@ -42,14 +36,12 @@
 
 
 /* Search btn */
-
 .search-btn {
    background-color: var(--eerie-black);
 }
 
 
 /* Reset btn */
-
 .reset-btn {
    background-color: var(--flame);
    color: var(--eerie-black);
@@ -57,7 +49,6 @@
 
 
 /* Search btn on hover */
-
 .search-btn:hover {
    background-color: var(--flame);
    color: var(--eerie-black);
@@ -65,7 +56,6 @@
 
 
 /* Reset btn on hover */
-
 .reset-btn:hover {
    background-color: var(--eerie-black);
    color: var(--flame);
@@ -73,7 +63,6 @@
 
 
 /* Extra small devices (phones, 600px and down) */
-
 @media only screen and (max-width: 320px) {
    /* Search Position */
    .card-panel {
@@ -102,15 +91,7 @@
 }
 
 
-/* Extra small devices (phones, 600px and down) */
-
-
-/* @media only screen and (max-width: 600px) {
-    
-    
-}
-    /* Hide button icons on small */
-
+/* Hide button icons on small */
 .btn i,
 .btn-large i,
 .btn-small i,
@@ -123,7 +104,6 @@
 
 
 /* Position search icon */
-
 .input-field .prefix {
    position: absolute;
    width: 3rem;
@@ -135,7 +115,6 @@
 
 
 /* Search bar buttons position */
-
 .btn-container {
    display: flex;
    justify-content: space-evenly;
@@ -143,7 +122,6 @@
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-
 @media only screen and (max-width: 600px) {
    /* Hide button icons on small */
    .btn i,
@@ -175,29 +153,5 @@
    .btn-small,
    .btn-flat {
       margin-right: 0px;
-   }
-   /*  Search error\msg icon on mobile */
-   .search-result-container .fa-smile,
-   .new-search .fa-smile,
-   .fa-sad-tear {
-      font-size: 6rem;
-      text-shadow: 0px 6px 14px black;
-   }
-   /* Search messages */
-   /* h3 {
-      font-size: 2.5rem;
-      font-family: var(--header-font);
-      text-shadow: -2px 1px 2px #eb5e28;
-      color: #252422;
-      padding: 3px;
-   } */
-}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-
-@media only screen and (min-width: 768px) {
-   .new-search-container {
-      top: 7rem;
    }
 }
