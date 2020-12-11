@@ -1,0 +1,10 @@
+/* To position search bar after search */
+.search-bar-container {
+    padding-top: 10rem;
+}
+
+
+/* Search fedback messages */
+.new-search h3 {
+    font-size: 2rem;
+}
