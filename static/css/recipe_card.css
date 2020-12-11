@@ -139,11 +139,3 @@
     padding: 0px;
 }
 
-
-/* User recipe card style */
-
-/* Carousel height */
-.my-recipe-carousel {
-    height: 1000px!important;
-    margin-top: -400px;
-}

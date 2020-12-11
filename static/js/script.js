@@ -22,13 +22,6 @@ $(document).ready(function () {
     // Modal initalization
     $('.modal').modal();
 
-    // Carousel
-    $('.carousel').carousel( {
-        dist: -200,
-        padding: 10,
-        numVisible: 5,
-        duration: 400
-    }); 
 
     /* Floating action button */
     document.addEventListener('DOMContentLoaded', function() {
