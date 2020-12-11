@@ -2,7 +2,6 @@
 
 
 /* Navbar position and style  */
-
 nav {
    background-color: var(--eerie-black);
    height: 70px;
@@ -16,7 +15,6 @@ nav {
 
 
 /* Navigation tab style */
-
 .visited {
    color: var(--flame);
    background-color: var(--eerie-black);
@@ -26,7 +24,6 @@ nav {
 
 
 /* Logo position in navigation bar */
-
 nav .brand-logo {
    position: absolute;
    display: inline-block;
@@ -38,7 +35,6 @@ nav .brand-logo {
 
 
 /* Nav style on screens with min 993px */
-
 @media only screen and (min-width: 993px) {
    #categories-detskop {
       /* To override materialize style and position */
@@ -75,7 +71,6 @@ nav .brand-logo {
 
 
 /* Category bg color and text position */
-
 @media only screen and (max-width: 992px) {
    #categories-mobile a {
       background-color: var(--flame);

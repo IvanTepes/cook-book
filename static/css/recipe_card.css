@@ -1,5 +1,4 @@
 /* To center category container inside card */
-
 .col .row {
    margin-left: 0px;
    margin-right: 0px;
@@ -7,21 +6,19 @@
 
 
 /* Recipe cards edit de;ete button */
-
 .edit-dlt-btn-border-top {
    border-top: 1px solid #fffcf2;
 }
 
 
 /* Recipe cards edit/ delete btn margins */
-
 .edit-dlt-btn-margin {
    margin-top: 10px;
    margin-bottom: 5px;
 }
 
-/* Edit and delete button bu */
 
+/* Edit and delete button bu */
 .edit-btn,
 .delete-btn {
    background-color: #eb5e28;
@@ -32,7 +29,6 @@
 
 
 /* Edit Btn style */
-
 .edit-btn:hover {
    background-color: #39c939;
    box-shadow: inset 0px 0px 10px 2px #000000;
@@ -40,7 +36,6 @@
 
 
 /* Delete btn style */
-
 .delete-btn:hover {
    background-color: red;
    box-shadow: inset 0px 0px 10px 2px #000000;
@@ -48,7 +43,6 @@
 
 
 /* To remove paddings around recipe categories */
-
 .card .card-content {
    padding: 0px;
    border-top: 1px solid #fffcf2;
@@ -56,10 +50,10 @@
 
 
 /* To remove bottom margin from row complete card */
-
 .card .card-content .row {
    margin-bottom: 0px;
 }
+
 
 .cooking-time {
    height: 20px;
@@ -67,16 +61,19 @@
    border-right: 1px solid var(--floral-white);
 }
 
+
 .allergens {
    height: 20px;
    border-bottom: 1px solid var(--floral-white);
 }
+
 
 .serves {
    height: 20px;
    border-right: 1px solid var(--floral-white);
    border-bottom-left-radius: 20px;
 }
+
 
 .difficulty {
    height: 20px;
@@ -85,7 +82,6 @@
 
 
 /* Categories Fields Display, Position, Font */
-
 .card-category {
    background-color: var(--pale-silver);
    height: 100px;
@@ -101,7 +97,6 @@
 
 
 /* Image position inside card */
-
 .card .card-image img {
    display: block;
    border-top-left-radius: 20px;
@@ -111,7 +106,6 @@
 
 
 /* Position image on middle of card */
-
 .card .card-image {
    position: relative;
    text-align: center;
@@ -119,7 +113,6 @@
 
 
 /* Card style  */
-
 .card {
    border-radius: 20px;
    background: var(--pale-silver);
@@ -129,7 +122,6 @@
 
 
 /* Recipe name 3d-effect */
-
 .card .card-image .card-title {
     color: #252422;
     font-family: 'Pacifico';

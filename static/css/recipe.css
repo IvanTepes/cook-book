@@ -1,8 +1,8 @@
 /* body bg color */
-
 body {
    background-color: var(--pale-silver);
 }
+
 
 nav li {
    font-family: 'Pacifico';
@@ -10,14 +10,12 @@ nav li {
 
 
 /* Parallax image blur */
-
 .message-container {
    filter: blur(5px);
 }
 
 
 /* position of recipe container */
-
 .recipe-container {
    margin-bottom: 200px;
    margin-top: -275px;
@@ -33,14 +31,12 @@ nav li {
 
 
 /* Braething space from top */
-
 .decorative-divider-top {
    margin-top: 10px;
 }
 
 
 /* To remove style from style.css from home page */
-
 .decorative-divider-bottom {
    margin-top: 10px;
    margin-bottom: 20px;
@@ -48,7 +44,6 @@ nav li {
 
 
 /* Recipe cuisine style */
-
 .text-cuisine {
    background-color: #ccc5b9;
    width: 50%;
@@ -63,7 +58,6 @@ nav li {
 
 
 /* Recipe information container */
-
 .info-container {
    background-color: var(--pale-silver);
    width: 90%;
@@ -77,9 +71,7 @@ nav li {
 }
 
 
-
 /* Recipe information row style */
-
 .info-container .row-info {
    font-family: 'Roboto';
    font-weight: 600;
@@ -91,7 +83,6 @@ nav li {
 
 
 /* To remove default Materialize padding */
-
 .info-container .row-info .s3,
 .info-container .row-desc .s3 {
    padding: 0px;
@@ -99,7 +90,6 @@ nav li {
 
 
 /* Recipe description row style */
-
 .container .row-desc {
    font-family: 'Pacifico';
    color: #eb5e28;
@@ -109,7 +99,6 @@ nav li {
 
 
 /* Ingedients and method container */
-
 .prep-container {
    width: 95%;
    text-align: center;
@@ -118,7 +107,6 @@ nav li {
 
 
 /* Ingredients and Method Text */
-
 .prep-headers {
    font-family: 'Roboto';
    margin-top: 0px;
@@ -127,18 +115,17 @@ nav li {
 
 
 /* To match right size dividers */
-
 .prep-container .row .l4 .container .row .l6 {
    width: 100%;
 }
 
 
 /* To remove margin from line 27 */
-
 .prep-container .row .l4 .decorative-divider-bottom,
 .prep-container .row .l8 .decorative-divider-bottom {
    margin-top: 0px;
 }
+
 
 .card {
    border-radius: 20px;
@@ -147,24 +134,27 @@ nav li {
 
 
 /* Recipe image */
-
 .card .card-image img {
    border-radius: 20px;
    box-shadow: -2px -1px 20px 0px black;
 }
+
 
 ul {
    margin-top: 40px;
    font-family: 'Roboto';
 }
 
+
 .odd-ingred {
    background-color: #ccc5b9;
 }
 
+
 .method {
    text-align: justify;
 }
+
 
 .user-info {
    position: relative;
@@ -174,6 +164,7 @@ ul {
    color: #eb5e28;
 }
 
+
 .user-info .col {
    margin: 20px;
 }
@@ -181,10 +172,7 @@ ul {
 
 /* Used Media Query here for all screens because of layout
     of page and also to easy override global style in style.css  */
-
-
 /* If the screen size is 600px wide or less */
-
 @media screen and (max-width: 600px) {
    /* Recipe Description row font size */
    .container .row-desc {
@@ -209,7 +197,6 @@ ul {
 
 
 /* If the screen size is 601px wide or more */
-
 @media only screen and (min-width: 601px) {
    /* Recipe Description row font size */
    .container .row-desc {
@@ -230,7 +217,6 @@ ul {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-
 @media only screen and (min-width: 768px) {
    /* Recipe Description row font size */
    .container .row-desc {
@@ -251,7 +237,6 @@ ul {
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-
 @media only screen and (min-width: 992px) {
    /* Recipe Description row font size */
    .container .row-desc {
@@ -272,7 +257,6 @@ ul {
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-
 @media only screen and (min-width: 1200px) {
    /* Recipe Description row font size */
    .container .row-desc {
@@ -290,6 +274,7 @@ ul {
       font-size: 2vw;
    }
 }
+
 
 @media only screen and (min-width: 1400px) {
    /* Recipe Description row font size */

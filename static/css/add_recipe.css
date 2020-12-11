@@ -1,115 +1,115 @@
 /* Position and style of caret when category is pressed */
-
 .select-wrapper .caret {
-   position: absolute;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   margin: 0;
-   z-index: 0;
-   fill: rgba(0, 0, 0, 0.87);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  z-index: 0;
+  fill: rgba(0, 0, 0, 0.87);
 }
 
 
 /* Recipes container style */
-
 .add-recipe {
-   background-color: var(--pale-silver);
-   margin-bottom: 80px;
-   border-radius: 20px;
-   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
-   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-   border: 0.5px solid var(--floral-white);
-   margin-top: 4rem;
+  background-color: var(--pale-silver);
+  margin-bottom: 80px;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  border: 0.5px solid var(--floral-white);
+  margin-top: 4rem;
 }
 
 
 /* Position and style of dropdown menus */
-
 .dropdown-content {
-   top: 33px !important;
-   margin: 12px;
-   overflow-y: auto;
-   position: absolute;
-   background-color: var(--eerie-black);
-   height: 210px;
+  top: 33px !important;
+  margin: 12px;
+  overflow-y: auto;
+  position: absolute;
+  background-color: var(--eerie-black);
+  height: 210px;
 }
 
 
 /* Recipe cards edit de;ete button */
-
 .edit-dlt-btn-border-top {
-   border-top: 1px solid #fffcf2;
+  border-top: 1px solid #fffcf2;
 }
 
 
 /* Recipe cards edit/ delete btn margins */
-
 .edit-dlt-btn-margin {
-   margin-top: 20px;
-   margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 
 .edit-btn,
 .delete-btn {
-   background-color: var(--flame);
-   color: #000000;
-   font-weight: 700;
+  background-color: var(--flame);
+  color: #000000;
+  font-weight: 700;
 }
 
 
 /* Edit Btn style */
-
 .edit-btn:hover {
-   background-color: #39c939;
-   box-shadow: inset 0px 0px 10px 2px #000000;
+  background-color: #39c939;
+  box-shadow: inset 0px 0px 10px 2px #000000;
 }
 
 
 /* Delete btn style */
-
 .delete-btn:hover {
-   background-color: red;
-   box-shadow: inset 0px 0px 10px 2px #000000;
+  background-color: red;
+  box-shadow: inset 0px 0px 10px 2px #000000;
 }
+
 
 /* Help modals */
-
 .info-modal {
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
+
 
 .modal-btn {
-    background-color: var(--flame);
-    color: var(--eerie-black);
+  background-color: var(--flame);
+  color: var(--eerie-black);
 }
+
 
 /* Modals Gif */
-
 .gif-instruction {
-    border: 1px solid black;
+  border: 1px solid black;
 }
+
 
 /* Input fileds */
 .input-field>label {
-    color: var(--flame);
+  color: var(--flame);
 }
 
+
 .dropdown-triger {
-    color: var(--flame);
+  color: var(--flame);
 }
+
 
 /* Text area font color*/
 textarea.materialize-textarea {
-    color: var(--flame);
+  color: var(--flame);
 }
 
+
 #query::placeholder, input {
-    color: black;
+  color: black;
 }
+
 
 /* To position info buttons */
 .fa-info-circle {
-    margin-top: 25px;
+  margin-top: 25px;
 }

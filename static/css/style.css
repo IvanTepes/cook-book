@@ -1,5 +1,4 @@
 /* Color Pattern */
-
 :root {
    --floral-white: #fffcf2;
    --pale-silver: #ccc5b9;
@@ -9,9 +8,7 @@
    --shadow: #000000;
 }
 
-
 /* Font-Family */
-
 :root {
    --header-font: "Pacifico", sans-serif;
    --text-font: "Roboto", sans-serif;
@@ -19,12 +16,12 @@
 
 
 /* Body Bg Color */
-
 body {
    background-color: var(--floral-white);
    height: 100vh;
    margin: 0;
 }
+
 
 .shadow {
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
@@ -34,12 +31,12 @@ body {
 
 
 /* Main hovable elements shadow / global style  */
-
 .main-shadow {
    border: 0.5px solid var(--floral-white);
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
+
 
 .main-shadow:hover {
    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -47,7 +44,6 @@ body {
 
 
 /* H1 headers style  */
-
 h1 {
    font-family: var(--header-font);
    color: var(--flame);
@@ -57,6 +53,8 @@ h1 {
    font-size: 4rem;
 }
 
+
+/* H3 elements style */
 h3 {
    font-size: 3rem;
    font-family: var(--header-font);
@@ -68,7 +66,6 @@ h3 {
 
 
 /* Parallax overlay  */
-
 .message-container {
    background-color: rgb(0 0 0 / 50%);
 }
@@ -79,6 +76,7 @@ h3 {
    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
    margin-bottom: 2rem;
 }
+
 
 .parallax-container p {
    font-size: 3vw;
@@ -93,7 +91,6 @@ h3 {
     Classes for hide not working without this
     Small an medium screens
  */
-
 .show-on-small {
    display: none;
 }
@@ -106,22 +103,21 @@ h3 {
    display: none;
 }
 
-/* Decorative divider position  */
 
+/* Decorative divider position  */
 .decorative-divider-top {
    padding-top: 7rem;
 }
 
 
 /* To position decorative divider in middle*/
-
 .decorative-divider-top .row .col,
 .decorative-divider-bottom .row .col {
    float: none;
 }
 
-/* Decorative divider middle margin */
 
+/* Decorative divider middle margin */
 .decorative-divider-middle {
    margin-top: 5rem;
    margin-bottom: 5rem;
@@ -129,14 +125,13 @@ h3 {
 
 
 /* Recipe card margins */
-
 .recipe-card {
    margin-top: 4vw;
    margin-bottom: 4vw;
 }
 
-/* To position search result and message below search bar */
 
+/* To position search result and message below search bar */
 .search-result-container {
    margin-top: 10rem;
    margin-bottom: 10rem;
@@ -145,7 +140,6 @@ h3 {
 
 
 /* Align instruction message to middle */
-
 .new-search {
    text-align: center;
    /* margin: 0px !important; */
@@ -160,7 +154,6 @@ h3 {
 
 
 /* Search instructions style  */
-
 .new-search h3 {
    font-size: 3rem;
    font-family: var(--text-font);
@@ -173,7 +166,6 @@ h3 {
 
 
 /* To position welcome message */
-
 .welcome-message {
    margin-bottom: 0px;
    font-size: 3rem;
@@ -183,6 +175,7 @@ h3 {
    text-shadow: none;
 }
 
+
 h4 {
    margin-top: 0px;
    margin-bottom: 0px;
@@ -190,22 +183,20 @@ h4 {
 
 
 /* Error msg New search msg icons */
-
 .search-result-container .fa-smile,
 .new-search .fa-smile,
 .fa-sad-tear {
    font-size: 8rem;
 }
 
-/* Flash messages container */
 
+/* Flash messages container */
 .flash-container {
    width: 100%;
 }
 
 
 /* Flash message container */
-
 .flash-msg {
    border: 0.5px solid #ff0000;
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
@@ -215,7 +206,6 @@ h4 {
 
 
 /* Flash messages style and position */
-
 .flashes h4 {
    font-size: 30px;
    font-family: 'Roboto';
@@ -230,7 +220,6 @@ h4 {
 
 
 /* New here msg on login form */
-
 .new-here-msg {
    font-weight: 600;
    font-size: 20px;
@@ -239,7 +228,6 @@ h4 {
 
 
 /* Register account style */
-
 .register-acc {
    color: #eb5e28;
    text-decoration: none;
@@ -248,12 +236,12 @@ h4 {
 
 
 /* Register in form on hover */
-
 .register-acc:hover {
    color: #039be5;
    text-decoration: underline;
    -webkit-tap-highlight-color: transparent;
 }
+
 
 .edit-delete-btn {
    border-top: 1px solid black;
@@ -261,7 +249,6 @@ h4 {
 
 
 /* Icons style and color */
-
 .fas {
    text-align: center;
    font-size: 30px;
@@ -271,7 +258,6 @@ h4 {
 
 
 /* Footer position and color*/
-
 .page-footer {
    background-color: var(--eerie-black);
    position: relative;
@@ -283,7 +269,6 @@ h4 {
 
 
 /* Search Bar Input color and text position */
-
 #form-search {
    height: 70px;
    border-radius: 10px;
@@ -297,14 +282,12 @@ h4 {
 
 
 /* Text position inside search bar */
-
 .search {
    text-align: center;
 }
 
 
 /* Search bar input text color */
-
 .search,
 #query::placeholder,
 input {
@@ -313,7 +296,6 @@ input {
 
 
 /* Search bar Button */
-
 .search-bar-button {
    margin: 20px;
    color: var(--eerie-black);
@@ -327,7 +309,6 @@ input {
 
 
 /* Search bar panel style */
-
 .card-panel {
    background-color: var(--pale-silver);
    box-shadow: none;
@@ -340,20 +321,19 @@ input {
 
 
 /* Floating action button style */
-
 .btn-floating.btn-large i {
    display: block;
    color: var(--flame);
 }
 
-/* floating home and up */ 
 
+/* floating home and up */ 
 .btn-floating i {
     color: #252422;
 }
 
-/* Home and up floating icon style */
 
+/* Home and up floating icon style */
 .btn-floating {
     background-color: var(--flame);
     border-radius: 50%;
@@ -363,12 +343,13 @@ input {
     vertical-align: middle;
 }
 
+
 .fa-arrow-left .fa-cog {
     color: var(--eerie-black);
 }
 
-/* Floating btn shadow*/
 
+/* Floating btn shadow*/
 .btn-floating.btn-large {
    box-shadow: 0px 0px 4px 1px black;
    background-color: #252422 !important;
@@ -376,7 +357,6 @@ input {
 
 
 /* Search bar button search_bar.css:39 disabled */
-
 .btn,
 .btn-large,
 .btn-small,
@@ -390,7 +370,6 @@ input {
 
 
 /* Forms button */
-
 .form-btn {
    background-color: var(--eerie-black);
    color: var(--flame);
@@ -398,11 +377,11 @@ input {
 
 
 /* Forms button on hover  */
-
 .btn-large:hover {
    background-color: var(--flame);
    color: var(--eerie-black);
 }
+
 
 /* Modal delete recipe */
 /* Modal image position and size */
@@ -420,18 +399,17 @@ input {
     margin-top: 4px!important;
 }
 
-/* Delete recipe modal */
 
+/* Delete recipe modal */
 .delete-modal {
     max-height: 25%;
     margin-top: 15rem;
 }
 
+
 /* ******************* MEDIA QUERY ********************** */
 
-
 /* Extra small devices (phones, 600px and down) */
-
 @media only screen and (max-width: 600px) {
 
     h1, h3 {
@@ -448,21 +426,18 @@ input {
     .recipe-container .decorative-divider-top {
       padding-top: 0px;
     }
-
     /* To position info container belove divider
         override recipe.css:67
      */
     .info-container {
     margin-top: 0px!important;
     }
-
    /* Dimmed background for better contrast */
    .message-container {
       padding-top: 105px;
       text-align: center;
       height: 100%;
    }
-
    .parallax-container p {
       text-align: center;
       font-family: var(--header-font);
@@ -471,7 +446,6 @@ input {
       color: var(--pale-silver);
       padding: 5px;
    }
-
    /* Remove margin for responsivnes */
    .btn,
    .btn-large,
@@ -479,21 +453,14 @@ input {
    .btn-flat {
       font-size: 1rem;
    }
-
    /* to control font size */
    .new-here-msg {
       font-size: 4vw;
    }
-
    /* Position search bar on home page */
    .card-panel {
        margin-top: 1rem;
    }
-
-   /* .search-bar-container {
-       padding-top: 1rem!important;
-   }
- */
    /* Search bar buttons */
    .btn,
    .btn-large,
@@ -502,12 +469,10 @@ input {
       margin-left: 0px;
       margin-right: 0px;
    }
-
    /* To control recipe name in recipe card stylecss:147*/
    .card .card-image .card-title {
       font-size: 1.4rem;
    }
-
    /* Modal delete recipe */
     .modal-img {
       width: 100%;
@@ -517,11 +482,9 @@ input {
 
 }
 
+
 /* If the screen size is 601px wide or more */
-
 @media only screen and (min-width: 601px) {
-
-    
    .message-container {
       position: relative;
       padding: 96px 0;

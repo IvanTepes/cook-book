@@ -1,8 +1,5 @@
 /* Register Container  */
-
-
 /* Register and login panel */
-
 .register-panel {
    padding: 0px;
    box-shadow: none;
@@ -10,7 +7,6 @@
 
 
 /* Position of register/login container */
-
 .register-container {
    border-radius: 20px;
    top: 100px;
@@ -24,7 +20,6 @@
 
 
 /* Top left and right tabs border radius */
-
 .register-container .row .tabs {
    border-top-left-radius: 20px;
    border-top-right-radius: 20px;
@@ -32,7 +27,6 @@
 
 
 /* Input label color and font */
-
 .register-container .input-field>label {
    color: var(--flame);
    font: "Roboto";
@@ -41,7 +35,6 @@
 
 
 /* Active register or log tab  */
-
 .tabs .tab a:hover,
 .tabs .tab a.active {
    background-color: #eb5e28;
@@ -51,7 +44,6 @@
 
 
 /* Tabs color on focus */
-
 .tabs .tab a:focus,
 .tabs .tab a:focus.active {
    background-color: var(--flame);
@@ -59,14 +51,12 @@
 
 
 /* Tabs text color when is inactive */
-
 .tabs .tab a {
    color: var(--flame);
 }
 
 
 /* Tabs bg color and active tab indicator */
-
 .tabs,
 .tabs .indicator {
    background-color: var(--eerie-black);
@@ -74,14 +64,12 @@
 
 
 /* Active tab indicator height */
-
 .tabs .indicator {
    height: 4px;
 }
 
 
 /* Input color */
-
 .card-panel input {
    color: var(--eerie-black);
 }
