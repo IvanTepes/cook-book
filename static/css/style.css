@@ -75,9 +75,9 @@ h3 {
 
 
 /* Parallax shadow */
-
 .parallax-container {
    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+   margin-bottom: 2rem;
 }
 
 .parallax-container p {
@@ -102,7 +102,7 @@ h3 {
    display: none;
 }
 
-.show-on-large: {
+.show-on-large {
    display: none;
 }
 
@@ -135,17 +135,6 @@ h3 {
    margin-bottom: 4vw;
 }
 
-
-/* Position search bar on search page and error*/
-
-.new-search-container {
-   margin-top: 0px !important;
-   margin-bottom: 0px !important;
-   position: relative;
-   top: 7vw;
-}
-
-
 /* To position search result and message below search bar */
 
 .search-result-container {
@@ -164,9 +153,8 @@ h3 {
 
 
 /* Position message below search bar */
-
 .new-search {
-   margin-top: 10rem;
+   margin-top: 4rem;
    font-family: 'Roboto';
 }
 
@@ -208,19 +196,6 @@ h4 {
 .fa-sad-tear {
    font-size: 8rem;
 }
-
-
-/* Remove margins from search_bar.css:188 */
-
-.new-search-container .new-search {
-   margin-top: 0px;
-   margin-bottom: 0px;
-}
-
-.new-search-container .recipe-card {
-   margin-top: 158px;
-}
-
 
 /* Flash messages container */
 
@@ -359,7 +334,7 @@ input {
    padding: 0px;
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
    border: 0.5px solid var(--floral-white);
-   margin-top: 9vw;
+   margin-top: 10rem;
    border-radius: 20px;
 }
 
@@ -491,14 +466,15 @@ input {
      */
     .info-container {
     margin-top: 0px!important;
-   
-}
+    }
+
    /* Dimmed background for better contrast */
    .message-container {
       padding-top: 105px;
       text-align: center;
       height: 100%;
    }
+
    .parallax-container p {
       text-align: center;
       font-family: var(--header-font);
@@ -507,6 +483,7 @@ input {
       color: var(--pale-silver);
       padding: 5px;
    }
+
    /* Remove margin for responsivnes */
    .btn,
    .btn-large,
@@ -514,14 +491,21 @@ input {
    .btn-flat {
       font-size: 1rem;
    }
+
    /* to control font size */
    .new-here-msg {
       font-size: 4vw;
    }
-   /* Search bar on new_search */
-   .new-search-container {
-      top: 7rem;
+
+   /* Position search bar on home page */
+   .card-panel {
+       margin-top: 1rem;
    }
+
+   /* .search-bar-container {
+       padding-top: 1rem!important;
+   }
+ */
    /* Search bar buttons */
    .btn,
    .btn-large,
@@ -530,6 +514,7 @@ input {
       margin-left: 0px;
       margin-right: 0px;
    }
+
    /* To control recipe name in recipe card stylecss:147*/
    .card .card-image .card-title {
       font-size: 1.6rem;
@@ -564,10 +549,6 @@ input {
       text-shadow: -4px 4px 2px var(--shadow);
       color: var(--pale-silver);
       padding: 1px;
-   }
-   /* Search bar position from top */
-   .new-search-container {
-      top: 7rem;
    }
    
 }
