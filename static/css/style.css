@@ -417,11 +417,15 @@ input {
  */
 .modal-question {
     color: red;
-    margin-top: 10px!important;
-    margin-bottom: 10px!important;
+    margin-top: 4px!important;
 }
 
+/* Delete recipe modal */
 
+.delete-modal {
+    max-height: 25%;
+    margin-top: 15rem;
+}
 
 /* ******************* MEDIA QUERY ********************** */
 
@@ -512,7 +516,6 @@ input {
 
 
 }
-
 
 /* If the screen size is 601px wide or more */
 
