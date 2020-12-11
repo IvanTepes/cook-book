@@ -6,18 +6,18 @@
 
 
 <!-- Home search bar 
-    if search true render recipe on search
-    if search false render error on search
+    if search true render recipe on search.html
+    if search false render error on search.html
     if reset refresh home
     logic on search.html -->
-<div class="container">
+<div class="container search-bar-container">
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row center-align">
                 <div class="input-field col s12">
                     <i class="fas fa-search prefix"></i>
                     <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Recipes</label>
+                    <label for="query">Search by name, ingredients, cook time</label>
                 </div>
                 <div class="col s12 btn-container">
                     <a href="{{ url_for('home') }}" class="reset-btn main-shadow btn">Reset</a>
@@ -30,5 +30,4 @@
     </div>
 </div>
     
-
 {% endblock %}
