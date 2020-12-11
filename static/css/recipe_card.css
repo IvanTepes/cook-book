@@ -7,7 +7,7 @@
 
 /* Recipe cards edit de;ete button */
 .edit-dlt-btn-border-top {
-   border-top: 1px solid #fffcf2;
+   border-top: 1px solid var(--floral-white);
 }
 
 
@@ -21,9 +21,9 @@
 /* Edit and delete button bu */
 .edit-btn,
 .delete-btn {
-   background-color: #eb5e28;
+   background-color: var(--flame);
    /* border-radius: 15px; */
-   color: #000000;
+   color: var(--shadow);
    font-weight: 700;
 }
 
@@ -31,21 +31,21 @@
 /* Edit Btn style */
 .edit-btn:hover {
    background-color: #39c939;
-   box-shadow: inset 0px 0px 10px 2px #000000;
+   box-shadow: inset 0px 0px 10px 2px var(--shadow);
 }
 
 
 /* Delete btn style */
 .delete-btn:hover {
    background-color: red;
-   box-shadow: inset 0px 0px 10px 2px #000000;
+   box-shadow: inset 0px 0px 10px 2px var(--shadow);
 }
 
 
 /* To remove paddings around recipe categories */
 .card .card-content {
    padding: 0px;
-   border-top: 1px solid #fffcf2;
+   border-top: 1px solid var(--floral-white);
 }
 
 
@@ -123,9 +123,9 @@
 
 /* Recipe name 3d-effect */
 .card .card-image .card-title {
-    color: #252422;
-    font-family: 'Pacifico';
-    text-shadow: -1px 0px 0px #fffcf2, 0px 1px 0px #fffcf2, 1px 0px 0px #fffcf2, -1px 0px 0px #fffcf2, -1px 0px 0px #fffcf2;
+    color:  var(--eerie-black);
+    font-family: var(--header-font);
+    text-shadow: -1px 0px 0px var(--floral-white), 0px 1px 0px var(--floral-white), 1px 0px 0px var(--floral-white), -1px 0px 0px var(--floral-white), -1px 0px 0px var(--floral-white);
     position: relative;
     z-index: 3;
     padding: 0px;

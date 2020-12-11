@@ -5,7 +5,7 @@ body {
 
 
 nav li {
-   font-family: 'Pacifico';
+   font-family: var(--header-font);
 }
 
 
@@ -24,7 +24,7 @@ nav li {
    z-index: 1;
    background-color: var(--floral-white);
    width: 90%;
-   border: 0.5px solid #252422;
+   border: 0.5px solid var(--eerie-black);
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
@@ -45,14 +45,14 @@ nav li {
 
 /* Recipe cuisine style */
 .text-cuisine {
-   background-color: #ccc5b9;
+   background-color: var(--pale-silver);
    width: 50%;
    position: relative;
    display: block;
    margin: auto;
    margin-bottom: 20px;
-   font-family: 'Pacifico';
-   color: #252422;
+   font-family: var(--header-font);
+   color: var(--eerie-black);
    border-radius: 10px;
 }
 
@@ -65,7 +65,7 @@ nav li {
    position: relative;
    margin-top: 7rem;
    padding: 5px;
-   border: 0.5px solid #252422;
+   border: 0.5px solid var(--eerie-black);
    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), -3px 0px 3px rgba(0, 0, 0, 0.12), 1px 0px 2px rgba(0, 0, 0, 0.24);
    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
@@ -73,9 +73,9 @@ nav li {
 
 /* Recipe information row style */
 .info-container .row-info {
-   font-family: 'Roboto';
+   font-family: var(--text-font);
    font-weight: 600;
-   border-bottom: 1px solid #fffcf2;
+   border-bottom: 1px solid var(--floral-white);
    color: var(--eerie-black);
    letter-spacing: 1px;
    padding: 5px;
@@ -91,10 +91,10 @@ nav li {
 
 /* Recipe description row style */
 .container .row-desc {
-   font-family: 'Pacifico';
-   color: #eb5e28;
+   font-family: var(--header-font);
+   color: var(--flame);
    padding: 5px;
-   text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
+   text-shadow: -1px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 1px 0px 0px var(--shadow), -1px 0px 0px var(--shadow), 1px 4px 3px var(--shadow);
 }
 
 
@@ -108,7 +108,7 @@ nav li {
 
 /* Ingredients and Method Text */
 .prep-headers {
-   font-family: 'Roboto';
+   font-family: var(--text-font);
    margin-top: 0px;
    margin-bottom: 20px;
 }
@@ -136,18 +136,18 @@ nav li {
 /* Recipe image */
 .card .card-image img {
    border-radius: 20px;
-   box-shadow: -2px -1px 20px 0px black;
+   box-shadow: -2px -1px 20px 0px var(--shadow);
 }
 
 
 ul {
    margin-top: 40px;
-   font-family: 'Roboto';
+   font-family: var(--text-font);
 }
 
 
 .odd-ingred {
-   background-color: #ccc5b9;
+   background-color: var(--pale-silver);
 }
 
 
@@ -160,8 +160,8 @@ ul {
    position: relative;
    display: flex;
    font-size: 2rem;
-   font-family: 'Pacifico';
-   color: #eb5e28;
+   font-family: var(--header-font);
+   color: var(--flame);
 }
 
 

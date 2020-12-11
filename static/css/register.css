@@ -29,7 +29,7 @@
 /* Input label color and font */
 .register-container .input-field>label {
    color: var(--flame);
-   font: "Roboto";
+   font: var(--text-font);
    font-weight: 600;
 }
 
@@ -37,8 +37,8 @@
 /* Active register or log tab  */
 .tabs .tab a:hover,
 .tabs .tab a.active {
-   background-color: #eb5e28;
-   color: #252422;
+   background-color: var(--flame);
+   color: var(--eerie-black);
    font-weight: 600;
 }
 

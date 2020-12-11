@@ -47,7 +47,7 @@ body {
 h1 {
    font-family: var(--header-font);
    color: var(--flame);
-   text-shadow: -1px 3px 2px #000000;
+   text-shadow: -1px 3px 2px var(--shadow);
    margin: 0px;
    padding: 1rem;
    font-size: 4rem;
@@ -60,8 +60,8 @@ h3 {
    font-family: var(--header-font);
    text-align: center;
    padding: 3px;
-   text-shadow: -1px 0px 0px #000000, 0px 1px 0px #000000, 1px 0px 0px #000000, -1px 0px 0px #000000, 1px 4px 3px #000000;
-   color: #eb5e28;
+   text-shadow: -1px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 1px 0px 0px var(--shadow), -1px 0px 0px var(--shadow), 1px 4px 3px var(--shadow);
+   color: var(--flame);
 }
 
 
@@ -80,7 +80,7 @@ h3 {
 
 .parallax-container p {
    font-size: 3vw;
-   font-family: 'Pacifico';
+   font-family: var(--header-font);
    text-shadow: -4px 4px 2px var(--shadow);
    color: var(--pale-silver);
    padding: 1px;
@@ -149,7 +149,7 @@ h3 {
 /* Position message below search bar */
 .new-search {
    margin-top: 4rem;
-   font-family: 'Roboto';
+   font-family: var(--text-font);
 }
 
 
@@ -158,7 +158,7 @@ h3 {
    font-size: 3rem;
    font-family: var(--text-font);
    padding: 3px;
-   color: #252422;
+   color: var(--eerie-black);
    font-weight: 600;
    text-shadow: none;
    /* margin-bottom: 100px; */
@@ -170,7 +170,7 @@ h3 {
    margin-bottom: 0px;
    font-size: 3rem;
    font-family: var(--text-font);
-   color: #252422;
+   color: var(--eerie-black);
    font-weight: 600;
    text-shadow: none;
 }
@@ -208,7 +208,7 @@ h4 {
 /* Flash messages style and position */
 .flashes h4 {
    font-size: 30px;
-   font-family: 'Roboto';
+   font-family: var(--text-font);
    background-color: var(--floral-white);
    color: var(--eerie-black);
    ;
@@ -223,13 +223,13 @@ h4 {
 .new-here-msg {
    font-weight: 600;
    font-size: 20px;
-   color: #252422;
+   color: var(--eerie-black);
 }
 
 
 /* Register account style */
 .register-acc {
-   color: #eb5e28;
+   color: var(--flame);
    text-decoration: none;
    -webkit-tap-highlight-color: transparent;
 }
@@ -244,7 +244,7 @@ h4 {
 
 
 .edit-delete-btn {
-   border-top: 1px solid black;
+   border-top: 1px solid var(--shadow);
 }
 
 
@@ -303,7 +303,7 @@ input {
    height: 30px;
    width: 85px;
    border-radius: 10px;
-   font-family: "Roboto", sans-serif;
+   font-family: var(--text-font);
    font-weight: 600;
 }
 
@@ -329,7 +329,7 @@ input {
 
 /* floating home and up */ 
 .btn-floating i {
-    color: #252422;
+    color: var(--eerie-black);
 }
 
 
@@ -351,8 +351,8 @@ input {
 
 /* Floating btn shadow*/
 .btn-floating.btn-large {
-   box-shadow: 0px 0px 4px 1px black;
-   background-color: #252422 !important;
+   box-shadow: 0px 0px 4px 1px var(--shadow);
+   background-color: var(--eerie-black)!important;
 }
 
 
@@ -363,7 +363,7 @@ input {
 .btn-flat {
    border: none;
    font-weight: 800;
-   font-family: 'Roboto';
+   font-family: var(--text-font);
    background-color: var(--pale-silver);
    color: var(--pale-silver);
 }
@@ -495,7 +495,7 @@ input {
    }
    .parallax-container p {
       font-size: 3vw;
-      font-family: 'Pacifico';
+      font-family: var(--header-font);
       text-shadow: -4px 4px 2px var(--shadow);
       color: var(--pale-silver);
       padding: 1px;
