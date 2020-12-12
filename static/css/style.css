@@ -184,9 +184,14 @@ h4 {
 
 /* Error msg New search msg icons */
 .search-result-container .fa-smile,
-.new-search .fa-smile,
-.fa-sad-tear {
+.new-search .fa-smile {
    font-size: 8rem;
+}
+
+
+/* Search not found sad icon size */
+.search-container .row .col .fa-sad-tear {
+    font-size: 8rem;
 }
 
 

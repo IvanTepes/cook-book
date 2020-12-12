@@ -92,6 +92,7 @@ Two fonts were used in this project.
 
 #### Icons
 
+The icons used in this project are provided by [Font Awesome](https://fontawesome.com/).
 All icons used were chosen for their obvious meaning and purpose so that they can be understood by everyone.
 
 #### Colours
@@ -163,37 +164,70 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 - The user can find the search bar on the home page and have the option to reset the search and start over again from the home page or start a new search immediately.
 - Search bar provides the user with feedback if the recipe is found and if is not.
 
+- If the search has a result: :
+
+    ![search-found](readme_files/img/search-found.png)
+
+- If the search has no result:
+
+    ![search-fail](readme_files/img/search-fail.png)
+
 #### Parallax 
 
-- Parallax is used on the home page and on the recipe page. On the home page as a container for the hero image while on the recipe it was used as a background containing the recipe image. Blur on pallarax was added to the recipe page.
+- Parallax is used on the home page and on the recipe page. On the home page as a container for the hero image while on the recipe it was used as a background containing the recipe image. Blur on pallarax was added on the recipe page.
 
 #### Floating Action Button 
 
 - It allows the user to quickly scroll to the top of the page and also on the recipe page allows you to return to the home page. The floating button is located in the lower right corner of the screen and is located on all pages is especially useful on mobile devices.
 
+--UPDATE--
+
 #### Quick Log In
 
 - Allow the user a quick login to his account directly from the home page.
+
+- Login on home page with invite message :
+
+    ![login-index](readme_files/img/login-index.png)
 
 #### Recipe Cards
 
 - Allow the user to see without searching and clicking the recipe they would like, also providing the user with more important information     about the recipe.
 
+- Recipe card showing recipe preparation time, recipe cooking time,   recipe size and recipe difficulty :
+
+    ![recipe-card](readme_files/img/recipe-card.png)
+
+- Recipe card on hover:
+
+    ![recipe-card](readme_files/img/recipe-hover.png)
+
 #### Log In / Register Page
 
-- Allows a new user to create their account and allows existing users to log in to their account.
+- Allows a new user to create their account and allows existing users to log in to their account. 
+
+- Allows user login/register without changing a page :
+
+    ![login-register](readme_files/img/login-register.gif)
 
 #### My Recipes
 
 - Allows registered users to **view** previously added recipe.
 - Allows registered users to **update** their recipe.
 - Allows registered users to **delete** their recipe. 
+- When a user decides to delete a recipe before deleting it, he is asked if he wants to delete the recipe?
+
+- Delete Modal :
+
+    ![delete](readme_files/img/delete.png)
 
 #### Add Recipe
 
 - Allows registered users to add their own recipes.
 
 #### Footer 
+
+- Contain autor name and social icons.
 
 ### Features Left to Implement
 
