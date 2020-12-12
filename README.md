@@ -2,7 +2,9 @@
 
 ![responsiveness](readme_files/img/cook-book-multi.png)
 
-Cook Book is site for all gourmets and people who love to cook, share, try a new recipes and delicious food. Cook Book offers the user a quick and effective way to get the desired specific recipe in the fastest possible way.
+Cook Book is a site for all gourmets and people who love to cook, share,try new recipes and delicious food. Cook Book offers the user a quick and effective way to get the desired specific recipe in the fastest possible way.
+
+[View the live project here.](https://flask-cook-book-project.herokuapp.com/)
 
 ## UX
 
@@ -11,22 +13,25 @@ Cook Book is site for all gourmets and people who love to cook, share, try a new
 The central target audience for Cook Book are people:
 
 - Who are old enough to be able to use household appliances on their own, who possess a certain level of skill to operate this type of tool.
-- Who like to share recipes and knowledge about food and be part of this type of community.
+- Who likes to share recipes and knowledge about food and be part of this type of community.
 
-User Goal are:
+User Goal is:
 
-- Find recipe on fastest posible way.
-- Find important information about recipe without too much looking.
-- Share recipes with community. 
+- Find a recipe in the fastest possible way less clicks possible.
+- Find important information about the recipe without too much looking.
+- Share recipes with the community. 
 
 Cook Book is a great way to help users meet these needs because:
 
 - The planning and design process took all these needs into account before starting to build it.
-- The needs of the user may vary and vary from person to person and this site tries to cover some of the most important issues that the user    has when visiting this site such as: 
-    - Time need to cook dish
+- The needs of the user may vary and vary from person to person and this site tries to cover some of the most important issues that the user has when visiting this site such as: 
+    - Preparation time
+    - Time need to cook a dish
     - Size of dish
-    - Possible allergens
-    - Skill needed
+    - Recipe difficulty
+
+    ![recipe-card](readme_files/img/recipe-card.png)
+
 - Cook Book allows registered users to share their best creations with the community in form of CRUD operations (create, read, update, delete)
 
 ### User Stories
