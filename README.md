@@ -468,6 +468,14 @@ https://www.bbc.co.uk/food/recipes/iced_mince_pies_04100
 
 https://www.bbc.co.uk/food/recipes/mini-tiramisu_cakes_73687
 
-
-### Media
 ### Acknowledgements
+
+- To my girlfriend who was my biggest helper, the biggest critic, the voice of common sense in some difficult moments during the making of this project.
+
+- I'd like to thank my mentor in Code Institute **[Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/)** who had all the patience to explain and make me understand certain concepts and peculiarities of the project. And also for useful and constructive feedback through this project.
+
+- All people, including family, friends, and colleagues who have tested the application on their real devices, reporting to me about any usability issues and giving improvement tips to improve the usability.
+
+- To all of the **[Code Institute Slack](https://codeinstitute.net/)** community for the help in my issues and review to my project.
+
+### The content of this website is for educational purposes only. 
