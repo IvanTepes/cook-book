@@ -29,7 +29,7 @@ Cook Book is a great way to help users meet these needs because:
     - Time need to cook a dish
     - Size of dish
     - Recipe difficulty
-
+    - Recipe card :
     ![recipe-card](readme_files/img/recipe-card.png)
 
 - Cook Book allows registered users to share their best creations with the community in form of CRUD operations (create, read, update, delete)
@@ -69,10 +69,10 @@ Cook Book is a great way to help users meet these needs because:
 Two fonts were used in this project.
 
 - [Pacifico](https://fonts.google.com/specimen/Pacifico)
-    - The Pacifico font is used for document headers because it resembles a handwritten one and the page gets the impression of a book.
+    - The Pacifico font is used for document headers because it resembles a handwritten one, and the page gets the impression of a book.
 
 - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto)
-    - The Roboto font was used for all other parts of the page where text was used and because it blends in nicely with the rest of the page.
+    - The Roboto font was used for all other parts of the page where the text was used and because it blends in nicely with the rest of the page.
 
 #### Icons
 
@@ -80,18 +80,18 @@ All icons used were chosen for their obvious meaning and purpose so that they ca
 
 #### Colours
 
-The color palette contains two dark, two light and one bright color. Combining these colors I got an eye-pleasing and interesting look.
+The color palette contains two dark, two-light, and one bright color. Combining these colors I got an eye-pleasing and interesting look.
 - Color palette can be find [here](readme_files/color_palette/cook_book_colour_palette.png).
 
 #### Styling
 
 - Cards and container boxes were given rounded corners with shadows.
-- Repeating the same rounded corner pattern throughout the page keeps consistency in design and maintains the feeling that all elements         belong together.
+- Repeating the same rounded corner pattern throughout the page keeps     consistency in design and maintains the feeling that all elements       belong together.
 - Pictures that accurately show the finished result of the recipes.
-- SHADOWS?
-- BUTTONS?
-- HOVER?
-- DIVIDERS?
+- All elements on the page have a shadow, which is the main shade of      black. Only the navbar has a different shade that is a little more      pronounced to get the effect of underlining the page when scrolling.
+- All the buttons on the page are large and easy to use, with the         action name on each, so the user knows what to expect when a            particular button is pressed.
+- Recipe cards and buttons share the same hover effect when a user        interacts with items by letting them know something is going on.
+- For the text dividers, I used decorative dividends, which gave me the   look and style of the book that fits nicely with the Pacifico font      and gives me the design I had planned from the beginning.
 
 ### Wireframes
 
@@ -111,21 +111,29 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 ### Existing Features
 
+### Home Page
+
+- The home page shows the four last added recipes in the database from each category allowing the user to immediately have an insight into the recipes that interest him.
+
 #### Navigation Bar
 
+- The Navbar is fixed so it is always available to the user.
 - Allows all users to select the content they want to view by simply clicking them, this also collapses into a toggle on mobile devices to.
 - After the user registers, the navigation bar expands and gets two new items My Recipes and Add Recipe.  
 
 #### Search Bar
 
-- So the user can find recipes
-- The user can find the search bar on the home page and on the pages where the recipes are grouped as Dinner, giving the user the option to     continue searching for recipes without returning to the home page.
+- So the user can find recipes and filter them.
+- The user can find the search bar on the home page and have the option to reset the search and start over again from the home page or start a new search immediately.
+- Search bar provides the user with feedback if the recipe is found and if is not.
 
-#### Parallax Hero Image
-- 
-#### Return Button 
+#### Parallax 
 
-- Allow user a quick return to the Home page.
+- Parallax is used on the home page and on the recipe page. On the home page as a container for the hero image while on the recipe it was used as a background containing the recipe image. Blur on pallarax was added to the recipe page.
+
+#### Floating Action Button 
+
+- It allows the user to quickly scroll to the top of the page and also on the recipe page allows you to return to the home page. The floating button is located in the lower right corner of the screen and is located on all pages is especially useful on mobile devices.
 
 #### Quick Log In
 
@@ -133,9 +141,7 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 #### Recipe Cards
 
-- Allow the user to see without searching and clicking the recipe they would like, also providing the user with more important information      about the recipe.
-
-#### Allergens Guide
+- Allow the user to see without searching and clicking the recipe they would like, also providing the user with more important information     about the recipe.
 
 #### Log In / Register Page
 
@@ -155,8 +161,14 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 ### Features Left to Implement
 
-#### Rate Recipe 
-#### Admin Statistics
+- I would like to add information about possible allergens in the recipe.
+
+- A rating system that allows the user to rate a tried recipe. Over time, the homepage will no longer display the last four recipes, but the last four recipes with the highest score.
+
+- Mail A welcome message when the user registers on the site, also when the rating system is in place to inform the user that the recipe has received a rating.
+
+- A page for the administrator who would have the options to delete recipes and edit also a dashboard with page and recipe statistics.
+
 
 ## Technologies Used
 - [**HTML**](https://www.w3.org/TR/html52/)
