@@ -1,5 +1,7 @@
 # Cook Book
 
+![responsiveness](readme_files/img/cook-book-multi.png)
+
 Cook Book is site for all gourmets and people who love to cook, share, try a new recipes and delicious food. Cook Book offers the user a quick and effective way to get the desired specific recipe in the fastest possible way.
 
 ## UX
