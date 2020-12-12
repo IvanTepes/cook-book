@@ -316,11 +316,107 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
     - to create Favicon.
 - [**LucidChart**](https://lucid.app/)
     - to create ERD (Entity Relationship Diagram)
+
+
 ## Testing
 
 - Testing information can be found in separate testing.md file.
 
 ## Deployment
+
+    - Clone a Repository from Github
+    - Work with a Local Copy
+    - Deploy on Heroku
+
+### Cloning the Repository
+
+To work with a local copy of this project the following steps needs to be taken:
+
+- Go to the main page of the GitHub repository and click on the dropdown menu **Code**
+
+- Copy the URL and go to your local IDE
+
+- In the terminal of your IDE type in **git clone** and the paste the URL copied from step 2
+- Press Enter and the clone will be created
+
+
+### Working with a Local Copy
+
+Installing the Requirements :
+
+- To install all the required libraries of the project go to the workspace of your local copy
+
+- In the terminal window of your IDE type in: **pip3 install -r requirements.txt**
+
+
+Creating Collections in MongoDB :
+
+- Login to your MongoDB account
+- Create a **cluster**
+- Create a **database**
+- Create four **collections** in the database named:
+
+    - **categories**
+    - **difficulty**
+    - **recipes**
+    - **users**
+
+Setting Up the Environment Variables :
+
+- Create a file called **.gitignore** in the root directory of your project
+- Add the following text in your .gitignore file: **env.py**
+- Create a file called **env.py**. This will contain all your environment variables
+- Create your own personal secret key and password.
+
+
+Run the App :
+
+- Open your terminal window in your IDE
+
+- Type in **python3 app.py** to run the app
+
+
+### Heroku Deployment
+
+To host this project on Heroku :
+
+Setting Up Heroku
+
+- Create a Heroku account
+
+- Create a new app and select your region
+
+Preparing Local Workspace for Heroku
+
+- In the terminal window of your local IDE type **pip3 freeze --local > requirements.txt** to create a requirements.txt file. This file is needed so that Heroku knows which files needs to be installed
+
+- In the terminal window of your local IDE type **python app.py > Procfile** to create a Procfile. This file is needed so that Heroku knows which file is needed as its entry point to get the app up and running
+
+Pushing files to Heroku
+
+- In the terminal window of your local IDE type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password
+
+- Commit all your files and type in the same terminal window **git push heroku master**. Now all your files are committed to Heroku
+
+Setting the Configuration Variables in Heroku
+
+- Go back to your Heroku account and go to **settings**
+
+- Click on **Reveal Config Vars** to reveal the keys and the values
+
+- Set the keys and values as follow:
+
+    (**KEY: VALUE**)
+    - IP: 0.0.0.0
+    - PORT: 5000
+    - MONGO_DBNAME: YOUR-DATABASE-NAME
+    - MONGO_URI: mongodb+srv://root:**YOURPASSWORD**@**YOUR-CLUSTER-NAME**.2qobt.mongodb.net/**YOUR-DATABASE-NAME**?retryWrites=true&w=majority
+    - SECRET_KEY: YOURSECRETKEY
+
+Open App in Heroku
+
+- Click on **Open app** in the right corner of your Heroku account, the application will open in a new window
+- The live link is available from the address bar
 
 ## Credit
 ### Content
