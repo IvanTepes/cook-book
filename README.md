@@ -70,6 +70,12 @@ Two fonts were used in this project.
 
 - [Pacifico](https://fonts.google.com/specimen/Pacifico)
     - The Pacifico font is used for document headers because it resembles a handwritten one, and the page gets the impression of a book.
+    
+- Combined with a decorative divider they give a pleasant view.
+    ![recipe-card](readme_files/img/category-heading.png)
+
+- And it fits nicely into the darkened hero image.
+    ![recipe-card](readme_files/img/pacifico-hero.png)
 
 - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto)
     - The Roboto font was used for all other parts of the page where the text was used and because it blends in nicely with the rest of the page.
@@ -111,7 +117,7 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 ### Existing Features
 
-### Home Page
+#### Home Page
 
 - The home page shows the four last added recipes in the database from each category allowing the user to immediately have an insight into the recipes that interest him.
 
