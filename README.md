@@ -336,7 +336,7 @@ To work with a local copy of this project the following steps needs to be taken:
 
 - Copy the URL and go to your local IDE
 
-- In the terminal of your IDE type in **git clone** and the paste the URL copied from step 2
+- In the terminal of your IDE type in **git clone** and the paste the URL copied 
 - Press Enter and the clone will be created
 
 
@@ -416,12 +416,58 @@ Setting the Configuration Variables in Heroku
 Open App in Heroku
 
 - Click on **Open app** in the right corner of your Heroku account, the application will open in a new window
+
 - The live link is available from the address bar
 
 ## Credit
+
 ### Content
 
+- Home page parallax image is taken from [here](https://www.usa.canon.com/internet/portal/us/home/learn/education/topics/article/2019/june/top-tips-for-better-food-photos-on-social-media/top-tips-for-better-food-photos-on-social-media/!ut/p/z1/lZJLU9swFIX_Slmw1OjaethaOs7LxWkwEAjeZGRbCmISKTgidPj1NTTTTunEtNro9d1zNUcHl3iJSysPZi29cVZuuv19yVezYhpPsxRyGOYCivl8MByP04wmFN-9A3BiJIDLf6nvAcp--Z_1cRaPpgLCPL6MORQwEjlZZNl8QT_r__UzoHMgbGfpbI3LnfQPyFjt8DKEQODl47NVeOndDnmz2yPtWlQp71XbLV2Ddg_Ouz1yFu1dbeQGbVVj5P8X3OGy95UX_BNgQo_AL5_m-SSCJEopXN0kwWTB_lK4HVBIuBimJBy_eX0E-n76g8KV6FrwIZ-KbwOYzoN-oMh4P5CNKL7vfjv6Dcy7eyguJkVyO7qALArw3cGoF7ywrt126b1-U9zVpsH3IoBKgYiRlk2AKGk4inlAUCVDQSPNqIgFnsKxw8k8sdMdaiKCRlcSsUoDoizQqIpDiriOFAFNoWb6GLeeuHZxM49PT2WCy9pZr757vKyldXZl1cuLqlbvp9afQ2PWxsvNaqNka41dn4M6dBdfjN379rn2rt2fw8a8SrRW7f5hK-2JLP_JfDAAbgvWJSkfhARuAhiGpw1QFWNRozQi0LDOYs07AyigOpK6ViSUlQ4_yk_SbAhFQq7GeXI9oZf8tDzhnPG6EigSIUFURhSJmoVIURKCEgGjtcS77WKxfM0TfZ2ZzFxu0yqejQjbHHL9Nq-3ydnZD76Kwfw!/)
+
+- All credit for image go to autor.
+
+- All recipes is taken from BBC Food.
+
+- Recipes can be found [here](https://www.bbc.co.uk/food)
+
+- Decorative divider is taken from [Vecteezy]("https://www.vecteezy.com/vector-art/216053-decorative-ornaments-vector"). All credit go to autor.
+
+- Box shadow and animation are taken from [Material Design Box Shadows](https://codepen.io/sdthornton/pen/wBZdXq).
+
 #### Recipes
+- Here is all links to recipes included in page :
+
+https://www.bbc.co.uk/food/recipes/eggy_bread_11076
+
+https://www.bbc.co.uk/food/recipes/theulsterfry_92143
+
+https://www.bbc.co.uk/food/recipes/drop_scones_38257
+
+https://www.bbc.co.uk/food/recipes/belgian_waffles_34066
+
+https://www.bbc.co.uk/food/recipes/hashbrowns_12454
+
+https://www.bbc.co.uk/food/recipes/honey_chicken_39457
+
+https://www.bbc.co.uk/food/recipes/halloumi_salad_19294
+
+https://www.bbc.co.uk/food/recipes/pasta_frittata_31803
+
+https://www.bbc.co.uk/food/recipes/meatball_curry_51206
+
+https://www.bbc.co.uk/food/recipes/glam_mac_and_cheese_92848
+
+https://www.bbc.co.uk/food/recipes/tomato_and_broccoli_08254
+
+https://www.bbc.co.uk/food/recipes/cajun_chicken_wedges_61950
+
+https://www.bbc.co.uk/food/recipes/halloween_ghost_cupcakes_04170
+
+https://www.bbc.co.uk/food/recipes/iced_mince_pies_04100
+
+https://www.bbc.co.uk/food/recipes/mini-tiramisu_cakes_73687
+
 
 ### Media
 ### Acknowledgements
