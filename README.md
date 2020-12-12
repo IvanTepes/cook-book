@@ -29,7 +29,7 @@ Cook Book is a great way to help users meet these needs because:
     - Time need to cook a dish
     - Size of dish
     - Recipe difficulty
-    - Recipe card :
+    - Recipe card showing recipe preparation time, recipe cooking time,   recipe size and recipe difficulty :
 
         ![recipe-card](readme_files/img/recipe-card.png)
 
@@ -81,7 +81,7 @@ Two fonts were used in this project.
     ![pacifico-hero](readme_files/img/pacifico-hero.png)
 
 - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto)
-    - The robot fund was chosen for the readability of the text. It is used primarily to display recipe ingredients and recipe methods.
+    - The robot font was chosen for the readability of the text. It is used primarily to display recipe ingredients and recipe methods.
     - Recipe ingredients :
 
         ![ingredients](readme_files/img/ingredients.png)
@@ -130,14 +130,31 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 #### Home Page
 
 - The home page shows the four last added recipes in the database from each category allowing the user to immediately have an insight into the recipes that interest him.
-- Home:
-    - ![home-sort](readme_files/img/home-sort.png)
+- Home page with last four recipes added in database:
+
+      ![home-sort](readme_files/img/home-sort.png)
 
 #### Navigation Bar
 
 - The Navbar is fixed so it is always available to the user.
 - Allows all users to select the content they want to view by simply clicking them, this also collapses into a toggle on mobile devices to.
-- After the user registers, the navigation bar expands and gets two new items My Recipes and Add Recipe.  
+- After the user registers, the navigation bar expands and gets two new items My Recipes and Add Recipe.
+
+- Navigation Bar for all users:
+
+    ![nav-all](readme_files/img/navbar-all.png)
+
+- Navigation Bar for registered users:
+
+    ![nav-register](readme_files/img/nav-register.png)
+
+- Navigation Bar on hover:
+
+    ![nav-hover](readme_files/img/nav-hover.gif)
+
+- Navigation Bar category hover:
+
+    ![cat-hover](readme_files/img/cat-hover.gif)
 
 #### Search Bar
 
