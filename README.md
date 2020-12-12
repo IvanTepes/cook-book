@@ -130,9 +130,10 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 #### Home Page
 
 - The home page shows the four last added recipes in the database from each category allowing the user to immediately have an insight into the recipes that interest him.
+
 - Home page with last four recipes added in database:
 
-      ![home-sort](readme_files/img/home-sort.png)
+    ![home-sort](readme_files/img/home-sort.png)
 
 #### Navigation Bar
 
@@ -142,7 +143,7 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 - Navigation Bar for all users:
 
-    ![nav-all](readme_files/img/navbar-all.png)
+    ![nav-all](readme_files/img/nav-all.png)
 
 - Navigation Bar for registered users:
 
