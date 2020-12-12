@@ -176,6 +176,10 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 - Parallax is used on the home page and on the recipe page. On the home page as a container for the hero image while on the recipe it was used as a background containing the recipe image. Blur on pallarax was added on the recipe page.
 
+- Recipe parallax with blur :
+
+    ![recipe-parallax](readme_files/img/recipe-parallax.gif)
+
 #### Floating Action Button 
 
 - It allows the user to quickly scroll to the top of the page and also on the recipe page allows you to return to the home page. The floating button is located in the lower right corner of the screen and is located on all pages is especially useful on mobile devices.
@@ -224,6 +228,10 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 - Allows registered users to **update** their recipe.
 - Allows registered users to **delete** their recipe. 
 - When a user decides to delete a recipe before deleting it, he is asked to confirm.
+
+- My recipe cards with delete and edit button :
+
+    ![my-recipe-edit-delete](readme_files/img/my-recipe-edit-delete.gif)
 
 - Delete Modal :
 
