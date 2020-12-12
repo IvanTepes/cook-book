@@ -180,7 +180,15 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 - It allows the user to quickly scroll to the top of the page and also on the recipe page allows you to return to the home page. The floating button is located in the lower right corner of the screen and is located on all pages is especially useful on mobile devices.
 
---UPDATE--
+- On the recipe page the user can choose, go back to the home page, to the top of the page or if the recipe is his he can edit it.
+
+- Floating button to scroll on top :
+
+    ![floating](readme_files/img/floating.png)
+
+- Floating button on recipe page :
+
+    ![fog](readme_files/img/fog.png)
 
 #### Quick Log In
 
@@ -215,7 +223,7 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 - Allows registered users to **view** previously added recipe.
 - Allows registered users to **update** their recipe.
 - Allows registered users to **delete** their recipe. 
-- When a user decides to delete a recipe before deleting it, he is asked if he wants to delete the recipe?
+- When a user decides to delete a recipe before deleting it, he is asked to confirm.
 
 - Delete Modal :
 
@@ -224,6 +232,21 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 #### Add Recipe
 
 - Allows registered users to add their own recipes.
+
+- When adding a recipe, the user should select the category and difficulty of the recipe from the drop-down menus, and enter other information about the recipe. Each input field has an info icon on the right explaining to the user what he should do when entering recipe information.
+
+- Recipe category and difficulty :
+
+    ![dropdowns](readme_files/img/dropdowns.png)
+
+- Input info position :
+
+    ![input](readme_files/img/input.png)
+
+- Input requirements :
+
+    ![info](readme_files/img/info.png)
+
 
 #### Footer 
 
