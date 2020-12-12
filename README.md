@@ -200,7 +200,7 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 - Recipe card on hover:
 
-    ![recipe-card](readme_files/img/recipe-hover.png)
+    ![recipe-card](readme_files/img/recipe-hover.gif)
 
 #### Log In / Register Page
 
