@@ -30,7 +30,8 @@ Cook Book is a great way to help users meet these needs because:
     - Size of dish
     - Recipe difficulty
     - Recipe card :
-    ![recipe-card](readme_files/img/recipe-card.png)
+
+        ![recipe-card](readme_files/img/recipe-card.png)
 
 - Cook Book allows registered users to share their best creations with the community in form of CRUD operations (create, read, update, delete)
 
@@ -72,17 +73,22 @@ Two fonts were used in this project.
     - The Pacifico font is used for document headers because it resembles a handwritten one, and the page gets the impression of a book.
     
 - Combined with a decorative divider they give a pleasant view.
+
     ![category-heading](readme_files/img/category-heading.png)
 
 - And it fits nicely into the darkened hero image.
+
     ![pacifico-hero](readme_files/img/pacifico-hero.png)
 
 - [Roboto](https://fonts.google.com/specimen/Roboto?query=Roboto)
     - The robot fund was chosen for the readability of the text. It is used primarily to display recipe ingredients and recipe methods.
     - Recipe ingredients :
-        - ![ingredients](readme_files/img/method.png)
+
+        ![ingredients](readme_files/img/ingredients.png)
+
     - Recipe method :
-        - ![method](readme_files/img/method.png)
+
+        ![method](readme_files/img/method.png)
 
 #### Icons
 
