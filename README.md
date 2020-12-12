@@ -359,7 +359,8 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 ## Testing
 
-- Testing information can be found in separate testing.md file.
+- Testing information can be found in separate [testing.md](testing.md) file.
+
 
 ## Deployment
 
