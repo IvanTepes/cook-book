@@ -309,6 +309,9 @@ For creating ERD i used [**LucidChart**](https://lucid.app/) during the Scope Pl
 
 - A page for the administrator who would have the options to delete recipes and edit also a dashboard with page and recipe statistics.
 
+- Features to share recipe.
+
+- User account page with option to delete or update their account.
 
 ## Technologies Used
 - [**HTML**](https://www.w3.org/TR/html52/)

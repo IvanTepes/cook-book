@@ -1,7 +1,85 @@
 # Manual Testing
 
 - Manual tests have been done throughout the development of the project.
-The following test scenarios confirms that the website is behaving accordingly
+The following test scenarios confirms that the website is behaving accordingly.
+
+## Browers used in testing
+
+- Google Chrome
+    - Used for testing site through all developing process and DevTools for    responsiveness and scaling issues on different screen sizes.
+
+- Mozilla Firefox
+    - Used for testing site and responsiveness and scaling.
+
+- Opera Web Browser
+    - Used for testing site and responsiveness and scaling.
+
+- Microsoft Edge 
+    - Used for testing site and responsiveness and scaling.
+
+This was the primary method of testing the application.
+
+## User story testing
+
+- As a new user, I want to be able to view recipes to cook.
+    - **If user click on any recipe card will redirect him to recipe**
+
+- As a new user, I want to be able to search for recipes.
+    - **User can search recipes by entering the desirable name of recipe, cooking time, ingredients in search engine** 
+
+- As a new user, I want to be able to easily navigate through the website.
+    - **Fixed navigation bar is present at all time to user easily navigate through site**
+
+- As a new user, I want to be able to easily access all of its feature.
+    - **User can read and search for recipes for all app feature he needs to register**
+
+- As a new user, I want to be able to immediatly see what the website is about.
+    - **With design of page user can immediatly see what this page is about**
+
+- As a new user, I want to be able to see different categories of recipes.
+    - **If the user clicks on recipes, he can see different recipe categories, and if scrolls on the home page, he can see 4 recipes from each recipe category..**
+
+- As a new user, I want to be able to know cook time, portion size, prep time or difficulty of recipe. 
+    - **Users can easily see this information on a recipe card.**
+
+- As a new user, I want to be able to see whole recipe on separate page
+    - **Clicked on the recipe card user gets redirected to a recipe.**
+
+- As a new user, I want to be able to see ingredients needed for dish.
+    - **On the recipe page, users can easily see ingredients needed for a recipe.**
+
+- As a new user, I want to be able to see image of dish.
+    - **Users can see recipe image on recipe card before he open recipe itself, on mobile screen user can see image directly below recipe information when on bigger devices recipe image is under recipe method.**
+- As a new user, I want to be able to create account.
+
+#### Registered Users
+
+- As a returning user, I want to be able to log in to my account easily.
+    - **The user can log in to the page through navbar by pressing login or through the home page.**
+
+- As a registered user, I want to be able to create my recipe.
+    - **By clicking on add recipe the user is able to add their recipe.**
+
+- As a registered user, I want to be able to see my recipes.
+    - **The user can see their recipes on the My recipes page.**
+
+- As a registered user, I want to be able to update my recipe.
+    - **The user can edit their recipes by clicking on the edit recipe on my recipes page or through the action button on the recipe page.**
+
+- As a registered user, I want to be able to share my recipes.
+    - **At this moment user is not able to share their recipe**
+
+- As a registered user, I want to be able to rate recipes.
+    - **At this moment user is not able to rate recipes.**
+
+- As a registered user, I want to be able to see feedback about my recipes.
+    - **At this moment user is not able to see feedback about their recipes.**
+
+- As a registered user, I expect my personal details to be private.
+    - **User information is safe from stealing**
+
+- As a registered user, I want to be able to delete my account.
+    - **At this moment registered user is not able to delete their account.**
 
 ## Navigation Bar functionality testing
 
@@ -71,7 +149,26 @@ The following test scenarios confirms that the website is behaving accordingly
 | Clicked **Yes** on modal  | Delete recipe from db and display flash msg | PASS |
 | Clicked **No** on modal  | Redirect back to my recipes | PASS |
 
+## Registration and log in / out
 
+| Action  | Expetatiopn  | Result |
+|---|---|---|
+| Enter username, password and email clicked **Register**  | Register user to db | PASS |
+| Enter same username, password and email clicked **Register**  | Display flash msg existing user | PASS |
+| Clicked **Log Out** from navbar  | Log out user and Redirect to login | PASS |
+| Enter valid username and password on **Log in**  | Logged to my account and display my recipes or msg if no recipes | PASS |
+| Enter wrong username or password on **Log in**  | Display flash msg and redirect to login | PASS |
+
+
+## Floating action button
+
+| Action  | Expetatiopn  | Result |
+|---|---|---|
+| Clicked **Action button** on any page  | Scroll page on top | PASS |
+| Clicked **Action button on Recipe** | Open Action button and display options | PASS |
+| Clicked **Back** icon from **Action button** | Redirect to home page | PASS |
+| Clicked **Top** icon from **Action button** | Scroll page on top | PASS |
+| Clicked **Edit** icon from **Action button** | Open **Edit Recipe** page| PASS |
 
 
 
