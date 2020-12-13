@@ -38,9 +38,43 @@ The following test scenarios confirms that the website is behaving accordingly
 |---|---|---|
 | Clicked **Choose Recipe Category**  | Open drop-down menu | PASS |
 | Clicked **Choose Recipe Difficulty** |  Open drop-down menu | PASS |
-| Clicked **All info** on any page  | Display **Recipe** | PASS |
-| Clicked **Recipe card** on any page  | Display **Recipe** | PASS |
-| Clicked **Recipe card** on any page  | Display **Recipe** | PASS |
+| Clicked **All info buttons**  | Display modal with **Requirements** | PASS |
+| **Enter Recipe Name**  by  **Requirements**   | Validate input | PASS |
+| **Enter Recipe Name** use just blank spaces | Validate input as wrong | PASS |
+| **Enter Recipe Cooking Time**  by  **Requirements**   | Validate input | PASS |
+| **Enter Recipe Cooking Time** use just blank spaces | Validate input as wrong | PASS |
+| **Enter Recipe Prepare Time**  by  **Requirements**   | Validate input | PASS |
+| **Enter Recipe Prepare Time** use just blank spaces | Validate input as wrong | PASS |
+| **Enter Recipe Servings**  by  **Requirements**   | Validate input | PASS |
+| **Enter Recipe Servings** use just blank spaces | Validate input as wrong | PASS |
+| **Recipe Image ULR**  by  **Requirements**   | Validate input | PASS |
+| **Recipe Image ULR** use just blank spaces | Validate input as wrong | PASS |
+| **Enter recipe ingredients**  by  **Requirements**   | Validate input | PASS |
+| **Enter recipe ingredients** use just blank spaces | Validate input as wrong | FAIL |
+| **Enter recipe cooking method**  by  **Requirements**   | Validate input | PASS |
+| **Enter recipe cooking method** use just blank spaces | Validate input as wrong | FAIL |
+| Clicked **Add Recipe** | Added Recipe to db | PASS |
+
+## Edit Recipe
+
+| Action  | Expetatiopn  | Result |
+|---|---|---|
+| Clicked **Edit on Recipe card** | Open **Edit Recipe** with recipe information | PASS |
+| Change any field on **Edit Recipe** and click **Edit Recipe** button | Change and save to db display flash msg | PASS |
+| Clicked **Cancel** on edit recipe | Close Edit Recipe and redirect back to My recipes | PASS |
+
+## Delete Recipe
+
+| Action  | Expetatiopn  | Result |
+|---|---|---|
+| Clicked **Delete** on recipe card  | Display modal with delete question | PASS |
+| Clicked **Yes** on modal  | Delete recipe from db and display flash msg | PASS |
+| Clicked **No** on modal  | Redirect back to my recipes | PASS |
+
+
+
+
+
 
 
 
