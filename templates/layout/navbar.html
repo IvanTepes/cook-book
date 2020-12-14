@@ -1,77 +1,78 @@
 {% block navbar %}
 
+
 <!--Link to css files-->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
 
+
 <!-- Navigation Bar -->
 <nav>
-    <div class="nav-wrapper">
-        <a href="{{ url_for('home') }}">
-            <img src="/static/img/logo/logo.png" class="brand-logo" alt="logo">
-        </a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-        <ul class="right hide-on-med-and-down">
-            <!-- available to all and else statement -->
-            <li><a id="home" class="active" href="{{ url_for('home') }}">Home</a></li>
-            <ul id="categories-detskop" class="dropdown-content">
-                <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
-                <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
-                <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
-                <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
-            </ul>
+   <div class="nav-wrapper">
+      <a href="{{ url_for('home') }}">
+      <img src="/static/img/logo/logo.png" class="brand-logo" alt="logo">
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+         <!-- available to all and else statement -->
+         <li><a id="home" class="active" href="{{ url_for('home') }}">Home</a></li>
+         <ul id="categories-detskop" class="dropdown-content">
+            <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
+            <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
+            <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
+            <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
+         </ul>
+         <li>
+            <a id="recipe" class="dropdown-trigger" href="#!" data-target="categories-detskop">
+            Recipes <i class="fas fa-caret-down right"></i>
+            </a>
+         </li>
+         <!-- if registered user show my recipe, add recipe and logout -->
+         {% if session.user %}
             <li>
-                <a id="recipe" class="dropdown-trigger" href="#!" data-target="categories-detskop">
-                    Recipes <i class="fas fa-caret-down right"></i>
+                <a id="myRecipes" href="{{ url_for('my_recipes', username=session['user']) }}">
+                My Recipes
                 </a>
             </li>
-            <!-- if registered user show my recipe, add recipe and logout -->
-            {% if session.user %}
-                <li>
-                    <a id="myRecipes" href="{{ url_for('my_recipes', username=session['user']) }}">
-                        My Recipes
-                    </a>
-                </li>
-                <li><a id="addRecipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                <li><a id="logout" href="{{ url_for('logout') }}">Log Out</a></li>
-            <!-- If not -->    
-            {% else %}
-                <li><a id="login" href="{{ url_for('login') }}">Log In</a></li>
-                <li><a id="register" href="{{ url_for('register') }}">Register</a></li>
-            {% endif %}
-        </ul>
-    </div>
+            <li><a id="addRecipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+            <li><a id="logout" href="{{ url_for('logout') }}">Log Out</a></li>
+         <!-- If not -->    
+         {% else %}
+            <li><a id="login" href="{{ url_for('login') }}">Log In</a></li>
+            <li><a id="register" href="{{ url_for('register') }}">Register</a></li>
+         {% endif %}
+      </ul>
+   </div>
 </nav>
 <!-- mobile navigation -->
 <ul class="sidenav button-collapse" id="mobile-demo">
-    <li class="center-align">
-        <a href="{{ url_for('home') }}">
-            <img src="/static/img/logo/logo.png" class="brand-logo" 
-                style="height:70px;margin-top:10px;" alt="logo">
-        </a>
-    </li>
-    <li class="mobile-navigation"><a href="{{ url_for('home') }}">Home</a></li>
-    <!-- available to all and else statement -->
-    <ul id="categories-mobile" class="dropdown-content">
-        <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
-        <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
-        <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
-        <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
-    </ul>
-    <li>
-        <a class="dropdown-trigger mobile-navigation" href="#!"                              data-target="categories-mobile">
-            Recipes <i class="fas fa-caret-down  right"></i>
-        </a>
-    </li>
-    <!-- if registered user show my recipe, add recipe and logout -->
-    {% if session.user %}
-        <li class="mobile-navigation"><a href="{{ url_for('my_recipes',username=session['user']) }}">My Recipes</a></li>
-        <li class="mobile-navigation"><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-        <li class="mobile-navigation"><a href="{{ url_for('logout') }}">Log Out</a></li>
-    <!-- If not  -->       
-    {% else %}
-        <li class="mobile-navigation"><a href="{{ url_for('login') }}">Log In</a></li>
-        <li class="mobile-navigation"><a href="{{ url_for('register') }}">Register</a></li>
-    {% endif %}
+   <li class="center-align">
+      <a href="{{ url_for('home') }}">
+      <img src="/static/img/logo/logo.png" class="brand-logo" 
+         style="height:70px;margin-top:10px;" alt="logo">
+      </a>
+   </li>
+   <li class="mobile-navigation"><a href="{{ url_for('home') }}">Home</a></li>
+   <!-- available to all and else statement -->
+   <ul id="categories-mobile" class="dropdown-content">
+      <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
+      <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
+      <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
+      <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
+   </ul>
+   <li>
+      <a class="dropdown-trigger mobile-navigation" href="#!"                  data-target="categories-mobile">
+      Recipes <i class="fas fa-caret-down  right"></i>
+      </a>
+   </li>
+   <!-- if registered user show my recipe, add recipe and logout -->
+   {% if session.user %}
+    <li class="mobile-navigation"><a href="{{ url_for('my_recipes',username=session['user']) }}">My Recipes</a></li>
+    <li class="mobile-navigation"><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+    <li class="mobile-navigation"><a href="{{ url_for('logout') }}">Log Out</a></li>
+   <!-- If not  -->       
+   {% else %}
+    <li class="mobile-navigation"><a href="{{ url_for('login') }}">Log In</a></li>
+    <li class="mobile-navigation"><a href="{{ url_for('register') }}">Register</a></li>
+   {% endif %}
 </ul>
-
 {% endblock %}
