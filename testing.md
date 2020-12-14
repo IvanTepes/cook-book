@@ -21,14 +21,14 @@ This was the primary method of testing throughout the development of the project
 
 ## Validators
 
-**[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)** 
-    - This is online CSS code validator
-    - All css files pass testing
+[**W3C CSS Validator**](https://jigsaw.w3.org/css-validator/) 
+- This is online CSS code validator
+- All css files pass testing
 
 
-**[W3C HTML Validator](https://validator.w3.org/)** 
-    * This is online HTML code validator
-    - All the pages from the site where tested and all the results came back with error on point where jinja templating is used rest of code is validate as valid.
+[**W3C HTML Validator**](https://validator.w3.org/)
+- This is online HTML code validator
+- All the pages from the site where tested and all the results came back with error on point where jinja templating is used rest of code is validate as valid.
     
 
 ## User story testing
