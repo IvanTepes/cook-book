@@ -340,4 +340,4 @@ if __name__ == "__main__":
     """ DEBUG SET TO FALSE BEFORE SUBMIT PROJECT """
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
