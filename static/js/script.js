@@ -1,5 +1,6 @@
 $(document).ready(function () {
     
+
     // Nav mobile initalization
     $('.sidenav').sidenav({
         closeOnClick: true,
@@ -7,22 +8,27 @@ $(document).ready(function () {
         edge: 'right',
     });
    
+
     // Parallax initalization
     $('.parallax').parallax();
+
 
     // Login and Register tabs
     $('.tabs').tabs();
 
+
     // Dropdown triger for nav bar
     $(".dropdown-trigger").dropdown();
+
 
     // Select dropdown initalization
     $('select').formSelect();
 
+
     // Modal initalization
     $('.modal').modal();
 
-
+    
     /* Floating action button */
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.fixed-action-btn');
@@ -32,8 +38,10 @@ $(document).ready(function () {
         });
     });
         
+
     // Character counter initalization
     $('input#recipe_name,#recipe_cuisine,#recipe_cooking_time,#recipe_prep_time,#recipe_ingredients,#recipe_method,#recipe_image').characterCounter();
+
 
     /* 
         Dropdown menus validation
@@ -42,6 +50,7 @@ $(document).ready(function () {
         https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js
 
     */
+
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {
