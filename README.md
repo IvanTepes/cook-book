@@ -474,7 +474,7 @@ Open App in Heroku
 
 - Recipes can be found [here](https://www.bbc.co.uk/food)
 
-- Decorative divider is taken from [Vecteezy]("https://www.vecteezy.com/vector-art/216053-decorative-ornaments-vector"). All credit go to autor.
+- Decorative divider is taken from [Vecteezy](https://www.vecteezy.com/vector-art/216053-decorative-ornaments-vector). All credit go to autor.
 
 - Box shadow and animation are taken from [Material Design Box Shadows](https://codepen.io/sdthornton/pen/wBZdXq).
 
