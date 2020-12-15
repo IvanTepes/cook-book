@@ -153,8 +153,8 @@ The color palette contains two dark, two-light, and one bright color. Combining 
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
 
-- Wireframes for this project can be found [here](wireframes/cook_book_wireframes.pdf).
-- Colored wireframes can be found [here](wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
+- Wireframes for this project can be found [here](/wireframes/cook_book_wireframes.pdf).
+- Colored wireframes can be found [here](/wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
 
 #### Entity Relationship Diagram
 
