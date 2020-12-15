@@ -7,7 +7,6 @@
 <!-- Link to add_ecipe css -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_recipe.css') }}" />
 
-
 {% include 'components/text_dividers/divider_top.html' %}
 
 
@@ -239,6 +238,16 @@
                     </div>
                 </div>
                 </div>
+                <!-- Empty ingredients modal -->
+                <div id="empty_modal" class="modal">
+                    <div class="modal-content">
+                    <h4 class="center-align">Please check your input!</h4>
+                    <p class="center-align">Ingredients or cooking methods must not be empty!</p>
+                    </div>
+                    <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect modal-btn btn-flat">Agree</a>
+                    </div>
+                </div>
                 <!-- Text Input Recipe Method -->
                 <div class="input-field col s10 m8 offset-m2">
                     <textarea id="recipe_method" name="recipe_method" class="materialize-textarea validate" minlength="5" maxlength="3000" data-length="3000" required></textarea>
@@ -265,12 +274,13 @@
             <!-- Submit Button -->
             <div class="row">
                 <div class="col s12 center-align">
-                    <button class="btn waves-effect waves-light edit-btn" type="submit">Add Recipe<i class="material-icons right"></i></button>
+                    <button id="add_button"  class="btn waves-effect waves-light edit-btn" type="submit">Add Recipe<i class="material-icons right"></i></button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 
+<script type="text/javascript" src="{{ url_for('static', filename='js/text-area.js') }}"></script>
 
 {% endblock %}
