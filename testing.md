@@ -30,6 +30,11 @@ This was the primary method of testing throughout the development of the project
 - This is online HTML code validator
 - All the pages from the site where tested and all the results came back with error on point where jinja templating is used rest of code is validate as valid.
     
+[**PEP8 Validator***](http://pep8online.com/)
+- This is online Python validator
+- Is used to validate python code in app.py
+- Code pass validation.
+
 
 ## User story testing
 
