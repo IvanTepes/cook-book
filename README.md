@@ -153,8 +153,8 @@ The color palette contains two dark, two-light, and one bright color. Combining 
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
 
-- Wireframes for this project can be found [here](readme_files/wireframes/cook_book_wireframes.pdf).
-- Colored wireframes can be found [here](readme_files/wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
+- Wireframes for this project can be found [here](wireframes/cook_book_wireframes.pdf).
+- Colored wireframes can be found [here](wireframes/colored_wireframes/cook_book_wireframes_colored.pdf).
 
 #### Entity Relationship Diagram
 
@@ -470,9 +470,7 @@ Open App in Heroku
 
 - All credit for image go to autor.
 
-- All recipes is taken from BBC Food.
-
-- Recipes can be found [here](https://www.bbc.co.uk/food)
+- All recipes is taken from [BBC Food](https://www.bbc.co.uk/food)
 
 - Decorative divider is taken from [Vecteezy](https://www.vecteezy.com/vector-art/216053-decorative-ornaments-vector). All credit go to autor.
 
