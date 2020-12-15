@@ -54,7 +54,14 @@
     /* On focus out check if both method and ingredients have class valid 
     if so display button */
     method.addEventListener('focusout', (event) => {
-        if (method.classList.contains('valid') && (ingredients.classList.contains('valid'))) {
+        if (method.classList.contains('valid')) {
+            // Display Button
+            document.getElementById('add_button').disabled = false;
+        }
+    });
+
+    ingredients.addEventListener('focusout', (event) => {
+        if (ingredients.classList.contains('valid')){
             // Display Button
             document.getElementById('add_button').disabled = false;
         }
