@@ -1,3 +1,20 @@
+[Main README.md file](README.md)
+
+[View website on Heroku](https://flask-cook-book-project.herokuapp.com/)
+
+* [Browers used in testing](#browers-used-in-testing)
+  * [Validators](#validators)
+  * [User story testing](#user-story-testing)
+      - [Registered Users](#registered-users)
+  * [Navigation Bar functionality testing](#navigation-bar-functionality-testing)
+  * [Search Bar](#search-bar)
+  * [Recipe cards](#recipe-cards)
+  * [Add Recipe](#add-recipe)
+  * [Edit Recipe](#edit-recipe)
+  * [Delete Recipe](#delete-recipe)
+  * [Registration and log in / out](#registration-and-log-in---out)
+  * [Floating action button](#floating-action-button)
+
 # Manual Testing
 
 - Manual tests have been done throughout the development of the project.
@@ -187,6 +204,7 @@ This was the primary method of testing throughout the development of the project
 | Clicked **Top** icon from **Action button** | Scroll page on top | PASS |
 | Clicked **Edit** icon from **Action button** | Open **Edit Recipe** page| PASS |
 
+[Main README.md file](README.md)
 
 
 
