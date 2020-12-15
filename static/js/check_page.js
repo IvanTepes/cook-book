@@ -50,7 +50,6 @@ if (activePage == gitPage ) {
 } else if (activePage.includes("edit_recipe")) {
   document.getElementById("myRecipes").classList.toggle("visited");
 } else { (activePage.includes("logout")) 
-  /* document.getElementById("logout").classList.toggle("visited"); */
   return
 }
 }
